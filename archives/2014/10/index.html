@@ -8,7 +8,7 @@
   <meta name="description" content="a place of sharing tech, food">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Kai Kang">
-<meta property="og:url" content="http://pavelkang.github.io/archives/2014/10/">
+<meta property="og:url" content="https://pavelkang.github.io/archives/2014/10/">
 <meta property="og:site_name" content="Kai Kang">
 <meta property="og:description" content="a place of sharing tech, food">
 <meta name="twitter:card" content="summary">
@@ -59,13 +59,86 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://pavelkang.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:https://pavelkang.github.io"></form>
       </div>
     </div>
   </div>
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-CacheLab-Part-B" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/10/07/CacheLab-Part-B/" class="article-date">
+  <time datetime="2014-10-07T04:51:02.000Z" itemprop="datePublished">Oct 7 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/07/CacheLab-Part-B/">CacheLab Part B</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="CacheLab_Part_B">CacheLab Part B</h3>
+<blockquote>
+<p>Part B of CacheLab is very challenging. I spent tons of hours on this, and I would like to write a blog on how I approached this problem.</p>
+</blockquote>
+<p>So before going into the details for each problem, there are something we should not that apply to all three problems:</p>
+<ul>
+<li>The cache has parameters: s = 5, E = 1, b = 5. The b=5 tells us that each line stores 2^5 = 32 bytes, or 8 integers. The E = 1 tells us that it is direct-mapped. And this has a very important implication is that, if we reference two addresses of the same <em>set</em>, the latter will cause the first to evict! This is because we have only one line in one set.</li>
+<li>To see why this is important to this lab, let’s run <code>csim</code> against our program and store the trace into a file. We can see that the first matrix starts with <strong>6022e0</strong>, the second starts with <strong>6422e0</strong>. This means that, <em>for the same row of A and B, they are cached to the same set, and will cause conflict.</em></li>
+<li>So this means we have to take special care for diagonal entries when transposing the matrix.</li>
+<li>Another thing to notice, I borrowed this image from another blog:<br><img src="http://winnieliu.org/images/others/cache32.png" alt="set number for 32*32" title="Access pattern"><br>So when we read A[0][0], we can read A[0][1] to A[0][7] <em>without a single miss</em>. So we want to explore that to avoid misses as much as possible.<h4 id="32_*_32">32 * 32</h4>
+Upperbound for misses: 300<br>Please refer to the image for 32 <em> 32. In this case, if we deal with 8</em>8 blocks, then we can avoid misses because we can store each row in a cache line, which is of <strong>8</strong> integers. However, we should avoid accessing diagonal entries in the loop. This is because if we do this:</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">B[<span class="link_label">i</span>][<span class="link_reference">j</span>] = A[<span class="link_label">j</span>][<span class="link_reference">i</span>]</div></pre></td></tr></table></figure>
+
+<p>Since for diagonal entries, i=j, we kiced A[j] out of the cache with B[i]. So we will check for diagonal entry in each loop, store it in a temporary variable, and put it in B after the loop.<br>This approach makes <strong>287</strong> misses.</p>
+<h4 id="61_*_67">61 * 67</h4>
+<p>Upperbound for misses 2000<br>We can use the same approach of blocking to divide this matrix to sub-matrices. This problem is trivial compared to <strong>64*64</strong>. I found that if we try different sizes of sub-matrices, we can get some pretty good results. My best <strong>guess</strong> so far is 18, with <strong>1815</strong> misses.</p>
+<h4 id="64_*_64">64 * 64</h4>
+<p>This is the most interesting/challenging problem. If we try to simply divide the matrix into smaller matrices, we get somewhere between 1600 ~ 2000 depending on the size of the sub matrix. We will first look at the graph, again, credit to winnieliu, who had an amazing <a href="https://winnieliu.org" target="_blank" rel="external">blog</a>.<br><img src="http://winnieliu.org/images/others/cache64.png" alt="set number for 64 * 64"><br>We can see that since our cache can only store 32 <em> 32 bytes, which is 32 </em> 8 integers, it doesn’t make much sense in this case to do 8<em>8 blocks because we will have misses in 8</em>8 blocks. 0 will conflict with 0, 1 with 1, etc. It seems like 4 <em> 8 is a pretty good candidate, but 4 </em> 8 is not a square and can thus make things complicated.</p>
+<h5 id="First_Try">First Try</h5>
+<p>I tried to use 4*4 blocks first. I tried to use 8 local variables, which is the max number of local vars I can manage to use. It gives 1630-ish misses. Not good enough. So I ran <code>csim</code> against this solution, and looked for the misses. I found that since we only have 8 vars, if we access 2 rows of length 4 of A, we have good locality on A, because we have 2 misses for 8 references. However, we have very bad locality for B, because in B, this is 4 rows of 2 cols, we have 4 misses in 8 references.<br>If we try to figure out why this doesn’t work, we can tell that:</p>
+<ul>
+<li>We didn’t fully explore the fact that once we load A[0][0], <strong>eight</strong> numbers are loaded. We just used <strong>four</strong>.</li>
+<li>We didn’t have a good <strong>access pattern</strong> for B. We are jumping back and forth.</li>
+</ul>
+<p>So we kind of have this idea that, we still want the width of the sub matrix to be 8 to use that at our advantage.<br>So we still divide it into 8*8 blocks. But this time, instead of solving it row by row, we are going to divide it even more to 4 4 by 4 blocks. So suppose <code>i, j</code> are the coordinates for the top-left corner of this 8 by 8 block. We use a iterator <code>k</code> to help use traverse inside this block. We can label it as:<br>| a  |  b |<br>| c  |  d |<br>where a, b, c, d are 4 by 4.</p>
+<h5 id="a">a</h5>
+<p>So to fill a, we need to access row j ~ j+3, col i~i+3 of A (so that rows of B can be i~i+3, cols of B can be j ~ j+3). However, instead of reading four cols, we know we can read <strong>8</strong> cols without misses. So we read col i~i+7 of A, for i~i+3, we do the usual transpose, for i+4 ~ i+5, instead of transposing them, which will cause more misses to the next step, we are going to store them in the position of b.<br>An example of doing so is:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">tmp = A[<span class="link_label">k</span>][<span class="link_reference">i+4</span>];</div><div class="line">B[<span class="link_label">i</span>][<span class="link_reference">k+4</span>] = tmp;</div></pre></td></tr></table></figure>
+
+<p>So an interesting to note after we have transposed a, c’s transpose is now in b.</p>
+<h5 id="b_c">b c</h5>
+<p>We are going to do b and c together.<br>So we scan a row of b to local variables, find values in A to fill the row in b, and use local variables to fill a row of c. Repeat this step four times.</p>
+<h5 id="d">d</h5>
+<p>Nothing special here, for (i, j) in B, just look for (j, i) in A. Fill d row by row to use cache at our advantage.<br>This algorithm gives us a total misses of <strong>1219</strong>.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://pavelkang.github.io/2014/10/07/CacheLab-Part-B/" data-id="1vz4kgylwliy7unh" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cachelab/">cachelab</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Create-a-blog-with-hexo" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -94,7 +167,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pavelkang.github.io/2014/10/05/Create-a-blog-with-hexo/" data-id="6fyzg5gg95syf8xs" class="article-share-link">Share</a>
+      <a data-url="https://pavelkang.github.io/2014/10/05/Create-a-blog-with-hexo/" data-id="6fyzg5gg95syf8xs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -117,7 +190,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/cachelab/">cachelab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -126,7 +199,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/hexo/" style="font-size: NaNpx;">hexo</a>
+      <a href="/tags/213/" style="font-size: 10.00px;">213</a><a href="/tags/cachelab/" style="font-size: 20.00px;">cachelab</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab, 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab; 213</a><a href="/tags/hexo/" style="font-size: 20.00px;">hexo</a>
     </div>
   </div>
 
@@ -135,7 +208,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -145,6 +218,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2014/10/07/CacheLab-Part-B/">CacheLab Part B</a>
+          </li>
         
           <li>
             <a href="/2014/10/05/Create-a-blog-with-hexo/">Create a blog with hexo</a>
