@@ -96,9 +96,11 @@
 <li><a href="https://oj.leetcode.com/problems/palindrome-partitioning/" target="_blank" rel="external">Palindrome Partition I</a><br>Find all possible ways to partition a string into palindrome substrings<br>Solution: DP<br>Big-O: n^2 space 2^n time (n is the length of string)</li>
 <li><a href="https://oj.leetcode.com/problems/palindrome-partitioning-ii/" target="_blank" rel="external">Palindrome Partition II</a><br>Find the minimum number of cuts to partition a string into palindrome substrings<br>Solution: Double DP. If use the previous problem, too much space and time.<br>Find P[i][j] s.t. P[i][j] is true if s[i:j] is palindrome. D[i] is the mincut<br>of s[i:].<br>Big-O: n^2 space n^2 time (n is the length of string)</li>
 <li><a href="https://www.hackerrank.com/challenges/palindrome-index" target="_blank" rel="external">Palindrome Index</a><br>Find the index in the string which if removed, makes the string palindrome<br>Solution: TODO</li>
-<li><a href="https://oj.leetcode.com/problems/longest-palindromic-substring/" target="_blank" rel="external">Longest Palindrome Substring</a><br>Solution: We can use the DP in “Pal Part II”, which will have O(n^2) big-O.<pre><code>      <span class="keyword">Or</span> we can <span class="keyword">use</span> __manacher<span class="attribute">'s</span> algorithm__ <span class="keyword">in</span> O(n).
-</code></pre><h3 id="Binary_Tree">Binary Tree</h3>
-</li>
+<li><a href="https://oj.leetcode.com/problems/longest-palindromic-substring/" target="_blank" rel="external">Longest Palindrome Substring</a><br>Solution: We can use the DP in “Pal Part II”, which will have O(n^2) big-O. Or we can use <strong>manacher’s algorithm</strong> in O(n).</li>
+</ul>
+<hr>
+<h3 id="Binary_Tree">Binary Tree</h3>
+<ul>
 <li><a href="https://oj.leetcode.com/problems/binary-tree-preorder-traversal/" target="_blank" rel="external">Preorder Traversal</a><br>Solution: Trivial</li>
 <li><a href="https://oj.leetcode.com/problems/binary-tree-postorder-traversal/" target="_blank" rel="external">Postorder Traversal</a><br>Solution: Trivial</li>
 <li><a href="https://oj.leetcode.com/problems/binary-tree-maximum-path-sum/" target="_blank" rel="external">Binary Tree Maximum Sum</a><br>Solution: This problem has a lot of edge cases, and the “path” is not so well-defined in the problem.<br>This problem seems to be a DP problem at the first sight, but if you think about it, you can expand in<br>two directions at the root, but not at children of root, which is not a “path”. I used a hash table<br>to store each node’s single path sum, defined as the max sum reached by going either to the left<br>or to the right, but not both. And traverse the tree to compute each node’s maxPathSum.<br>Big-O: n space nlogn time</li>
@@ -112,7 +114,7 @@
       <a data-url="https://pavelkang.github.io/2014/11/15/Tech-Interview-1/" data-id="nvg1p85unjbxi07k" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interview/">Interview</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interview/">Interview</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
 
     </footer>
   </div>
@@ -282,7 +284,7 @@ Upperbound for misses: 300<br>Please refer to the image for 32 <em> 32. In this 
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cachelab/">cachelab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/combination/">combination</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode/">leetcode</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/permutation/">permutation</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cachelab/">cachelab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/combination/">combination</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode/">leetcode</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/permutation/">permutation</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -291,7 +293,7 @@ Upperbound for misses: 300<br>Please refer to the image for 32 <em> 32. In this 
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/213/" style="font-size: 10.00px;">213</a><a href="/tags/Interview/" style="font-size: 20.00px;">Interview</a><a href="/tags/Python/" style="font-size: 20.00px;">Python</a><a href="/tags/algorithm/" style="font-size: 20.00px;">algorithm</a><a href="/tags/cachelab/" style="font-size: 20.00px;">cachelab</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab, 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab; 213</a><a href="/tags/combination/" style="font-size: 20.00px;">combination</a><a href="/tags/hexo/" style="font-size: 20.00px;">hexo</a><a href="/tags/leetcode/" style="font-size: 20.00px;">leetcode</a><a href="/tags/permutation/" style="font-size: 20.00px;">permutation</a>
+      <a href="/tags/213/" style="font-size: 10.00px;">213</a><a href="/tags/C/" style="font-size: 20.00px;">C++</a><a href="/tags/Interview/" style="font-size: 20.00px;">Interview</a><a href="/tags/Python/" style="font-size: 20.00px;">Python</a><a href="/tags/algorithm/" style="font-size: 20.00px;">algorithm</a><a href="/tags/cachelab/" style="font-size: 20.00px;">cachelab</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab, 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab; 213</a><a href="/tags/combination/" style="font-size: 20.00px;">combination</a><a href="/tags/hexo/" style="font-size: 20.00px;">hexo</a><a href="/tags/leetcode/" style="font-size: 20.00px;">leetcode</a><a href="/tags/permutation/" style="font-size: 20.00px;">permutation</a>
     </div>
   </div>
 
