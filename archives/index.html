@@ -117,7 +117,7 @@ ga('send', 'pageview');
 <li>And $\wedge$</li>
 <li>Or $\vee$</li>
 <li>Implies $\rightarrow$</li>
-<li>If and Only if $leftrightarrow$</li>
+<li>If and Only if $\leftrightarrow$</li>
 </ul>
 </li>
 </ul>
@@ -125,6 +125,32 @@ ga('send', 'pageview');
 <ul>
 <li>Initial: Any variable</li>
 <li>Deduction Rules: From $A$, can obtain $\neg A$. From $A, B$, can obtain $A\vee B$, $A\wedge B$, $A\rightarrow B$, $A\leftrightarrow B$.</li>
+</ul>
+<p>A formula is a binary tree in which:</p>
+<ul>
+<li>2-child nodes are labeled by <em>binary ops</em></li>
+<li>1-child nodes are labeled by <em>unary ops</em></li>
+<li>0-child nodes are labeled by <em>variables</em></li>
+</ul>
+<p><em>Truth Assignment V</em>: setting of true and false for each variable<br>Given a formula $S$, its truth value $V[S]$ can be defined by <em>structural induction</em></p>
+<p><strong>Satisfiability</strong>:</p>
+<ul>
+<li>$V$ satisfies $S$: $V[S] = T$</li>
+<li>$S$ is satisfiable: $\exists V such that V[S] = T$</li>
+<li>$S$ is unsatisfiable: $\forall V, V[S] = F$</li>
+<li>$S$ is tautology: $\forall V, V[S] = T$</li>
+</ul>
+<p><em>Equivalent</em>: Formulas $R$ and $S$ are equivalent, $R \equiv S$ if $\forall V, V[R] = V[S]$.<br><em>Entailment</em>: Formulas $A_1, …, A_m$ entail formula $S$, written $A_1, …, A_m \models S$ if every truth assignment which makes $A_i$ true makes $S$ true.<br><em>Truth table</em>: It represents a <em>Boolean function</em>, $f: {0, 1}^n \rightarrow {0, 1}$.</p>
+<ul>
+<li>There are $2^{2^n}$ truth tables on n variables.</li>
+<li>Every truth table can be computed by some formula, only using $\neg, \vee, \wedge$</li>
+</ul>
+<p><strong>Circuits</strong></p>
+<ul>
+<li>In circuits, nodes (gates) may have fan-out &gt; 1.</li>
+<li>Formulas are trees: all nodes have fan-out 1.</li>
+<li>Circuits can reuse already-computed pieces. Formulas cannot; everything must be “rebuilt”.</li>
+<li>Deduction viewpoint: The circuit is the deduction. The formula is the last line.</li>
 </ul>
 
       
