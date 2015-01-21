@@ -6,20 +6,23 @@
   <title>Machine Learning Notes | Kai Kang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Lecture 1
-Wed Jan 21 10:45:26 EST 2015
-Machine Learning: program that gets better at some tasks(functions) with experiences(data, examples)Formalizing a task as a function learning task (f: board pos">
+Jan 14 Wed
+
+Machine Learning: program that gets better at some tasks(functions) with experiences(data, examples)Formalizing a task as a function learning task (f: board pos -&gt; next move)H">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Machine Learning Notes">
 <meta property="og:url" content="https://pavelkang.github.io/2015/01/21/Machine-Learning-Notes/">
 <meta property="og:site_name" content="Kai Kang">
 <meta property="og:description" content="Lecture 1
-Wed Jan 21 10:45:26 EST 2015
-Machine Learning: program that gets better at some tasks(functions) with experiences(data, examples)Formalizing a task as a function learning task (f: board pos">
+Jan 14 Wed
+
+Machine Learning: program that gets better at some tasks(functions) with experiences(data, examples)Formalizing a task as a function learning task (f: board pos -&gt; next move)H">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Machine Learning Notes">
 <meta name="twitter:description" content="Lecture 1
-Wed Jan 21 10:45:26 EST 2015
-Machine Learning: program that gets better at some tasks(functions) with experiences(data, examples)Formalizing a task as a function learning task (f: board pos">
+Jan 14 Wed
+
+Machine Learning: program that gets better at some tasks(functions) with experiences(data, examples)Formalizing a task as a function learning task (f: board pos -&gt; next move)H">
 
   
     <link rel="alternative" href="/atom.xml" title="Kai Kang" type="application/atom+xml">
@@ -106,8 +109,9 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Lecture_1">Lecture 1</h3>
-<h2 id="Wed_Jan_21_10:45:26_EST_2015">Wed Jan 21 10:45:26 EST 2015</h2>
+        <h1 id="Lecture_1">Lecture 1</h1>
+<h3 id="Jan_14_Wed">Jan 14 Wed</h3>
+<hr>
 <p><strong>Machine Learning</strong>: program that gets better at some tasks(functions) with experiences(data, examples)<br>Formalizing a task as a function learning task (f: board pos -&gt; next move)<br><em>Human Annotation</em>: human assigning scores</p>
 <ul>
 <li>f: INPUT -&gt; {choice1, choice2, …} : <em>classification</em></li>
@@ -115,6 +119,19 @@ ga('send', 'pageview');
 <li>f: INPUT -&gt; {0, 1} probability: <em>Logistic Regression</em></li>
 <li>f: INPUT -&gt; P(INPUT) <em>Probability Density Estimation</em><br>Binary Classification = Concept Learning = Learning a subset of $X$.</li>
 </ul>
+<h1 id="Lecture_2">Lecture 2</h1>
+<h3 id="Wed_Jan_21_10:48:53_EST_2015">Wed Jan 21 10:48:53 EST 2015</h3>
+<hr>
+<ul>
+<li><em>Input space</em>: A set of features</li>
+<li><em>Target Concept</em>: The concept or function to be learned, denoted by $c$, a boolean-<br>valued function defined over the instances $X$; that is, $c$ : $X \rightarrow {0, 1}$</li>
+<li><em>Training Examples</em>: $D$</li>
+<li><em>Hypothesis</em> We are looking for $h$ in the set of all possible hypothesis $H$ such that $\forall x, h(x) = c(x)$</li>
+<li>$|X| \ll |H| \ll |e| = 2^x$, $|e|$ is the set of all possible functions</li>
+</ul>
+<h3 id="Find-S_algorithm">Find-S algorithm</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">hypo = &lt;null, null, <span class="keyword">...</span>&gt;</div><div class="line"><span class="keyword">for</span> x (positive_example) <span class="keyword">in</span> D:</div><div class="line">    <span class="keyword">for</span> a(attribute_constraint) <span class="keyword">in</span> hypo:</div><div class="line">        <span class="keyword">if</span> a satisfied by x: pass</div><div class="line">        <span class="keyword">else</span>: a := <span class="keyword">next</span> more general constraint satisfied by x</div><div class="line"><span class="keyword">return</span> hypo</div></pre></td></tr></table></figure>
+
 
       
     </div>
