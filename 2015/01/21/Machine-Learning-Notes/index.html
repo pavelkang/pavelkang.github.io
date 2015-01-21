@@ -3,17 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: C++ | Kai Kang</title>
+  <title>Machine Learning Notes | Kai Kang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="a place of sharing tech, food">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Kai Kang">
-<meta property="og:url" content="https://pavelkang.github.io/tags/C/">
+  <meta name="description" content="Lecture 1
+Wed Jan 21 10:45:26 EST 2015
+Machine Learning: program that gets better at some tasks(functions) with experiences(data, examples)Formalizing a task as a function learning task (f: board pos">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Machine Learning Notes">
+<meta property="og:url" content="https://pavelkang.github.io/2015/01/21/Machine-Learning-Notes/">
 <meta property="og:site_name" content="Kai Kang">
-<meta property="og:description" content="a place of sharing tech, food">
+<meta property="og:description" content="Lecture 1
+Wed Jan 21 10:45:26 EST 2015
+Machine Learning: program that gets better at some tasks(functions) with experiences(data, examples)Formalizing a task as a function learning task (f: board pos">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kai Kang">
-<meta name="twitter:description" content="a place of sharing tech, food">
+<meta name="twitter:title" content="Machine Learning Notes">
+<meta name="twitter:description" content="Lecture 1
+Wed Jan 21 10:45:26 EST 2015
+Machine Learning: program that gets better at some tasks(functions) with experiences(data, examples)Formalizing a task as a function learning task (f: board pos">
 
   
     <link rel="alternative" href="/atom.xml" title="Kai Kang" type="application/atom+xml">
@@ -78,12 +84,10 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Tech-Interview-1" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Machine-Learning-Notes" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2014/11/15/Tech-Interview-1/" class="article-date">
-  <time datetime="2014-11-15T20:27:33.000Z" itemprop="datePublished">Nov 15 2014</time>
+    <a href="/2015/01/21/Machine-Learning-Notes/" class="article-date">
+  <time datetime="2015-01-21T15:41:09.000Z" itemprop="datePublished">Jan 21 2015</time>
 </a>
     
   </div>
@@ -93,62 +97,50 @@ ga('send', 'pageview');
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/11/15/Tech-Interview-1/">Tech Interview</a>
+    <h1 class="article-title" itemprop="name">
+      Machine Learning Notes
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody" style="display:none">
+    <div class="article-entry" itemprop="articleBody">
       
-        <p>Some topics from either oj.leetcode.com or hackerrank:</p>
-<h3 id="Palindrome">Palindrome</h3>
+        <h3 id="Lecture_1">Lecture 1</h3>
+<h2 id="Wed_Jan_21_10:45:26_EST_2015">Wed Jan 21 10:45:26 EST 2015</h2>
+<p><strong>Machine Learning</strong>: program that gets better at some tasks(functions) with experiences(data, examples)<br>Formalizing a task as a function learning task (f: board pos -&gt; next move)<br><em>Human Annotation</em>: human assigning scores</p>
 <ul>
-<li><a href="https://oj.leetcode.com/problems/palindrome-number/" target="_blank" rel="external">Palindrome Number</a><br>Is a number palindrome?<br>Solution: reverse the integer and see if they equal. Pay attention to the sign<br>Big-O: 0 space n time (n is the length of number)</li>
-<li><a href="https://oj.leetcode.com/problems/palindrome-partitioning/" target="_blank" rel="external">Palindrome Partition I</a><br>Find all possible ways to partition a string into palindrome substrings<br>Solution: DP<br>Big-O: n^2 space 2^n time (n is the length of string)</li>
-<li><a href="https://oj.leetcode.com/problems/palindrome-partitioning-ii/" target="_blank" rel="external">Palindrome Partition II</a><br>Find the minimum number of cuts to partition a string into palindrome substrings<br>Solution: Double DP. If use the previous problem, too much space and time.<br>Find P[i][j] s.t. P[i][j] is true if s[i:j] is palindrome. D[i] is the mincut<br>of s[i:].<br>Big-O: n^2 space n^2 time (n is the length of string)</li>
-<li><a href="https://www.hackerrank.com/challenges/palindrome-index" target="_blank" rel="external">Palindrome Index</a><br>Find the index in the string which if removed, makes the string palindrome<br>Solution: TODO</li>
-<li><a href="https://oj.leetcode.com/problems/longest-palindromic-substring/" target="_blank" rel="external">Longest Palindrome Substring</a><br>Solution: We can use the DP in “Pal Part II”, which will have O(n^2) big-O. Or we can use <strong>manacher’s algorithm</strong> in O(n).</li>
-</ul>
-<hr>
-<h3 id="Binary_Tree">Binary Tree</h3>
-<ul>
-<li><a href="https://oj.leetcode.com/problems/binary-tree-preorder-traversal/" target="_blank" rel="external">Preorder Traversal</a><br>Solution: Trivial</li>
-<li><a href="https://oj.leetcode.com/problems/binary-tree-postorder-traversal/" target="_blank" rel="external">Postorder Traversal</a><br>Solution: Trivial</li>
-<li><a href="https://oj.leetcode.com/problems/binary-tree-inorder-traversal/" target="_blank" rel="external">Inorder Traversal</a><br>Solution: Trivial</li>
-<li><a href="https://oj.leetcode.com/problems/binary-tree-maximum-path-sum/" target="_blank" rel="external">Binary Tree Maximum Sum</a><br>Solution: This problem has a lot of edge cases, and the “path” is not so well-defined in the problem.<br>This problem seems to be a DP problem at the first sight, but if you think about it, you can expand in<br>two directions at the root, but not at children of root, which is not a “path”. I used a hash table<br>to store each node’s single path sum, defined as the max sum reached by going either to the left<br>or to the right, but not both. And traverse the tree to compute each node’s maxPathSum.<br>Big-O: n space nlogn time</li>
-<li><a href="https://oj.leetcode.com/problems/flatten-binary-tree-to-linked-list/" target="_blank" rel="external">Flatten Binary Tree to Linked List</a><br>Solution: Use a queue. Brute force solution.<br>Big-O: n space n time</li>
-<li><a href="https://oj.leetcode.com/problems/minimum-depth-of-binary-tree/" target="_blank" rel="external">Minimum depth of tree</a><br>Find the minimum distance from root to a leaf node<br>Solution: this problem is not complicated, but not as trivial as it first appears. Consider (1, #, 2) as<br>an edge case.<br>Big-O: 1 space d work</li>
-<li><a href="https://oj.leetcode.com/problems/balanced-binary-tree/" target="_blank" rel="external">Balanced Binary Tree</a><br>Solution: Trivial<blockquote>
-<p>TODO: AVL Tree</p>
-</blockquote>
-</li>
-<li><a href="https://oj.leetcode.com/problems/convert-sorted-array-to-binary-search-tree/" target="_blank" rel="external">Sorted Array to Binary Tree</a><br>Solution: similar to binary search<br>Big-O: n space n time</li>
-<li><a href="https://oj.leetcode.com/problems/convert-sorted-list-to-binary-search-tree/" target="_blank" rel="external">Sorted list to Binary Tree</a><br>Solution: Use the above program<br>Big-O: n space n time</li>
-<li><a href="https://oj.leetcode.com/problems/maximum-depth-of-binary-tree/" target="_blank" rel="external">Maximum Depth of Binary Tree </a><br>Solution: Trivial</li>
-<li><a href="https://oj.leetcode.com/problems/binary-tree-level-order-traversal/" target="_blank" rel="external">Level order Traversal</a><br>Solution: Create a hash table of <node, height=""><br>Big-O: n time n space</node,></li>
-<li><a href="https://oj.leetcode.com/problems/binary-tree-level-order-traversal-ii/" target="_blank" rel="external">Level order Traversal II</a><br>Solution: Similar to the above problem.</li>
-<li><a href="https://oj.leetcode.com/problems/binary-tree-zigzag-level-order-traversal/" target="_blank" rel="external">Zigzag level order traversal</a><br>Solution: Similar to the above</li>
-<li><a href="https://oj.leetcode.com/problems/same-tree/" target="_blank" rel="external">Same Tree</a><br>Solution: Trivial</li>
+<li>f: INPUT -&gt; {choice1, choice2, …} : <em>classification</em></li>
+<li>f: INPUT -&gt; Real : <em>Regression</em></li>
+<li>f: INPUT -&gt; {0, 1} probability: <em>Logistic Regression</em></li>
+<li>f: INPUT -&gt; P(INPUT) <em>Probability Density Estimation</em><br>Binary Classification = Concept Learning = Learning a subset of $X$.</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2014/11/15/Tech-Interview-1/" data-id="nvg1p85unjbxi07k" class="article-share-link">Share</a>
+      <a data-url="https://pavelkang.github.io/2015/01/21/Machine-Learning-Notes/" data-id="vcrxzwcsv358nhfc" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interview/">Interview</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/machine-learning/">machine learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/notes/">notes</a></li></ul>
 
     </footer>
   </div>
   
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/01/15/-15251-Deductive-Systems-and-Propositional-Logic/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">[15251] Deductive Systems and Propositional Logic</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
-
-  
-  
 </section>
         
           <aside id="sidebar">
