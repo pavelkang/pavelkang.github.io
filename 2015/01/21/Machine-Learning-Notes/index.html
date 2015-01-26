@@ -126,11 +126,23 @@ ga('send', 'pageview');
 <li><em>Input space</em>: A set of features</li>
 <li><em>Target Concept</em>: The concept or function to be learned, denoted by $c$, a boolean-<br>valued function defined over the instances $X$; that is, $c$ : $X \rightarrow {0, 1}$</li>
 <li><em>Training Examples</em>: $D$</li>
-<li><em>Hypothesis</em> We are looking for $h$ in the set of all possible hypothesis $H$ such that $\forall x, h(x) = c(x)$</li>
-<li>$|X| \ll |H| \ll |e| = 2^x$, $|e|$ is the set of all possible functions</li>
+<li><em>Hypothesis</em> Conjunctions of literals. Eg $&lt;?, Cold, High, ?, ?&gt;$. We are looking for $h$ in the set of all possible hypothesis $H$ such that $\forall x, h(x) = c(x)$</li>
+<li>$|X| \ll |H| \ll |C| = 2^x$, $|C|$ is the set of all possible functions (concept space)</li>
+<li>X is input space, H is hypothesis space (each item + 1), C is concept space ($2^{|X|}$)</li>
 </ul>
+<h1 id="Lecture_3">Lecture 3</h1>
+<p>$D={(x_1, c(x_1)), …}$ data<br>Each concept c_i is a bit vector.</p>
+<p><strong>Hypothesis consistency</strong> $Consistent(h, D) = \forall <x, c(x)="">\in D, h(x) = c(x)$<br><strong>Version space</strong> $VS_{H,D} = {h\in H| Consistent(h, D)}$</x,></p>
 <h3 id="Find-S_algorithm">Find-S algorithm</h3>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">hypo = &lt;null, null, <span class="keyword">...</span>&gt;</div><div class="line"><span class="keyword">for</span> x (positive_example) <span class="keyword">in</span> D:</div><div class="line">    <span class="keyword">for</span> a(attribute_constraint) <span class="keyword">in</span> hypo:</div><div class="line">        <span class="keyword">if</span> a satisfied by x: pass</div><div class="line">        <span class="keyword">else</span>: a := <span class="keyword">next</span> more general constraint satisfied by x</div><div class="line"><span class="keyword">return</span> hypo</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">hypo = &lt;null, null, ...&gt; <span class="comment"># says NO to everything</span></div><div class="line"><span class="comment"># D is the data {(x1, c(x1)), (x2, c(x2)), ...}</span></div><div class="line"><span class="comment"># looking for target concept c in C</span></div><div class="line"><span class="keyword">for</span> positive_example <span class="keyword">in</span> D:</div><div class="line">    <span class="keyword">for</span> attribute_constraint <span class="keyword">in</span> hypo:</div><div class="line">        <span class="keyword">if</span> pos_example satisfied by attr_constraint: <span class="keyword">pass</span></div><div class="line">        <span class="keyword">else</span>: hypo := next more general constraint satisfied by attr_constraint</div><div class="line"><span class="keyword">return</span> hypo</div></pre></td></tr></table></figure>
+
+<h3 id="Problems_with_Find-S">Problems with Find-S</h3>
+<ul>
+<li>Fails when training data inconsistent</li>
+<li>Picks a maximally specific $h$</li>
+</ul>
+<h3 id="List-Then-Eliminate">List-Then-Eliminate</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hypos = a list containing every hypothesis</div><div class="line"><span class="keyword">for</span> &lt;x, c(x)&gt; <span class="keyword">in</span> D:</div><div class="line">    remove h <span class="keyword">in</span> hypos <span class="keyword">if</span> h(x) != c(x)</div><div class="line"><span class="keyword">return</span> hypos</div></pre></td></tr></table></figure>
 
 
       
