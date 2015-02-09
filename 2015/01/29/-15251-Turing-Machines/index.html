@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: machine learning | Kai Kang</title>
+  <title>[15251]-Set Theory And Church Turing Thesis | Kai Kang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="a place of sharing tech, food">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Kai Kang">
-<meta property="og:url" content="https://pavelkang.github.io/tags/machine-learning/">
+  <meta name="description" content="Turing Machine">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[15251]-Set Theory And Church Turing Thesis">
+<meta property="og:url" content="https://pavelkang.github.io/2015/01/29/-15251-Turing-Machines/">
 <meta property="og:site_name" content="Kai Kang">
-<meta property="og:description" content="a place of sharing tech, food">
+<meta property="og:description" content="Turing Machine">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kai Kang">
-<meta name="twitter:description" content="a place of sharing tech, food">
+<meta name="twitter:title" content="[15251]-Set Theory And Church Turing Thesis">
+<meta name="twitter:description" content="Turing Machine">
 
   
     <link rel="alternative" href="/atom.xml" title="Kai Kang" type="application/atom+xml">
@@ -78,12 +78,10 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Machine-Learning-Notes" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post--15251-Turing-Machines" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/01/21/Machine-Learning-Notes/" class="article-date">
-  <time datetime="2015-01-21T15:41:09.000Z" itemprop="datePublished">Jan 21 2015</time>
+    <a href="/2015/01/29/-15251-Turing-Machines/" class="article-date">
+  <time datetime="2015-01-30T01:03:48.000Z" itemprop="datePublished">Jan 29 2015</time>
 </a>
     
   </div>
@@ -93,81 +91,51 @@ ga('send', 'pageview');
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/21/Machine-Learning-Notes/">Machine Learning Notes</a>
+    <h1 class="article-title" itemprop="name">
+      [15251]-Set Theory And Church Turing Thesis
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody" style="display:none">
+    <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Lecture_1">Lecture 1</h1>
-<h3 id="Jan_14_Wed">Jan 14 Wed</h3>
-<hr>
-<p><strong>Machine Learning</strong>: program that gets better at some tasks(functions) with experiences(data, examples)<br>Formalizing a task as a function learning task (f: board pos -&gt; next move)<br><em>Human Annotation</em>: human assigning scores</p>
-<ul>
-<li>f: INPUT -&gt; {choice1, choice2, …} : <em>classification</em></li>
-<li>f: INPUT -&gt; Real : <em>Regression</em></li>
-<li>f: INPUT -&gt; {0, 1} probability: <em>Logistic Regression</em></li>
-<li>f: INPUT -&gt; P(INPUT) <em>Probability Density Estimation</em><br>Binary Classification = Concept Learning = Learning a subset of $X$.</li>
-</ul>
-<h1 id="Lecture_2">Lecture 2</h1>
-<h3 id="Wed_Jan_21_10:48:53_EST_2015">Wed Jan 21 10:48:53 EST 2015</h3>
-<hr>
-<ul>
-<li><em>Input space</em>: A set of features</li>
-<li><em>Target Concept</em>: The concept or function to be learned, denoted by $c$, a boolean-<br>valued function defined over the instances $X$; that is, $c$ : $X \rightarrow {0, 1}$</li>
-<li><em>Training Examples</em>: $D$</li>
-<li><em>Hypothesis</em> Conjunctions of literals. Eg $&lt;?, Cold, High, ?, ?&gt;$. We are looking for $h$ in the set of all possible hypothesis $H$ such that $\forall x, h(x) = c(x)$</li>
-<li>$|X| \ll |H| \ll |C| = 2^x$, $|C|$ is the set of all possible functions (concept space)</li>
-<li>X is input space, H is hypothesis space (each item + 1), C is concept space ($2^{|X|}$)</li>
-</ul>
-<h1 id="Lecture_3">Lecture 3</h1>
-<p>$D={(x_1, c(x_1)), …}$ data<br>Each concept c_i is a bit vector.</p>
-<p><strong>Hypothesis consistency</strong> $Consistent(h, D) = \forall <x, c(x)="">\in D, h(x) = c(x)$<br><strong>Version space</strong> $VS_{H,D} = {h\in H| Consistent(h, D)}$</x,></p>
-<h3 id="Find-S_algorithm">Find-S algorithm</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">hypo = &lt;null, null, ...&gt; <span class="comment"># says NO to everything</span></div><div class="line"><span class="comment"># D is the data {(x1, c(x1)), (x2, c(x2)), ...}</span></div><div class="line"><span class="comment"># looking for target concept c in C</span></div><div class="line"><span class="keyword">for</span> positive_example <span class="keyword">in</span> D:</div><div class="line">    <span class="keyword">for</span> attribute_constraint <span class="keyword">in</span> hypo:</div><div class="line">        <span class="keyword">if</span> pos_example satisfied by attr_constraint: <span class="keyword">pass</span></div><div class="line">        <span class="keyword">else</span>: hypo := next more general constraint satisfied by attr_constraint</div><div class="line"><span class="keyword">return</span> hypo</div></pre></td></tr></table></figure>
-
-<h3 id="Problems_with_Find-S">Problems with Find-S</h3>
-<ul>
-<li>Fails when training data inconsistent</li>
-<li>Picks a maximally specific $h$</li>
-</ul>
-<h3 id="List-Then-Eliminate">List-Then-Eliminate</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hypos = a list containing every hypothesis</div><div class="line"><span class="keyword">for</span> &lt;x, c(x)&gt; <span class="keyword">in</span> D:</div><div class="line">    remove h <span class="keyword">in</span> hypos <span class="keyword">if</span> h(x) != c(x)</div><div class="line"><span class="keyword">return</span> hypos</div></pre></td></tr></table></figure>
-
-<h1 id="Lecture_4_Informaiton_theory">Lecture 4 Informaiton theory</h1>
-<p><strong>Bias</strong></p>
-<ul>
-<li>Hard bias: eg. “Language bias” (conjunctions)</li>
-<li>Soft bias: “ranking”, preference bias (prefer hypothesis that tends to say NO)</li>
-</ul>
-<p>Information = Reduction in Uncertainty<br>Suprisal = information received when observing an outcome = $I(\text{sunny}) = log_2 \frac{1}{prob(\text{sunny})} \in [0, \infty)$<br>Information is <em>additive</em>:</p>
-<h1 id="Lecture_5">Lecture 5</h1>
-<p>Suprise(Information learned) = $log<em>2\frac{1}{p(e)}$, where $p(e)$ is <em>subjective</em>, int <strong>BITS</strong>.<br><strong>Cross Entropy</strong> $\Sigma p_i I(s_i)$.<br><strong>Fundamental Inequality</strong><br><strong>Distance</strong> $D</em>{KL}(p||q) = E_p[log\frac{p(x)}{q(x)}]\ge 0$<br>A special case would be $p = q$, when we fully know the “truth”. $0\lte CH(p, p) \lte log k$, where $log k$ is fully uniform. <em>20 questions game</em>.<br>Ask questions which answers you think are equally likely to be $0$ and $1$, so that you can learn the most information.</p>
-<p>$H(Letter) = log_{27} = 4.75 BITS$.</p>
-<h1 id="Lecture_6">Lecture 6</h1>
-<p>Entropy is a tight lower bound of efficiency of emitting events.<br><em>Regular Variable</em>: holds a <em>single</em> value.<br><em>Random Variable</em>: distribution<br>Joint Entropy, Conditional Entropy, Average Conditional Entropy.<br>Average Conditional Entropy, $H(T/M)$.<br>$H(T) - H(M/T)$, how much $M$ is telling us on average about $T$.<br>$H(T) - H(M/T) = H(M) - H(M/T)$</p>
-<h1 id="Lecture_7">Lecture 7</h1>
-<p>$I(X; Y; Z) = I(X,Y) - I(X,Y|Z)$<br>$I(X, Y) = H(X) - H(X|Y)$</p>
+        <h1 id="Turing_Machine">Turing Machine</h1>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2015/01/21/Machine-Learning-Notes/" data-id="vcrxzwcsv358nhfc" class="article-share-link">Share</a>
+      <a data-url="https://pavelkang.github.io/2015/01/29/-15251-Turing-Machines/" data-id="qinyfmbbld2sp4ue" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/machine-learning/">machine learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/notes/">notes</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/251/">251</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/">math</a></li></ul>
 
     </footer>
   </div>
   
+    
+<nav id="article-nav">
+  
+    <a href="/2015/01/31/-15251-Uncountability-and-Uncomputability/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          [15251 Uncountability and Uncomputability]
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/01/22/-15251-Formalization-of-Proof-Finite-Automata/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">[15251] Formalization of Proof, Finite Automata</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
-
-  
-  
 </section>
         
           <aside id="sidebar">
