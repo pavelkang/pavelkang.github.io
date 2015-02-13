@@ -109,6 +109,28 @@ ga('send', 'pageview');
 </ul>
 <p>$\mathbb{N} = \mathbb{Z}$<br><em>Countable</em> = finite or countably infinite<br><strong>Cantor’s Theorem</strong><br>For any non-empty set $A$, $|A|\lt |P(A)|$. This can be proven by <em>diagonalization</em>. $S = a\in A: a\notin f(a)$ $S$ is defined by diagonalization so that $S$ cannot equal any $f(a)$.<br><strong>Continuum Hypothesis (Hilbert’s 1st Problem)</strong><br>There is no set $S$ such that $|\mathbb{N}|\lt |S|\lt |P(\mathbb{N})|$</p>
 <p><em>String encoding</em>: Computational problems can be <em>serialized</em> into a string</p>
+<h3 id="Computational_Complexity">Computational Complexity</h3>
+<ul>
+<li>Every multitape TM has an equivalent single tape TM.</li>
+<li>Running time depends on the particular model you choose</li>
+<li>Running time is defined as $T_A(n) = max{# \text{steps A takes on I}}$ (max input instance)</li>
+<li><em>intrinsic complexity</em> is defined by $min$ (min algorithm).</li>
+<li>Entscheidungsproblem: Decide whether a given statement is valid with a given set of axioms</li>
+<li>To compute summations:<ul>
+<li>Rough bounding</li>
+<li>Exact computation</li>
+<li>Induction</li>
+<li>Telescoping series ($\frac{1}{i(i+1)}$)</li>
+<li>Comparison with an integral</li>
+</ul>
+</li>
+<li><strong>Master Method</strong><br>For $T(n) \le a\dot T(\frac{n}{b}) + O(n^d)$,<ul>
+<li>$a = b^d$, $O(n^dlog n)$</li>
+<li>$a &lt; b^d$, $O(n^d)$</li>
+<li>$a &gt; b^d$, $O(n^{log_ba})$</li>
+</ul>
+</li>
+</ul>
 <p>Countable:</p>
 <ul>
 <li>countable cartesian product of countable sets<ul>

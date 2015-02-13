@@ -146,11 +146,14 @@ ga('send', 'pageview');
 <p>Information = Reduction in Uncertainty<br>Suprisal = information received when observing an outcome = $I(\text{sunny}) = log_2 \frac{1}{prob(\text{sunny})} \in [0, \infty)$<br>Information is <em>additive</em>:</p>
 <h1 id="Lecture_5">Lecture 5</h1>
 <p>Suprise(Information learned) = $log<em>2\frac{1}{p(e)}$, where $p(e)$ is <em>subjective</em>, int <strong>BITS</strong>.<br><strong>Cross Entropy</strong> $\Sigma p_i I(s_i)$.<br><strong>Fundamental Inequality</strong><br><strong>Distance</strong> $D</em>{KL}(p||q) = E_p[log\frac{p(x)}{q(x)}]\ge 0$<br>A special case would be $p = q$, when we fully know the “truth”. $0\lte CH(p, p) \lte log k$, where $log k$ is fully uniform. <em>20 questions game</em>.<br>Ask questions which answers you think are equally likely to be $0$ and $1$, so that you can learn the most information.</p>
-<p>$H(Letter) = log_{27} = 4.75 BITS$.</p>
+<p>$H(Letter) = log{27} = 4.75 BITS$.</p>
 <h1 id="Lecture_6">Lecture 6</h1>
-<p>Entropy is a tight lower bound of efficiency of emitting events.<br><em>Regular Variable</em>: holds a <em>single</em> value.<br><em>Random Variable</em>: distribution<br>Joint Entropy, Conditional Entropy, Average Conditional Entropy.<br>Average Conditional Entropy, $H(T/M)$.<br>$H(T) - H(M/T)$, how much $M$ is telling us on average about $T$.<br>$H(T) - H(M/T) = H(M) - H(M/T)$</p>
+<p>Entropy is a tight lower bound of efficiency of emitting events.<br><em>Regular Variable</em>: holds a <em>single</em> value.<br><em>Random Variable</em>: distribution<br>Joint Entropy, Conditional Entropy, Average Conditional Entropy.<br>Average Conditional Entropy, $H(T/M)$.<br>$H(T) - H(M/T)$, how much $M$ is telling us on average about $T$.<br>$H(T) - H(M/T) = H(M) - H(M/T)$<br>$I(X; Y; Z) = I(X,Y) - I(X,Y|Z)$<br>$I(X, Y) = H(X) - H(X|Y)$<br>$I(y, {x_1, x_2, …}) = I(y, x_1) + (y; x_2|x_1) + I(y, x_3|x_1, x_2) + …$</p>
 <h1 id="Lecture_7">Lecture 7</h1>
-<p>$I(X; Y; Z) = I(X,Y) - I(X,Y|Z)$<br>$I(X, Y) = H(X) - H(X|Y)$</p>
+<h3 id="Decision_Tree">Decision Tree</h3>
+<p>Same attribute will not appear twice in a single path</p>
+<h1 id="Lecture_8">Lecture 8</h1>
+<p>Draw a decision tree from $f(A, B, C, D, E) = (A\wedge B)\vee (C\wedge \not D\wedge E)$<br>Decision trees can represent any functions.</p>
 
       
     </div>
