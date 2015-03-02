@@ -80,6 +80,167 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post--15-251-NP" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/02/26/-15-251-NP/" class="article-date">
+  <time datetime="2015-02-27T02:19:16.000Z" itemprop="datePublished">Feb 26 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/26/-15-251-NP/">[15-251] NP</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody" style="display:none">
+      
+        <h3 id="NP_and_NP-completeness">NP and NP-completeness</h3>
+<p><em>NP</em>: We have a simple proof to verify a solution</p>
+<ul>
+<li>length of proof is polynomial</li>
+<li>proof can be verified in polynomial time<br><em>Cook-Levin Theorem</em>: SAT is NP-complete</li>
+</ul>
+<p>To show A is NP-complete:</p>
+<ol>
+<li>A is in NP</li>
+<li>Pick a NP-complete problem L</li>
+<li>Show L reduces to A</li>
+</ol>
+<p>NP: Nondeterminsitic Polynomial Time</p>
+<p>C-hard: C can be reduced to A $\forall C \in C$<br>C-complete: C is in $C$.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://pavelkang.github.io/2015/02/26/-15-251-NP/" data-id="5becai7isqdj4tjz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/251/">251</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/">math</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post--15-251-Graph-Algorithms" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/02/24/-15-251-Graph-Algorithms/" class="article-date">
+  <time datetime="2015-02-24T06:38:34.000Z" itemprop="datePublished">Feb 24 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/24/-15-251-Graph-Algorithms/">[15-251] Graph Algorithms</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody" style="display:none">
+      
+        <p>Problem: Identify all nodes reachable from s.<br>BFS, DFS, AFS<br>AFS finds a <em>spanning tree</em> rooted at s (bag, mark)<br>Why does AFS halt?<br>If we put <em>edge</em> in the bag, get a spanning tree.<br>Full AFS finds all connected components<br>CFS: Cheapest First Search<br><em>MST</em>: subset of edges of minimum total cost such that all vertices connected<br>Prim: put the cheapest edge in the bag. If use Priority Queue, $O(Elog(E))$ run-time.<br><em>MST Cut Property</em> e is the cheapest edge from S to not S, then must be in the MST.</p>
+<h2 id="Matching">Matching</h2>
+<p><em>Bipartite Graph</em>: there is a bipartition X and Y such that each edge connects x and y.<br><em>Matching</em>: a subset of edges that do not share an endpoint.<br><em>Maximum Matching</em>: A matching with largest number of edges<br><em>Perfect Matching</em>: A matching that covers all vertices<br><em>Stable matching</em>: There is no unstable pair(u, v not matched to each other, but they prefer each other to their current partners)<br>GS-algorithm: While a man is unmatched: propose to w(highest in the list)</p>
+<ul>
+<li>$O(n^2)$ (because number of proposals are $n^2$).</li>
+<li>Perfect Matching</li>
+<li>Stable<br>GS always finds the <em>Best Valid Partner</em><br>Prove: Man always finds the best. Woman always finds the worst.</li>
+</ul>
+<h3 id="Maximum_Matching">Maximum Matching</h3>
+<p><em>Augmenting path</em>(with respect to matching M): edges alternate between in M and not in M.<br>Prove: If there is an aug. path, M is not maximum<br>Find Maximum Matching: start with an edge, find augment path, …<br>To find aug. path: direct edges in M from left to right.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://pavelkang.github.io/2015/02/24/-15-251-Graph-Algorithms/" data-id="rrh1z2unvmqn5if9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/251/">251</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/">math</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post--15251-Computational-Complexity" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/02/15/-15251-Computational-Complexity/" class="article-date">
+  <time datetime="2015-02-15T22:49:09.000Z" itemprop="datePublished">Feb 15 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/15/-15251-Computational-Complexity/">[15251]-Computational Complexity</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody" style="display:none">
+      
+        <p><strong>Strong Church-Turing Thesis</strong>: The intuitive notion of “efficiently computable” is captured by functions efficiently computable by a TM.</p>
+<ul>
+<li><strong>Master Method</strong><br>For $T(n) \le a\dot T(\frac{n}{b}) + O(n^d)$,<ul>
+<li>$a = b^d$, $O(n^dlog n)$</li>
+<li>$a &lt; b^d$, $O(n^d)$</li>
+<li>$a &gt; b^d$, $O(n^{log_ba})$</li>
+</ul>
+</li>
+</ul>
+<h3 id="Polynomial_time_and_the_class_P">Polynomial time and the class P</h3>
+<p>$DTIME(T(n)) = $ the language decided by an $O(T(n))$ time algorithm.<br>$P=DTIME(n^k)$ union of all<br>$EXP=DTIME(2^{n^k})$ union of all<br>P is a subset of EXP.<br>We can prove that <strong>Polynomial time algorithms can solve every decidable problem</strong><br>$HWTB$ is the language <m> such that M<m> takes at most $n^3$ steps. This cannot be decided in $O(n^2)$ steps, which can be proved with diagonalization algorithm.<br><strong>Time Hierarchy Theorem</strong><br>Let $T(n)$ be a time-constructible algorithm. $\epsilon &gt; 0$. Then there is a problem which cannot be decided in time $T(n)$, but can be decided in time $T(n)^{1+\epsilon}$. $DTIME(T(n))$ is a PROPER subset of $DTIME(T(n)^{1+\epsilon})$.</m></m></p>
+<p><strong>Space Complexity</strong></p>
+<ul>
+<li>Use two-tape TM that has a work tape and an input tape that is read-only.<br>$DSPACE(T(n)) = $ the language decided by an $O(T(n))$ space algorithm.<br>PSPACE, L is log space. L is a subset of PSPACE.<br><strong>Space Hierarchy Theorem</strong><br>If a TM uses $S(n)\ge log_2(n)$, then it decides the language using $\le 2^{O(S(n))}$ time (because of the number of possible configurations)</li>
+<li>$L\subset P$</li>
+<li>$PSPACE\subset EXP$<br><strong>Circuit Complexity</strong><br>A circuit family is an infinite answer to infinite number of questions</li>
+<li>The size of a circuit is the total number of gates, including inputs as gates too</li>
+<li><strong>Circuit complexity</strong> is the size of the minimal circuit family that decides the language<br>Circuit complexity is ALWAYS bounded by $2^n$.<br>$f_A(x_1, x_2, …, x_n) = (x_1\wedge f_A(1, x_2, …, x_n))\wedge (\not x_1\wedge (f_A(0, x_2, .., x_n)))$<br>This has recurrence $s(n) \le 2s(n-1)+5$.<br>W.T.S.: There is a language L whose circuit complexity is at least $2^n/4n$.</li>
+</ul>
+<ol>
+<li>Number of possible functions is $2^{2^n}$</li>
+<li>Number of circuits of size s is $\le 2^{4slogs}$<br>Claim 2: for each gate, 2 bits for its type, 2logs bits for which gates the inputs are from.</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://pavelkang.github.io/2015/02/15/-15251-Computational-Complexity/" data-id="7ydmwam6icjyecgy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/251/">251</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/">math</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post--15251-Uncountability-and-Uncomputability" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/01/31/-15251-Uncountability-and-Uncomputability/" class="article-date">
@@ -389,7 +550,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/251/">251</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cachelab/">cachelab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">food</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/">machine learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/">notes</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/251/">251</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cachelab/">cachelab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">food</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/">machine learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/">notes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/schedule/">schedule</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -398,7 +559,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/213/" style="font-size: 10.00px;">213</a><a href="/tags/251/" style="font-size: 20.00px;">251</a><a href="/tags/C/" style="font-size: 13.33px;">C++</a><a href="/tags/Interview/" style="font-size: 13.33px;">Interview</a><a href="/tags/Python/" style="font-size: 13.33px;">Python</a><a href="/tags/algorithm/" style="font-size: 10.00px;">algorithm</a><a href="/tags/cachelab/" style="font-size: 13.33px;">cachelab</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab, 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab; 213</a><a href="/tags/combination/" style="font-size: 10.00px;">combination</a><a href="/tags/editor/" style="font-size: 10.00px;">editor</a><a href="/tags/emacs/" style="font-size: 10.00px;">emacs</a><a href="/tags/food/" style="font-size: 16.67px;">food</a><a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a><a href="/tags/leetcode/" style="font-size: 10.00px;">leetcode</a><a href="/tags/lisp/" style="font-size: 10.00px;">lisp</a><a href="/tags/machine-learning/" style="font-size: 13.33px;">machine learning</a><a href="/tags/math/" style="font-size: 20.00px;">math</a><a href="/tags/notes/" style="font-size: 13.33px;">notes</a><a href="/tags/permutation/" style="font-size: 10.00px;">permutation</a>
+      <a href="/tags/213/" style="font-size: 10.00px;">213</a><a href="/tags/251/" style="font-size: 20.00px;">251</a><a href="/tags/C/" style="font-size: 13.33px;">C++</a><a href="/tags/Interview/" style="font-size: 13.33px;">Interview</a><a href="/tags/Python/" style="font-size: 13.33px;">Python</a><a href="/tags/algorithm/" style="font-size: 10.00px;">algorithm</a><a href="/tags/cachelab/" style="font-size: 13.33px;">cachelab</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab, 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab; 213</a><a href="/tags/combination/" style="font-size: 10.00px;">combination</a><a href="/tags/editor/" style="font-size: 10.00px;">editor</a><a href="/tags/emacs/" style="font-size: 10.00px;">emacs</a><a href="/tags/food/" style="font-size: 16.67px;">food</a><a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a><a href="/tags/leetcode/" style="font-size: 10.00px;">leetcode</a><a href="/tags/lisp/" style="font-size: 10.00px;">lisp</a><a href="/tags/machine-learning/" style="font-size: 13.33px;">machine learning</a><a href="/tags/math/" style="font-size: 20.00px;">math</a><a href="/tags/notes/" style="font-size: 13.33px;">notes</a><a href="/tags/permutation/" style="font-size: 10.00px;">permutation</a><a href="/tags/schedule/" style="font-size: 13.33px;">schedule</a>
     </div>
   </div>
 
@@ -407,7 +568,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -419,23 +580,23 @@ ga('send', 'pageview');
       <ul>
         
           <li>
+            <a href="/2015/02/26/-15-251-NP/">[15-251] NP</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/25/undergrad-schedule/">undergrad schedule</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/24/-15-251-Graph-Algorithms/">[15-251] Graph Algorithms</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/15/-15251-Computational-Complexity/">[15251]-Computational Complexity</a>
+          </li>
+        
+          <li>
             <a href="/2015/01/31/-15251-Uncountability-and-Uncomputability/">[15251 Uncountability and Uncomputability]</a>
-          </li>
-        
-          <li>
-            <a href="/2015/01/29/-15251-Turing-Machines/">[15251]-Set Theory And Church Turing Thesis</a>
-          </li>
-        
-          <li>
-            <a href="/2015/01/22/-15251-Formalization-of-Proof-Finite-Automata/">[15251] Formalization of Proof, Finite Automata</a>
-          </li>
-        
-          <li>
-            <a href="/2015/01/21/Machine-Learning-Notes/">Machine Learning Notes</a>
-          </li>
-        
-          <li>
-            <a href="/2015/01/15/-15251-Deductive-Systems-and-Propositional-Logic/">[15251] Deductive Systems and Propositional Logic</a>
           </li>
         
       </ul>

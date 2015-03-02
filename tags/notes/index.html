@@ -154,6 +154,30 @@ ga('send', 'pageview');
 <p>Same attribute will not appear twice in a single path</p>
 <h1 id="Lecture_8">Lecture 8</h1>
 <p>Draw a decision tree from $f(A, B, C, D, E) = (A\wedge B)\vee (C\wedge \not D\wedge E)$<br>Decision trees can represent any functions.</p>
+<h1 id="Lecture_9">Lecture 9</h1>
+<p>Law of total variance: $VAR(y) = VAR(E[y|x]) + E[VAR(y|x)]$<br>First: how far apart the centers are<br>Second: WITHIN-CLUSTER VARIANCE</p>
+<h1 id="Lecture_11">Lecture 11</h1>
+<h3 id="Linear_Regression">Linear Regression</h3>
+<p>To a multi-linear regression: $\beta<em>{OLS} = (X^TX)^{-1}(X^TY)$<br>Hard bias: …<br>Soft bias: square of residue<br>_Sparse Estimation</em>: p &gt;&gt; n. $\beta$ is non-identifiable</p>
+<ul>
+<li>L2 Norm(sum of squared beta): “Ridge Regression”</li>
+<li>L1 Norm(sum of abs beta): “Lasso Regression”</li>
+<li>L0 Norm(number of non-zero beta)<br><em>Regularization</em>: minimize $argmin(Error(data, param) + Complexity(Param))$<br>In this example: square of residues + norm of Beta</li>
+</ul>
+<h1 id="Lecture_12">Lecture 12</h1>
+<h3 id="Neural_Networks">Neural Networks</h3>
+<p>Works really well with <em>complex real-world sensor-data</em><br>Since human neurons switch slowly compared to computeres, but is able to do complicated computations quickly. It is conjectured that humans do parallel computation.<br>Learning corresponds to assigning weights to edges in an acyclic directed graph.</p>
+<p><em>Perceptrons</em>: Takes a vector of real inputs, calculates a linear comb. If &gt; threshold, output 1; 0 otherwise<br>Learning a perceptron = choosing values for the <em>coeffs</em>!<br>It can represent primitive boolean functions AND, OR, NAND, …<br>And all boolean functions in general<br>Training a perceptron: start with arbitrary weights, repeat… (p88)<br>to modify $w_i$ to new $w_i$: $\Delta w_i = \ita (t-o)x_i$, where $\ita$ is the Learning Rate, which is a small value.</p>
+<h1 id="Lecture_13">Lecture 13</h1>
+<p>$<br>\begin{center}<br>    \begin{tabular}{| l | l | l | l |}<br>    \hline<br>    Day &amp; Min Temp &amp; Max Temp &amp; Summary \ \hline<br>    Monday &amp; 11C &amp; 22C &amp; A clear day with lots of sunshine.<br>    However, the strong breeze will bring down the temperatures. \ \hline<br>    Tuesday &amp; 9C &amp; 19C &amp; Cloudy with rain, across many northern regions. Clear spells<br>    across most of Scotland and Northern Ireland,<br>    but rain reaching the far northwest. \ \hline<br>    Wednesday &amp; 10C &amp; 21C &amp; Rain will still linger for the morning.<br>    Conditions will improve by early afternoon and continue<br>    throughout the evening. \<br>    \hline<br>    \end{tabular}<br>\end{center}<br>$</p>
+<pre><code>Single Linear Unit / Network <span class="keyword">of</span> L.U.<span class="attribute">'s</span> / Perceptron(STEP fxn,Classifier) / Network <span class="keyword">of</span> Perceptrons
+</code></pre><p>Expresesive Power(hard bias): All Linear fxns / Still Linear, / Linear Classifiers /<br>Optimization Criterion(soft bias): Mean Squared Error / Same / Misclassific Rate<br>Computational complexity: Algebraically, Gradient Decent / Same /</p>
+<h1 id="Midterm_Prep">Midterm Prep</h1>
+<p>Data mining: extract information from a large data set and transform it to a structure for future use<br>Target function<br>Hypothesis: h is a <em>conjunction</em> of constraints on attributes<br>constraints: value; don’t care; no value allowed;<br>Concept learning:<br>Training example: &lt;$x_1$, c($x_1$)&gt;, where c is the <em>target function</em> or <em>concept</em>.<br>Determine: h such that h(x) = c(x) for all x in D<br>Find-S: h0 = most specific (no to everything); for each pos example, “merge” the attribute constraint<br>consistent: (h, D) if h(x) = c(x) for all c in D<br>version space: subset of H(hypothesis space) consistent with all training data D<br>List-then-Eliminate: start with the biggest hypothesis space; find version space by checking each training example<br>Input Space: X, Hypothesis Space: H (+1), Concept Space: $2^{|X|}$</p>
+<blockquote>
+<p>??? Candidate Elimination Algorithm ???</p>
+</blockquote>
+<p>Information Theory</p>
 
       
     </div>
@@ -181,7 +205,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/251/">251</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cachelab/">cachelab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">food</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/">machine learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/">notes</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/251/">251</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cachelab/">cachelab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">food</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/">machine learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/">notes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/schedule/">schedule</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -190,7 +214,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/213/" style="font-size: 10.00px;">213</a><a href="/tags/251/" style="font-size: 20.00px;">251</a><a href="/tags/C/" style="font-size: 13.33px;">C++</a><a href="/tags/Interview/" style="font-size: 13.33px;">Interview</a><a href="/tags/Python/" style="font-size: 13.33px;">Python</a><a href="/tags/algorithm/" style="font-size: 10.00px;">algorithm</a><a href="/tags/cachelab/" style="font-size: 13.33px;">cachelab</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab, 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab; 213</a><a href="/tags/combination/" style="font-size: 10.00px;">combination</a><a href="/tags/editor/" style="font-size: 10.00px;">editor</a><a href="/tags/emacs/" style="font-size: 10.00px;">emacs</a><a href="/tags/food/" style="font-size: 16.67px;">food</a><a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a><a href="/tags/leetcode/" style="font-size: 10.00px;">leetcode</a><a href="/tags/lisp/" style="font-size: 10.00px;">lisp</a><a href="/tags/machine-learning/" style="font-size: 13.33px;">machine learning</a><a href="/tags/math/" style="font-size: 20.00px;">math</a><a href="/tags/notes/" style="font-size: 13.33px;">notes</a><a href="/tags/permutation/" style="font-size: 10.00px;">permutation</a>
+      <a href="/tags/213/" style="font-size: 10.00px;">213</a><a href="/tags/251/" style="font-size: 20.00px;">251</a><a href="/tags/C/" style="font-size: 13.33px;">C++</a><a href="/tags/Interview/" style="font-size: 13.33px;">Interview</a><a href="/tags/Python/" style="font-size: 13.33px;">Python</a><a href="/tags/algorithm/" style="font-size: 10.00px;">algorithm</a><a href="/tags/cachelab/" style="font-size: 13.33px;">cachelab</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab, 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab; 213</a><a href="/tags/combination/" style="font-size: 10.00px;">combination</a><a href="/tags/editor/" style="font-size: 10.00px;">editor</a><a href="/tags/emacs/" style="font-size: 10.00px;">emacs</a><a href="/tags/food/" style="font-size: 16.67px;">food</a><a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a><a href="/tags/leetcode/" style="font-size: 10.00px;">leetcode</a><a href="/tags/lisp/" style="font-size: 10.00px;">lisp</a><a href="/tags/machine-learning/" style="font-size: 13.33px;">machine learning</a><a href="/tags/math/" style="font-size: 20.00px;">math</a><a href="/tags/notes/" style="font-size: 13.33px;">notes</a><a href="/tags/permutation/" style="font-size: 10.00px;">permutation</a><a href="/tags/schedule/" style="font-size: 13.33px;">schedule</a>
     </div>
   </div>
 
@@ -199,7 +223,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -211,23 +235,23 @@ ga('send', 'pageview');
       <ul>
         
           <li>
+            <a href="/2015/02/26/-15-251-NP/">[15-251] NP</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/25/undergrad-schedule/">undergrad schedule</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/24/-15-251-Graph-Algorithms/">[15-251] Graph Algorithms</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/15/-15251-Computational-Complexity/">[15251]-Computational Complexity</a>
+          </li>
+        
+          <li>
             <a href="/2015/01/31/-15251-Uncountability-and-Uncomputability/">[15251 Uncountability and Uncomputability]</a>
-          </li>
-        
-          <li>
-            <a href="/2015/01/29/-15251-Turing-Machines/">[15251]-Set Theory And Church Turing Thesis</a>
-          </li>
-        
-          <li>
-            <a href="/2015/01/22/-15251-Formalization-of-Proof-Finite-Automata/">[15251] Formalization of Proof, Finite Automata</a>
-          </li>
-        
-          <li>
-            <a href="/2015/01/21/Machine-Learning-Notes/">Machine Learning Notes</a>
-          </li>
-        
-          <li>
-            <a href="/2015/01/15/-15251-Deductive-Systems-and-Propositional-Logic/">[15251] Deductive Systems and Propositional Logic</a>
           </li>
         
       </ul>

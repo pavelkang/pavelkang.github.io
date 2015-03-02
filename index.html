@@ -80,6 +80,227 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post--15-251-NP" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/02/26/-15-251-NP/" class="article-date">
+  <time datetime="2015-02-27T02:19:16.000Z" itemprop="datePublished">Feb 26 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/26/-15-251-NP/">[15-251] NP</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody" style="display:none">
+      
+        <h3 id="NP_and_NP-completeness">NP and NP-completeness</h3>
+<p><em>NP</em>: We have a simple proof to verify a solution</p>
+<ul>
+<li>length of proof is polynomial</li>
+<li>proof can be verified in polynomial time<br><em>Cook-Levin Theorem</em>: SAT is NP-complete</li>
+</ul>
+<p>To show A is NP-complete:</p>
+<ol>
+<li>A is in NP</li>
+<li>Pick a NP-complete problem L</li>
+<li>Show L reduces to A</li>
+</ol>
+<p>NP: Nondeterminsitic Polynomial Time</p>
+<p>C-hard: C can be reduced to A $\forall C \in C$<br>C-complete: C is in $C$.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://pavelkang.github.io/2015/02/26/-15-251-NP/" data-id="5becai7isqdj4tjz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/251/">251</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/">math</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-undergrad-schedule" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/02/25/undergrad-schedule/" class="article-date">
+  <time datetime="2015-02-25T15:52:10.000Z" itemprop="datePublished">Feb 25 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/25/undergrad-schedule/">undergrad schedule</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody" style="display:none">
+      
+        <ul>
+<li>36-401 Modern Regression</li>
+<li>Category2 ?Econ?</li>
+<li>2 electives: art in pittsburgh, ?book?beatles?<h3 id="Fall_2015">Fall 2015</h3>
+</li>
+<li>15410 OS</li>
+<li>11411 NLP</li>
+<li>15221 Tech Comm</li>
+<li>1 elective<h3 id="Spring_2016">Spring 2016</h3>
+</li>
+<li>15451 Algorithms</li>
+<li>15462 CG</li>
+<li>16465 Game Engine<h3 id="Fall_2016">Fall 2016</h3>
+</li>
+<li>10xxx ML Senior Project</li>
+<li>21484 Graph</li>
+<li>15440 Distributed<h3 id="Spring_2017">Spring 2017</h3>
+</li>
+<li>15312 Programming Languages</li>
+<li>11-751 Speech Recognition</li>
+<li>1 elective</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://pavelkang.github.io/2015/02/25/undergrad-schedule/" data-id="kofws00ea98cq54w" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/schedule/">schedule</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post--15-251-Graph-Algorithms" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/02/24/-15-251-Graph-Algorithms/" class="article-date">
+  <time datetime="2015-02-24T06:38:34.000Z" itemprop="datePublished">Feb 24 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/24/-15-251-Graph-Algorithms/">[15-251] Graph Algorithms</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody" style="display:none">
+      
+        <p>Problem: Identify all nodes reachable from s.<br>BFS, DFS, AFS<br>AFS finds a <em>spanning tree</em> rooted at s (bag, mark)<br>Why does AFS halt?<br>If we put <em>edge</em> in the bag, get a spanning tree.<br>Full AFS finds all connected components<br>CFS: Cheapest First Search<br><em>MST</em>: subset of edges of minimum total cost such that all vertices connected<br>Prim: put the cheapest edge in the bag. If use Priority Queue, $O(Elog(E))$ run-time.<br><em>MST Cut Property</em> e is the cheapest edge from S to not S, then must be in the MST.</p>
+<h2 id="Matching">Matching</h2>
+<p><em>Bipartite Graph</em>: there is a bipartition X and Y such that each edge connects x and y.<br><em>Matching</em>: a subset of edges that do not share an endpoint.<br><em>Maximum Matching</em>: A matching with largest number of edges<br><em>Perfect Matching</em>: A matching that covers all vertices<br><em>Stable matching</em>: There is no unstable pair(u, v not matched to each other, but they prefer each other to their current partners)<br>GS-algorithm: While a man is unmatched: propose to w(highest in the list)</p>
+<ul>
+<li>$O(n^2)$ (because number of proposals are $n^2$).</li>
+<li>Perfect Matching</li>
+<li>Stable<br>GS always finds the <em>Best Valid Partner</em><br>Prove: Man always finds the best. Woman always finds the worst.</li>
+</ul>
+<h3 id="Maximum_Matching">Maximum Matching</h3>
+<p><em>Augmenting path</em>(with respect to matching M): edges alternate between in M and not in M.<br>Prove: If there is an aug. path, M is not maximum<br>Find Maximum Matching: start with an edge, find augment path, …<br>To find aug. path: direct edges in M from left to right.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://pavelkang.github.io/2015/02/24/-15-251-Graph-Algorithms/" data-id="rrh1z2unvmqn5if9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/251/">251</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/">math</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post--15251-Computational-Complexity" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/02/15/-15251-Computational-Complexity/" class="article-date">
+  <time datetime="2015-02-15T22:49:09.000Z" itemprop="datePublished">Feb 15 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/15/-15251-Computational-Complexity/">[15251]-Computational Complexity</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody" style="display:none">
+      
+        <p><strong>Strong Church-Turing Thesis</strong>: The intuitive notion of “efficiently computable” is captured by functions efficiently computable by a TM.</p>
+<ul>
+<li><strong>Master Method</strong><br>For $T(n) \le a\dot T(\frac{n}{b}) + O(n^d)$,<ul>
+<li>$a = b^d$, $O(n^dlog n)$</li>
+<li>$a &lt; b^d$, $O(n^d)$</li>
+<li>$a &gt; b^d$, $O(n^{log_ba})$</li>
+</ul>
+</li>
+</ul>
+<h3 id="Polynomial_time_and_the_class_P">Polynomial time and the class P</h3>
+<p>$DTIME(T(n)) = $ the language decided by an $O(T(n))$ time algorithm.<br>$P=DTIME(n^k)$ union of all<br>$EXP=DTIME(2^{n^k})$ union of all<br>P is a subset of EXP.<br>We can prove that <strong>Polynomial time algorithms can solve every decidable problem</strong><br>$HWTB$ is the language <m> such that M<m> takes at most $n^3$ steps. This cannot be decided in $O(n^2)$ steps, which can be proved with diagonalization algorithm.<br><strong>Time Hierarchy Theorem</strong><br>Let $T(n)$ be a time-constructible algorithm. $\epsilon &gt; 0$. Then there is a problem which cannot be decided in time $T(n)$, but can be decided in time $T(n)^{1+\epsilon}$. $DTIME(T(n))$ is a PROPER subset of $DTIME(T(n)^{1+\epsilon})$.</m></m></p>
+<p><strong>Space Complexity</strong></p>
+<ul>
+<li>Use two-tape TM that has a work tape and an input tape that is read-only.<br>$DSPACE(T(n)) = $ the language decided by an $O(T(n))$ space algorithm.<br>PSPACE, L is log space. L is a subset of PSPACE.<br><strong>Space Hierarchy Theorem</strong><br>If a TM uses $S(n)\ge log_2(n)$, then it decides the language using $\le 2^{O(S(n))}$ time (because of the number of possible configurations)</li>
+<li>$L\subset P$</li>
+<li>$PSPACE\subset EXP$<br><strong>Circuit Complexity</strong><br>A circuit family is an infinite answer to infinite number of questions</li>
+<li>The size of a circuit is the total number of gates, including inputs as gates too</li>
+<li><strong>Circuit complexity</strong> is the size of the minimal circuit family that decides the language<br>Circuit complexity is ALWAYS bounded by $2^n$.<br>$f_A(x_1, x_2, …, x_n) = (x_1\wedge f_A(1, x_2, …, x_n))\wedge (\not x_1\wedge (f_A(0, x_2, .., x_n)))$<br>This has recurrence $s(n) \le 2s(n-1)+5$.<br>W.T.S.: There is a language L whose circuit complexity is at least $2^n/4n$.</li>
+</ul>
+<ol>
+<li>Number of possible functions is $2^{2^n}$</li>
+<li>Number of circuits of size s is $\le 2^{4slogs}$<br>Claim 2: for each gate, 2 bits for its type, 2logs bits for which gates the inputs are from.</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://pavelkang.github.io/2015/02/15/-15251-Computational-Complexity/" data-id="7ydmwam6icjyecgy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/251/">251</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/">math</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post--15251-Uncountability-and-Uncomputability" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/01/31/-15251-Uncountability-and-Uncomputability/" class="article-date">
@@ -364,6 +585,30 @@ ga('send', 'pageview');
 <p>Same attribute will not appear twice in a single path</p>
 <h1 id="Lecture_8">Lecture 8</h1>
 <p>Draw a decision tree from $f(A, B, C, D, E) = (A\wedge B)\vee (C\wedge \not D\wedge E)$<br>Decision trees can represent any functions.</p>
+<h1 id="Lecture_9">Lecture 9</h1>
+<p>Law of total variance: $VAR(y) = VAR(E[y|x]) + E[VAR(y|x)]$<br>First: how far apart the centers are<br>Second: WITHIN-CLUSTER VARIANCE</p>
+<h1 id="Lecture_11">Lecture 11</h1>
+<h3 id="Linear_Regression">Linear Regression</h3>
+<p>To a multi-linear regression: $\beta<em>{OLS} = (X^TX)^{-1}(X^TY)$<br>Hard bias: …<br>Soft bias: square of residue<br>_Sparse Estimation</em>: p &gt;&gt; n. $\beta$ is non-identifiable</p>
+<ul>
+<li>L2 Norm(sum of squared beta): “Ridge Regression”</li>
+<li>L1 Norm(sum of abs beta): “Lasso Regression”</li>
+<li>L0 Norm(number of non-zero beta)<br><em>Regularization</em>: minimize $argmin(Error(data, param) + Complexity(Param))$<br>In this example: square of residues + norm of Beta</li>
+</ul>
+<h1 id="Lecture_12">Lecture 12</h1>
+<h3 id="Neural_Networks">Neural Networks</h3>
+<p>Works really well with <em>complex real-world sensor-data</em><br>Since human neurons switch slowly compared to computeres, but is able to do complicated computations quickly. It is conjectured that humans do parallel computation.<br>Learning corresponds to assigning weights to edges in an acyclic directed graph.</p>
+<p><em>Perceptrons</em>: Takes a vector of real inputs, calculates a linear comb. If &gt; threshold, output 1; 0 otherwise<br>Learning a perceptron = choosing values for the <em>coeffs</em>!<br>It can represent primitive boolean functions AND, OR, NAND, …<br>And all boolean functions in general<br>Training a perceptron: start with arbitrary weights, repeat… (p88)<br>to modify $w_i$ to new $w_i$: $\Delta w_i = \ita (t-o)x_i$, where $\ita$ is the Learning Rate, which is a small value.</p>
+<h1 id="Lecture_13">Lecture 13</h1>
+<p>$<br>\begin{center}<br>    \begin{tabular}{| l | l | l | l |}<br>    \hline<br>    Day &amp; Min Temp &amp; Max Temp &amp; Summary \ \hline<br>    Monday &amp; 11C &amp; 22C &amp; A clear day with lots of sunshine.<br>    However, the strong breeze will bring down the temperatures. \ \hline<br>    Tuesday &amp; 9C &amp; 19C &amp; Cloudy with rain, across many northern regions. Clear spells<br>    across most of Scotland and Northern Ireland,<br>    but rain reaching the far northwest. \ \hline<br>    Wednesday &amp; 10C &amp; 21C &amp; Rain will still linger for the morning.<br>    Conditions will improve by early afternoon and continue<br>    throughout the evening. \<br>    \hline<br>    \end{tabular}<br>\end{center}<br>$</p>
+<pre><code>Single Linear Unit / Network <span class="keyword">of</span> L.U.<span class="attribute">'s</span> / Perceptron(STEP fxn,Classifier) / Network <span class="keyword">of</span> Perceptrons
+</code></pre><p>Expresesive Power(hard bias): All Linear fxns / Still Linear, / Linear Classifiers /<br>Optimization Criterion(soft bias): Mean Squared Error / Same / Misclassific Rate<br>Computational complexity: Algebraically, Gradient Decent / Same /</p>
+<h1 id="Midterm_Prep">Midterm Prep</h1>
+<p>Data mining: extract information from a large data set and transform it to a structure for future use<br>Target function<br>Hypothesis: h is a <em>conjunction</em> of constraints on attributes<br>constraints: value; don’t care; no value allowed;<br>Concept learning:<br>Training example: &lt;$x_1$, c($x_1$)&gt;, where c is the <em>target function</em> or <em>concept</em>.<br>Determine: h such that h(x) = c(x) for all x in D<br>Find-S: h0 = most specific (no to everything); for each pos example, “merge” the attribute constraint<br>consistent: (h, D) if h(x) = c(x) for all c in D<br>version space: subset of H(hypothesis space) consistent with all training data D<br>List-then-Eliminate: start with the biggest hypothesis space; find version space by checking each training example<br>Input Space: X, Hypothesis Space: H (+1), Concept Space: $2^{|X|}$</p>
+<blockquote>
+<p>??? Candidate Elimination Algorithm ???</p>
+</blockquote>
+<p>Information Theory</p>
 
       
     </div>
@@ -507,238 +752,10 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-Chicken-Curry-in-30-minutes" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/01/12/Chicken-Curry-in-30-minutes/" class="article-date">
-  <time datetime="2015-01-12T05:38:50.000Z" itemprop="datePublished">Jan 12 2015</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/12/Chicken-Curry-in-30-minutes/">Chicken Curry in 30 minutes</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody" style="display:none">
-      
-        <p>I happened to walk in an Indian market on Craig street. I wanted to try something exotic, and bought this curry powder: <img src="https://lh5.googleusercontent.com/-FI0x1GBT1jU/VLNN0TqgCgI/AAAAAAAAArU/h7GOYj2aIho/w425-h567-no/IMG_20150111_232940.jpg" alt="Curry">.<br>Ingredients:</p>
-<ul>
-<li>Vegetables(potato, onion)</li>
-<li>Chicken thigh(Breast is okay but thigh is more moist and flavorful. Use breast if you do not like skin)</li>
-<li>Coconut milk(This makes the curry so different than the ones made with water)<br>Steps:</li>
-</ul>
-<ol>
-<li>Pan-sear the thigh. This burns the fat and makes the skin crispy.<br><img src="https://lh5.googleusercontent.com/-Jgp4XvaqFEk/VLMYJZmu1CI/AAAAAAAAAqk/IMOkdDH2G4I/w425-h567-no/IMG_20150111_194029.jpg" alt="Crispy thighs"></li>
-<li>Cut thigh and vegetables into cubes. Stir-fry them with curry powder until they smell fragrant and potatoes turn gold.</li>
-<li>Add <em>lots of</em> coconut milk. Do not add water. Let it boil.<br><img src="https://lh6.googleusercontent.com/-K5kbOxtAsco/VLMcOrS6oPI/AAAAAAAAAqo/7k1CzuW_OyA/w425-h567-no/IMG_20150111_195808.jpg" alt="The stew"></li>
-<li>Serve it with nice rice. I like to sprinkle some somoked paprika on top of it to make it more tasty.</li>
-<li>Enjoy!<br><img src="https://lh4.googleusercontent.com/-AD_0nEsyCuA/VLMjNZ8IpSI/AAAAAAAAAq0/h0kV2aUdGug/w756-h567-no/IMG_20150111_202813.jpg" alt="Final Product"></li>
-</ol>
-<p>I know it is not the authentic way to cook Indian food, but I think it is fast and tasty. You can try this. Try any combination of meat and vegetables. As long as there is the authentic curry powder and coconut milk, it will be thick, spicy, and tasty.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2015/01/12/Chicken-Curry-in-30-minutes/" data-id="dngtwrsaqpwx391u" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/food/">food</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Tech-Interview-1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/11/15/Tech-Interview-1/" class="article-date">
-  <time datetime="2014-11-15T20:27:33.000Z" itemprop="datePublished">Nov 15 2014</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/11/15/Tech-Interview-1/">Tech Interview</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody" style="display:none">
-      
-        <p>Some topics from either oj.leetcode.com or hackerrank:</p>
-<h3 id="Palindrome">Palindrome</h3>
-<ul>
-<li><a href="https://oj.leetcode.com/problems/palindrome-number/" target="_blank" rel="external">Palindrome Number</a><br>Is a number palindrome?<br>Solution: reverse the integer and see if they equal. Pay attention to the sign<br>Big-O: 0 space n time (n is the length of number)</li>
-<li><a href="https://oj.leetcode.com/problems/palindrome-partitioning/" target="_blank" rel="external">Palindrome Partition I</a><br>Find all possible ways to partition a string into palindrome substrings<br>Solution: DP<br>Big-O: n^2 space 2^n time (n is the length of string)</li>
-<li><a href="https://oj.leetcode.com/problems/palindrome-partitioning-ii/" target="_blank" rel="external">Palindrome Partition II</a><br>Find the minimum number of cuts to partition a string into palindrome substrings<br>Solution: Double DP. If use the previous problem, too much space and time.<br>Find P[i][j] s.t. P[i][j] is true if s[i:j] is palindrome. D[i] is the mincut<br>of s[i:].<br>Big-O: n^2 space n^2 time (n is the length of string)</li>
-<li><a href="https://www.hackerrank.com/challenges/palindrome-index" target="_blank" rel="external">Palindrome Index</a><br>Find the index in the string which if removed, makes the string palindrome<br>Solution: TODO</li>
-<li><a href="https://oj.leetcode.com/problems/longest-palindromic-substring/" target="_blank" rel="external">Longest Palindrome Substring</a><br>Solution: We can use the DP in “Pal Part II”, which will have O(n^2) big-O. Or we can use <strong>manacher’s algorithm</strong> in O(n).</li>
-</ul>
-<hr>
-<h3 id="Binary_Tree">Binary Tree</h3>
-<ul>
-<li><a href="https://oj.leetcode.com/problems/binary-tree-preorder-traversal/" target="_blank" rel="external">Preorder Traversal</a><br>Solution: Trivial</li>
-<li><a href="https://oj.leetcode.com/problems/binary-tree-postorder-traversal/" target="_blank" rel="external">Postorder Traversal</a><br>Solution: Trivial</li>
-<li><a href="https://oj.leetcode.com/problems/binary-tree-inorder-traversal/" target="_blank" rel="external">Inorder Traversal</a><br>Solution: Trivial</li>
-<li><a href="https://oj.leetcode.com/problems/binary-tree-maximum-path-sum/" target="_blank" rel="external">Binary Tree Maximum Sum</a><br>Solution: This problem has a lot of edge cases, and the “path” is not so well-defined in the problem.<br>This problem seems to be a DP problem at the first sight, but if you think about it, you can expand in<br>two directions at the root, but not at children of root, which is not a “path”. I used a hash table<br>to store each node’s single path sum, defined as the max sum reached by going either to the left<br>or to the right, but not both. And traverse the tree to compute each node’s maxPathSum.<br>Big-O: n space nlogn time</li>
-<li><a href="https://oj.leetcode.com/problems/flatten-binary-tree-to-linked-list/" target="_blank" rel="external">Flatten Binary Tree to Linked List</a><br>Solution: Use a queue. Brute force solution.<br>Big-O: n space n time</li>
-<li><a href="https://oj.leetcode.com/problems/minimum-depth-of-binary-tree/" target="_blank" rel="external">Minimum depth of tree</a><br>Find the minimum distance from root to a leaf node<br>Solution: this problem is not complicated, but not as trivial as it first appears. Consider (1, #, 2) as<br>an edge case.<br>Big-O: 1 space d work</li>
-<li><a href="https://oj.leetcode.com/problems/balanced-binary-tree/" target="_blank" rel="external">Balanced Binary Tree</a><br>Solution: Trivial<blockquote>
-<p>TODO: AVL Tree</p>
-</blockquote>
-</li>
-<li><a href="https://oj.leetcode.com/problems/convert-sorted-array-to-binary-search-tree/" target="_blank" rel="external">Sorted Array to Binary Tree</a><br>Solution: similar to binary search<br>Big-O: n space n time</li>
-<li><a href="https://oj.leetcode.com/problems/convert-sorted-list-to-binary-search-tree/" target="_blank" rel="external">Sorted list to Binary Tree</a><br>Solution: Use the above program<br>Big-O: n space n time</li>
-<li><a href="https://oj.leetcode.com/problems/maximum-depth-of-binary-tree/" target="_blank" rel="external">Maximum Depth of Binary Tree </a><br>Solution: Trivial</li>
-<li><a href="https://oj.leetcode.com/problems/binary-tree-level-order-traversal/" target="_blank" rel="external">Level order Traversal</a><br>Solution: Create a hash table of <node, height=""><br>Big-O: n time n space</node,></li>
-<li><a href="https://oj.leetcode.com/problems/binary-tree-level-order-traversal-ii/" target="_blank" rel="external">Level order Traversal II</a><br>Solution: Similar to the above problem.</li>
-<li><a href="https://oj.leetcode.com/problems/binary-tree-zigzag-level-order-traversal/" target="_blank" rel="external">Zigzag level order traversal</a><br>Solution: Similar to the above</li>
-<li><a href="https://oj.leetcode.com/problems/same-tree/" target="_blank" rel="external">Same Tree</a><br>Solution: Trivial</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2014/11/15/Tech-Interview-1/" data-id="nvg1p85unjbxi07k" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interview/">Interview</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CacheLab-Part-B" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/10/07/CacheLab-Part-B/" class="article-date">
-  <time datetime="2014-10-07T04:51:02.000Z" itemprop="datePublished">Oct 7 2014</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/07/CacheLab-Part-B/">CacheLab Part B</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody" style="display:none">
-      
-        <h3 id="CacheLab_Part_B">CacheLab Part B</h3>
-<blockquote>
-<p>Part B of CacheLab is very challenging. I spent tons of hours on this, and I would like to write a blog on how I approached this problem.</p>
-</blockquote>
-<p>So before going into the details for each problem, there are something we should not that apply to all three problems:</p>
-<ul>
-<li>The cache has parameters: s = 5, E = 1, b = 5. The b=5 tells us that each line stores 2^5 = 32 bytes, or 8 integers. The E = 1 tells us that it is direct-mapped. And this has a very important implication is that, if we reference two addresses of the same <em>set</em>, the latter will cause the first to evict! This is because we have only one line in one set.</li>
-<li>To see why this is important to this lab, let’s run <code>csim</code> against our program and store the trace into a file. We can see that the first matrix starts with <strong>6022e0</strong>, the second starts with <strong>6422e0</strong>. This means that, <em>for the same row of A and B, they are cached to the same set, and will cause conflict.</em></li>
-<li>So this means we have to take special care for diagonal entries when transposing the matrix.</li>
-<li>Another thing to notice, I borrowed this image from another blog:<br><img src="http://winnieliu.org/images/others/cache32.png" alt="set number for 32*32" title="Access pattern"><br>So when we read A[0][0], we can read A[0][1] to A[0][7] <em>without a single miss</em>. So we want to explore that to avoid misses as much as possible.<h4 id="32_*_32">32 * 32</h4>
-Upperbound for misses: 300<br>Please refer to the image for 32 <em> 32. In this case, if we deal with 8</em>8 blocks, then we can avoid misses because we can store each row in a cache line, which is of <strong>8</strong> integers. However, we should avoid accessing diagonal entries in the loop. This is because if we do this:</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">B[<span class="link_label">i</span>][<span class="link_reference">j</span>] = A[<span class="link_label">j</span>][<span class="link_reference">i</span>]</div></pre></td></tr></table></figure>
-
-<p>Since for diagonal entries, i=j, we kiced A[j] out of the cache with B[i]. So we will check for diagonal entry in each loop, store it in a temporary variable, and put it in B after the loop.<br>This approach makes <strong>287</strong> misses.</p>
-<h4 id="61_*_67">61 * 67</h4>
-<p>Upperbound for misses 2000<br>We can use the same approach of blocking to divide this matrix to sub-matrices. This problem is trivial compared to <strong>64*64</strong>. I found that if we try different sizes of sub-matrices, we can get some pretty good results. My best <strong>guess</strong> so far is 18, with <strong>1815</strong> misses.</p>
-<h4 id="64_*_64">64 * 64</h4>
-<p>This is the most interesting/challenging problem. If we try to simply divide the matrix into smaller matrices, we get somewhere between 1600 ~ 2000 depending on the size of the sub matrix. We will first look at the graph, again, credit to winnieliu, who had an amazing <a href="https://winnieliu.org" target="_blank" rel="external">blog</a>.<br><img src="http://winnieliu.org/images/others/cache64.png" alt="set number for 64 * 64"><br>We can see that since our cache can only store 32 <em> 32 bytes, which is 32 </em> 8 integers, it doesn’t make much sense in this case to do 8<em>8 blocks because we will have misses in 8</em>8 blocks. 0 will conflict with 0, 1 with 1, etc. It seems like 4 <em> 8 is a pretty good candidate, but 4 </em> 8 is not a square and can thus make things complicated.</p>
-<h5 id="First_Try">First Try</h5>
-<p>I tried to use 4*4 blocks first. I tried to use 8 local variables, which is the max number of local vars I can manage to use. It gives 1630-ish misses. Not good enough. So I ran <code>csim</code> against this solution, and looked for the misses. I found that since we only have 8 vars, if we access 2 rows of length 4 of A, we have good locality on A, because we have 2 misses for 8 references. However, we have very bad locality for B, because in B, this is 4 rows of 2 cols, we have 4 misses in 8 references.<br>If we try to figure out why this doesn’t work, we can tell that:</p>
-<ul>
-<li>We didn’t fully explore the fact that once we load A[0][0], <strong>eight</strong> numbers are loaded. We just used <strong>four</strong>.</li>
-<li>We didn’t have a good <strong>access pattern</strong> for B. We are jumping back and forth.</li>
-</ul>
-<p>So we kind of have this idea that, we still want the width of the sub matrix to be 8 to use that at our advantage.<br>So we still divide it into 8*8 blocks. But this time, instead of solving it row by row, we are going to divide it even more to 4 4 by 4 blocks. So suppose <code>i, j</code> are the coordinates for the top-left corner of this 8 by 8 block. We use a iterator <code>k</code> to help use traverse inside this block. We can label it as:<br>| a  |  b |<br>| c  |  d |<br>where a, b, c, d are 4 by 4.</p>
-<h5 id="a">a</h5>
-<p>So to fill a, we need to access row j ~ j+3, col i~i+3 of A (so that rows of B can be i~i+3, cols of B can be j ~ j+3). However, instead of reading four cols, we know we can read <strong>8</strong> cols without misses. So we read col i~i+7 of A, for i~i+3, we do the usual transpose, for i+4 ~ i+5, instead of transposing them, which will cause more misses to the next step, we are going to store them in the position of b.<br>An example of doing so is:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">tmp = A[<span class="link_label">k</span>][<span class="link_reference">i+4</span>];</div><div class="line">B[<span class="link_label">i</span>][<span class="link_reference">k+4</span>] = tmp;</div></pre></td></tr></table></figure>
-
-<p>So an interesting to note after we have transposed a, c’s transpose is now in b.</p>
-<h5 id="b_c">b c</h5>
-<p>We are going to do b and c together.<br>So we scan a row of b to local variables, find values in A to fill the row in b, and use local variables to fill a row of c. Repeat this step four times.</p>
-<h5 id="d">d</h5>
-<p>Nothing special here, for (i, j) in B, just look for (j, i) in A. Fill d row by row to use cache at our advantage.<br>This algorithm gives us a total misses of <strong>1219</strong>.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2014/10/07/CacheLab-Part-B/" data-id="1vz4kgylwliy7unh" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cachelab/">cachelab</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Create-a-blog-with-hexo" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/10/05/Create-a-blog-with-hexo/" class="article-date">
-  <time datetime="2014-10-06T02:13:18.000Z" itemprop="datePublished">Oct 5 2014</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/05/Create-a-blog-with-hexo/">Create a blog with hexo</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody" style="display:none">
-      
-        <p>I started to get bored with writing a blog on wordpress.com. It should be more exciting to host my own blog. So I googled and found this blog framework <em>Hexo</em>. It’s super easy to use for someone with a basic understanding of nodejs applications and simple deployment on Github/Heroku etc. Anyway, it’s a fun thing to do! Hopefully I can keep writing more blogs.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2014/10/05/Create-a-blog-with-hexo/" data-id="6fyzg5gg95syf8xs" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </section>
         
@@ -750,7 +767,7 @@ Upperbound for misses: 300<br>Please refer to the image for 32 <em> 32. In this 
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/251/">251</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cachelab/">cachelab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">food</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/">machine learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/">notes</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/251/">251</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cachelab/">cachelab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">food</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/">machine learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/">notes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/schedule/">schedule</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -759,7 +776,7 @@ Upperbound for misses: 300<br>Please refer to the image for 32 <em> 32. In this 
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/213/" style="font-size: 10.00px;">213</a><a href="/tags/251/" style="font-size: 20.00px;">251</a><a href="/tags/C/" style="font-size: 13.33px;">C++</a><a href="/tags/Interview/" style="font-size: 13.33px;">Interview</a><a href="/tags/Python/" style="font-size: 13.33px;">Python</a><a href="/tags/algorithm/" style="font-size: 10.00px;">algorithm</a><a href="/tags/cachelab/" style="font-size: 13.33px;">cachelab</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab, 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab; 213</a><a href="/tags/combination/" style="font-size: 10.00px;">combination</a><a href="/tags/editor/" style="font-size: 10.00px;">editor</a><a href="/tags/emacs/" style="font-size: 10.00px;">emacs</a><a href="/tags/food/" style="font-size: 16.67px;">food</a><a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a><a href="/tags/leetcode/" style="font-size: 10.00px;">leetcode</a><a href="/tags/lisp/" style="font-size: 10.00px;">lisp</a><a href="/tags/machine-learning/" style="font-size: 13.33px;">machine learning</a><a href="/tags/math/" style="font-size: 20.00px;">math</a><a href="/tags/notes/" style="font-size: 13.33px;">notes</a><a href="/tags/permutation/" style="font-size: 10.00px;">permutation</a>
+      <a href="/tags/213/" style="font-size: 10.00px;">213</a><a href="/tags/251/" style="font-size: 20.00px;">251</a><a href="/tags/C/" style="font-size: 13.33px;">C++</a><a href="/tags/Interview/" style="font-size: 13.33px;">Interview</a><a href="/tags/Python/" style="font-size: 13.33px;">Python</a><a href="/tags/algorithm/" style="font-size: 10.00px;">algorithm</a><a href="/tags/cachelab/" style="font-size: 13.33px;">cachelab</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab, 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab; 213</a><a href="/tags/combination/" style="font-size: 10.00px;">combination</a><a href="/tags/editor/" style="font-size: 10.00px;">editor</a><a href="/tags/emacs/" style="font-size: 10.00px;">emacs</a><a href="/tags/food/" style="font-size: 16.67px;">food</a><a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a><a href="/tags/leetcode/" style="font-size: 10.00px;">leetcode</a><a href="/tags/lisp/" style="font-size: 10.00px;">lisp</a><a href="/tags/machine-learning/" style="font-size: 13.33px;">machine learning</a><a href="/tags/math/" style="font-size: 20.00px;">math</a><a href="/tags/notes/" style="font-size: 13.33px;">notes</a><a href="/tags/permutation/" style="font-size: 10.00px;">permutation</a><a href="/tags/schedule/" style="font-size: 13.33px;">schedule</a>
     </div>
   </div>
 
@@ -768,7 +785,7 @@ Upperbound for misses: 300<br>Please refer to the image for 32 <em> 32. In this 
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -780,23 +797,23 @@ Upperbound for misses: 300<br>Please refer to the image for 32 <em> 32. In this 
       <ul>
         
           <li>
+            <a href="/2015/02/26/-15-251-NP/">[15-251] NP</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/25/undergrad-schedule/">undergrad schedule</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/24/-15-251-Graph-Algorithms/">[15-251] Graph Algorithms</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/15/-15251-Computational-Complexity/">[15251]-Computational Complexity</a>
+          </li>
+        
+          <li>
             <a href="/2015/01/31/-15251-Uncountability-and-Uncomputability/">[15251 Uncountability and Uncomputability]</a>
-          </li>
-        
-          <li>
-            <a href="/2015/01/29/-15251-Turing-Machines/">[15251]-Set Theory And Church Turing Thesis</a>
-          </li>
-        
-          <li>
-            <a href="/2015/01/22/-15251-Formalization-of-Proof-Finite-Automata/">[15251] Formalization of Proof, Finite Automata</a>
-          </li>
-        
-          <li>
-            <a href="/2015/01/21/Machine-Learning-Notes/">Machine Learning Notes</a>
-          </li>
-        
-          <li>
-            <a href="/2015/01/15/-15251-Deductive-Systems-and-Propositional-Logic/">[15251] Deductive Systems and Propositional Logic</a>
           </li>
         
       </ul>
