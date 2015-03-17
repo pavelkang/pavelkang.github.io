@@ -147,9 +147,10 @@ ga('send', 'pageview');
 </ul>
 <h3 id="Problems">Problems</h3>
 <ul>
-<li>$HAM-CYCLE \le HAM-PATH$<br>** For each edge $(u, v)$, add “tenacle” $u’ v’$.</li>
-<li>$TSP \le HAM-CYCLE$<br>** Set weight of original edges to be $0$, others be $1$.</li>
-<li>$SUBSET-SUM \le 3-SAT$<br>** todo</li>
+<li>$HAM-CYCLE \le HAM-PATH$<br>..* For each edge $(u, v)$, add “tenacle” $u’ v’$.</li>
+<li>$TSP \le HAM-CYCLE$<br>..** Set weight of original edges to be $0$, others be $1$.</li>
+<li>$SUBSET-SUM \le 3-SAT$<br>..<strong> For a $n$-var, $k$-clause 3-SAT, we build a table of vectors where lower $n$ bits, upper $k$ bits. If $x_i$ or $\not x_i$ then the lower $i$ bit is 1. If it is present in the $j$th clause, then upper $j$ is 1. For each upper column, we add two “slack rows” where one is 1, the other is 2.<br>..</strong> If the $3-SAT$ is satisfiable, then we pick the rows representing true vars. We get first n bits 1s. We get each upper column 1, 2, or 3 (it cannot be 0 because there is at least 1 true var in each clause, it cannot be more than 3 because there are 3 vars in each clause). Then we pick corresponding slack rows to get all 4s on the upper bits. The reverse direction is similar.</li>
+<li>$3-SAT\le VC$</li>
 </ul>
 
       
