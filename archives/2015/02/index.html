@@ -117,6 +117,7 @@ ga('send', 'pageview');
 <p>NP: Nondeterminsitic Polynomial Time</p>
 <p>C-hard: C can be reduced to A $\forall C \in C$<br>C-complete: C is in $C$.</p>
 <h1 id="Midterm_Review">Midterm Review</h1>
+<h2 id="Time_Complexity,_NP">Time Complexity, NP</h2>
 <ul>
 <li>A language is in NP iff it can be decided by an NTM in polynomial time<ul>
 <li>Non-deterministically guess its verifier</li>
@@ -124,10 +125,29 @@ ga('send', 'pageview');
 </ul>
 </li>
 <li>SAT $\in$ P iff P = NP</li>
-<li>3SAT reduce to CLIQUE (recitation)<blockquote>
+<li><p>3SAT reduce to CLIQUE (triples with two exceptions)</p>
+<blockquote>
 <p>Cook-Levin Theorem<br>  SAT is NP-complete</p>
 </blockquote>
 </li>
+<li><p>3SAT is NP-c (reduce to SAT)</p>
+</li>
+<li>CLIQUE is NP-c</li>
+<li>V-C is NP-c (recitation)</li>
+<li>HAMPATH is NP-c (3SAT, diamond, zigzag, add additional edge when $c_j$ contains $\not x_i$)</li>
+<li>UHAMPATH is NP-c (HAMPATH by disassembling)</li>
+<li>SUBSET SUM(3SAT)</li>
+</ul>
+<h2 id="Space_Complexity">Space Complexity</h2>
+<p>P $\subset$ NP $\subset$ PSPACE = NPSPACE $\subset$ EXPTIME</p>
+<ul>
+<li>If A can be decided in $t(n)$, then A has circuit complexity $t(n)^2$ (Reverse also true?)</li>
+<li>Circuit-SAT is NP-C</li>
+<li>Do exerices 9</li>
+</ul>
+<h3 id="Problems">Problems</h3>
+<ul>
+<li>$HAM-CYCLE \le HAM-PATH$</li>
 </ul>
 
       
@@ -227,7 +247,19 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody" style="display:none">
       
-        <p>Problem: Identify all nodes reachable from s.<br>BFS, DFS, AFS<br>AFS finds a <em>spanning tree</em> rooted at s (bag, mark)<br>Why does AFS halt?<br>If we put <em>edge</em> in the bag, get a spanning tree.<br>Full AFS finds all connected components<br>CFS: Cheapest First Search<br><em>MST</em>: subset of edges of minimum total cost such that all vertices connected<br>Prim: put the cheapest edge in the bag. If use Priority Queue, $O(Elog(E))$ run-time.<br><em>MST Cut Property</em> e is the cheapest edge from S to not S, then must be in the MST.</p>
+        <h3 id="Basics">Basics</h3>
+<ul>
+<li>Regular: all nodes have same degrees</li>
+<li>Walk</li>
+<li>Path: Walk with no repeated vertices</li>
+<li>Cycle: a walk from u to u where the only repeated vertex is u</li>
+<li>Tree: connected; n-1 edges; acyclic</li>
+<li>Local Search guarantees to get $\ge \frac{m}{2}$<ul>
+<li>Each vertex has $\ge \frac{deg(v)}{2}$ edges cut because otherwise we can flip its color to get more cuts</li>
+</ul>
+</li>
+</ul>
+<p>Problem: Identify all nodes reachable from s.<br>BFS, DFS, AFS<br>AFS finds a <em>spanning tree</em> rooted at s (bag, mark)<br>Why does AFS halt?<br>If we put <em>edge</em> in the bag, get a spanning tree.<br>Full AFS finds all connected components<br>CFS: Cheapest First Search<br><em>MST</em>: subset of edges of minimum total cost such that all vertices connected<br>Prim: put the cheapest edge in the bag. If use Priority Queue, $O(Elog(E))$ run-time.<br><em>MST Cut Property</em> e is the cheapest edge from S to not S, then must be in the MST.<br><em>Kruskal</em>: Go through edges, add as long as it does not make cycles<br><em>Boruvka</em>: Add the cheapest edges out of each c.c.</p>
 <h2 id="Matching">Matching</h2>
 <p><em>Bipartite Graph</em>: there is a bipartition X and Y such that each edge connects x and y.<br><em>Matching</em>: a subset of edges that do not share an endpoint.<br><em>Maximum Matching</em>: A matching with largest number of edges<br><em>Perfect Matching</em>: A matching that covers all vertices<br><em>Stable matching</em>: There is no unstable pair(u, v not matched to each other, but they prefer each other to their current partners)<br>GS-algorithm: While a man is unmatched: propose to w(highest in the list)</p>
 <ul>

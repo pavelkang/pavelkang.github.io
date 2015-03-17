@@ -5,15 +5,36 @@
   
   <title>[15-251] Graph Algorithms | Kai Kang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Problem: Identify all nodes reachable from s.BFS, DFS, AFSAFS finds a spanning tree rooted at s (bag, mark)Why does AFS halt?If we put edge in the bag, get a spanning tree.Full AFS finds all connected">
+  <meta name="description" content="Basics
+
+Regular: all nodes have same degrees
+Walk
+Path: Walk with no repeated vertices
+Cycle: a walk from u to u where the only repeated vertex is u
+Tree: connected; n-1 edges; acyclic
+Local Search gu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[15-251] Graph Algorithms">
 <meta property="og:url" content="https://pavelkang.github.io/2015/02/24/-15-251-Graph-Algorithms/">
 <meta property="og:site_name" content="Kai Kang">
-<meta property="og:description" content="Problem: Identify all nodes reachable from s.BFS, DFS, AFSAFS finds a spanning tree rooted at s (bag, mark)Why does AFS halt?If we put edge in the bag, get a spanning tree.Full AFS finds all connected">
+<meta property="og:description" content="Basics
+
+Regular: all nodes have same degrees
+Walk
+Path: Walk with no repeated vertices
+Cycle: a walk from u to u where the only repeated vertex is u
+Tree: connected; n-1 edges; acyclic
+Local Search gu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[15-251] Graph Algorithms">
-<meta name="twitter:description" content="Problem: Identify all nodes reachable from s.BFS, DFS, AFSAFS finds a spanning tree rooted at s (bag, mark)Why does AFS halt?If we put edge in the bag, get a spanning tree.Full AFS finds all connected">
+<meta name="twitter:description" content="Basics
+
+Regular: all nodes have same degrees
+Walk
+Path: Walk with no repeated vertices
+Cycle: a walk from u to u where the only repeated vertex is u
+Tree: connected; n-1 edges; acyclic
+Local Search gu">
 
   
     <link rel="alternative" href="/atom.xml" title="Kai Kang" type="application/atom+xml">
@@ -100,7 +121,19 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Problem: Identify all nodes reachable from s.<br>BFS, DFS, AFS<br>AFS finds a <em>spanning tree</em> rooted at s (bag, mark)<br>Why does AFS halt?<br>If we put <em>edge</em> in the bag, get a spanning tree.<br>Full AFS finds all connected components<br>CFS: Cheapest First Search<br><em>MST</em>: subset of edges of minimum total cost such that all vertices connected<br>Prim: put the cheapest edge in the bag. If use Priority Queue, $O(Elog(E))$ run-time.<br><em>MST Cut Property</em> e is the cheapest edge from S to not S, then must be in the MST.</p>
+        <h3 id="Basics">Basics</h3>
+<ul>
+<li>Regular: all nodes have same degrees</li>
+<li>Walk</li>
+<li>Path: Walk with no repeated vertices</li>
+<li>Cycle: a walk from u to u where the only repeated vertex is u</li>
+<li>Tree: connected; n-1 edges; acyclic</li>
+<li>Local Search guarantees to get $\ge \frac{m}{2}$<ul>
+<li>Each vertex has $\ge \frac{deg(v)}{2}$ edges cut because otherwise we can flip its color to get more cuts</li>
+</ul>
+</li>
+</ul>
+<p>Problem: Identify all nodes reachable from s.<br>BFS, DFS, AFS<br>AFS finds a <em>spanning tree</em> rooted at s (bag, mark)<br>Why does AFS halt?<br>If we put <em>edge</em> in the bag, get a spanning tree.<br>Full AFS finds all connected components<br>CFS: Cheapest First Search<br><em>MST</em>: subset of edges of minimum total cost such that all vertices connected<br>Prim: put the cheapest edge in the bag. If use Priority Queue, $O(Elog(E))$ run-time.<br><em>MST Cut Property</em> e is the cheapest edge from S to not S, then must be in the MST.<br><em>Kruskal</em>: Go through edges, add as long as it does not make cycles<br><em>Boruvka</em>: Add the cheapest edges out of each c.c.</p>
 <h2 id="Matching">Matching</h2>
 <p><em>Bipartite Graph</em>: there is a bipartition X and Y such that each edge connects x and y.<br><em>Matching</em>: a subset of edges that do not share an endpoint.<br><em>Maximum Matching</em>: A matching with largest number of edges<br><em>Perfect Matching</em>: A matching that covers all vertices<br><em>Stable matching</em>: There is no unstable pair(u, v not matched to each other, but they prefer each other to their current partners)<br>GS-algorithm: While a man is unmatched: propose to w(highest in the list)</p>
 <ul>

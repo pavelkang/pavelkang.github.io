@@ -133,6 +133,7 @@ ga('send', 'pageview');
 <p>NP: Nondeterminsitic Polynomial Time</p>
 <p>C-hard: C can be reduced to A $\forall C \in C$<br>C-complete: C is in $C$.</p>
 <h1 id="Midterm_Review">Midterm Review</h1>
+<h2 id="Time_Complexity,_NP">Time Complexity, NP</h2>
 <ul>
 <li>A language is in NP iff it can be decided by an NTM in polynomial time<ul>
 <li>Non-deterministically guess its verifier</li>
@@ -140,10 +141,29 @@ ga('send', 'pageview');
 </ul>
 </li>
 <li>SAT $\in$ P iff P = NP</li>
-<li>3SAT reduce to CLIQUE (recitation)<blockquote>
+<li><p>3SAT reduce to CLIQUE (triples with two exceptions)</p>
+<blockquote>
 <p>Cook-Levin Theorem<br>  SAT is NP-complete</p>
 </blockquote>
 </li>
+<li><p>3SAT is NP-c (reduce to SAT)</p>
+</li>
+<li>CLIQUE is NP-c</li>
+<li>V-C is NP-c (recitation)</li>
+<li>HAMPATH is NP-c (3SAT, diamond, zigzag, add additional edge when $c_j$ contains $\not x_i$)</li>
+<li>UHAMPATH is NP-c (HAMPATH by disassembling)</li>
+<li>SUBSET SUM(3SAT)</li>
+</ul>
+<h2 id="Space_Complexity">Space Complexity</h2>
+<p>P $\subset$ NP $\subset$ PSPACE = NPSPACE $\subset$ EXPTIME</p>
+<ul>
+<li>If A can be decided in $t(n)$, then A has circuit complexity $t(n)^2$ (Reverse also true?)</li>
+<li>Circuit-SAT is NP-C</li>
+<li>Do exerices 9</li>
+</ul>
+<h3 id="Problems">Problems</h3>
+<ul>
+<li>$HAM-CYCLE \le HAM-PATH$</li>
 </ul>
 
       
