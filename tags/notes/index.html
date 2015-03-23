@@ -102,7 +102,43 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody" style="display:none">
       
-        <h1 id="Lecture_1">Lecture 1</h1>
+        <h1 id="Lecture_16">Lecture 16</h1>
+<ul>
+<li>Q1: How good is a hypothesis?<ul>
+<li>True error: $Err_D(h)$ (confidence interval of true error)</li>
+</ul>
+</li>
+<li>Q2: Is my hypothesis better than yours:<ul>
+<li>$d = Err_Dh_B - Err_Dh_A$</li>
+<li>$\hat{d} = Err<em>{SA}….Err</em>{SB}$: unbiased estimation (notes有公式，很像confidence interval. SA SB are two samples better be similar. Pair Test. 比如一个班做两套不同的卷子是不合理的)</li>
+</ul>
+</li>
+<li>Q3: Is my learning algorithm better than yours:<ul>
+<li>$h=L_A(s)$ (s is the training sample)</li>
+<li>We compare $Err_D(L_A(s))$, $Err_D(L_B(s))$. (s是蓝色的(observed), 所以这两个数都是observed，所以对于不同的training sample, 结果可能不一样。所以变成左右两边取expetation.)</li>
+<li>对于一些s当做training，用test sample测error，可以找到d hat。如果sample有限就每次拿出来一点当training另外的当testing</li>
+</ul>
+</li>
+</ul>
+<h3 id="Bayesian_Learning">Bayesian Learning</h3>
+<ul>
+<li>Probabilistic soft bias. $\forall h\in H, p(h)$ captures initial belief.</li>
+<li>Consistency -&gt; Match $P(D|h)$: likelihood</li>
+<li>Bayes Game<ul>
+<li>Start with $H = (h_1, h_2, …, h_n)$. PRIOR(INITIAL): $p(h)$.</li>
+<li>Data D</li>
+<li>Likelihood $P(D|h)$</li>
+<li>Bayes formula(MUST)<ul>
+<li>$P(h, D) = P(h) <em> P(D|h) = P(D) </em> P(h|D)$</li>
+<li>$P(h)$ captures the belief BEFORE seeing the data, PRIOR</li>
+<li>$P(h|D)$ captures … AFTER, POSTERIOR</li>
+<li>$P(h|D) = \frac{P(D|h) * P(h)}{P(D)}$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="Lecture_1">Lecture 1</h1>
 <h3 id="Jan_14_Wed">Jan 14 Wed</h3>
 <hr>
 <p><strong>Machine Learning</strong>: program that gets better at some tasks(functions) with experiences(data, examples)<br>Formalizing a task as a function learning task (f: board pos -&gt; next move)<br><em>Human Annotation</em>: human assigning scores</p>
