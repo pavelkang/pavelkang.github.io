@@ -385,6 +385,9 @@ ga('send', 'pageview');
 <h1 id="Midterm_Prep">Midterm Prep</h1>
 <p>Data mining: extract information from a large data set and transform it to a structure for future use<br>Target function<br>Hypothesis: h is a <em>conjunction</em> of constraints on attributes<br>constraints: value; don’t care; no value allowed;<br>Concept learning:<br>Training example: &lt;$x_1$, c($x_1$)&gt;, where c is the <em>target function</em> or <em>concept</em>.<br>Determine: h such that h(x) = c(x) for all x in D<br>Find-S: h0 = most specific (no to everything); for each pos example, “merge” the attribute constraint<br>consistent: (h, D) if h(x) = c(x) for all c in D<br>version space: subset of H(hypothesis space) consistent with all training data D<br>List-then-Eliminate: start with the biggest hypothesis space; find version space by checking each training example<br>Input Space: X, Hypothesis Space: H (+1), Concept Space: $2^{|X|}$</p>
 <p>Information Theory<br>Information: Reduction in uncertainty: $I(E)=log_2\frac{1}{P(E)}$<br>Entropy: From a Zero-memory source S, the entropy is $\Sigma_i p_i * I(s_i) = E[log\frac{1}{p_i}]$<br>avg amount of information<br>H(T, M) &lt; H(T) + H(M) ???<br>q distribution ???<br>H(T) - H(T|M) = H(M) - H(M|T) ???</p>
+<h1 id="Lecture_15">Lecture 15</h1>
+<h3 id="Hypothesis_Testing">Hypothesis Testing</h3>
+<p>Q1: Given a hypothesis, how good is it?<br>Q2: Given two hypothesis, which one is better?<br>Q3: Given two learning algorithms, which one is better?<br>Not about the portion of the mistakes in the whole input space, but the probability of making errors.(Consider when most of the examples are mistakes)<br>$Err_r(h)$ is an estimator of $Err_D(h)$.<br>$BIAS = E[EST] - TRUTH$ (Mean is around the truth)<br>$VARIANCE = E[EST - E[EST]]^2$(Also needs to be accurate (sharp around the truth))<br>True Error to Sample Error (Probability calculation)<br>Sample Error to True Error (Statistical Inferrence)</p>
 
       
     </div>

@@ -3,35 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>[15-251] NP | Kai Kang</title>
+  <title>Create a blog with hexo | Kai Kang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="NP and NP-completeness
-NP: We have a simple proof to verify a solution
-
-length of proof is polynomial
-proof can be verified in polynomial timeCook-Levin Theorem: SAT is NP-complete
-
-To show A is NP-co">
+  <meta name="description" content="I started to get bored with writing a blog on wordpress.com. It should be more exciting to host my own blog. So I googled and found this blog framework Hexo. It’s super easy to use for someone with a">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[15-251] NP">
-<meta property="og:url" content="https://pavelkang.github.io/2015/02/26/-15-251-NP/">
+<meta property="og:title" content="Create a blog with hexo">
+<meta property="og:url" content="https://pavelkang.github.io/2014/10/05/Create-a-blog-with-hexo/">
 <meta property="og:site_name" content="Kai Kang">
-<meta property="og:description" content="NP and NP-completeness
-NP: We have a simple proof to verify a solution
-
-length of proof is polynomial
-proof can be verified in polynomial timeCook-Levin Theorem: SAT is NP-complete
-
-To show A is NP-co">
+<meta property="og:description" content="I started to get bored with writing a blog on wordpress.com. It should be more exciting to host my own blog. So I googled and found this blog framework Hexo. It’s super easy to use for someone with a">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[15-251] NP">
-<meta name="twitter:description" content="NP and NP-completeness
-NP: We have a simple proof to verify a solution
-
-length of proof is polynomial
-proof can be verified in polynomial timeCook-Levin Theorem: SAT is NP-complete
-
-To show A is NP-co">
+<meta name="twitter:title" content="Create a blog with hexo">
+<meta name="twitter:description" content="I started to get bored with writing a blog on wordpress.com. It should be more exciting to host my own blog. So I googled and found this blog framework Hexo. It’s super easy to use for someone with a">
 
   
     <link rel="alternative" href="/atom.xml" title="Kai Kang" type="application/atom+xml">
@@ -96,10 +78,10 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post--15-251-NP" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Create-a-blog-with-hexo" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/02/26/-15-251-NP/" class="article-date">
-  <time datetime="2015-02-27T02:19:16.000Z" itemprop="datePublished">Feb 26 2015</time>
+    <a href="/2014/10/05/Create-a-blog-with-hexo/" class="article-date">
+  <time datetime="2014-10-06T02:13:18.000Z" itemprop="datePublished">Oct 5 2014</time>
 </a>
     
   </div>
@@ -110,7 +92,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      [15-251] NP
+      Create a blog with hexo
     </h1>
   
 
@@ -118,99 +100,15 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="NP_and_NP-completeness">NP and NP-completeness</h3>
-<p><em>NP</em>: We have a simple proof to verify a solution</p>
-<ul>
-<li>length of proof is polynomial</li>
-<li>proof can be verified in polynomial time<br><em>Cook-Levin Theorem</em>: SAT is NP-complete</li>
-</ul>
-<p>To show A is NP-complete:</p>
-<ol>
-<li>A is in NP</li>
-<li>Pick a NP-complete problem L</li>
-<li>Show L reduces to A</li>
-</ol>
-<p>NP: Nondeterminsitic Polynomial Time</p>
-<p>C-hard: C can be reduced to A $\forall C \in C$<br>C-complete: C is in $C$.</p>
-<h1 id="Midterm_Review">Midterm Review</h1>
-<h2 id="Types_of_problems">Types of problems</h2>
-<ul>
-<li>Prove big-oh or not big-oh (exists…for all; for all… exists).</li>
-<li>Circuit family</li>
-<li>Fast binary conversion, Nice language, paren algorithm, sorting $\frac{3n}{2}$</li>
-<li>!x1, a, b; x2, b, c; !x3, c, d; (1/3 SAT)</li>
-</ul>
-<h2 id="Time_Complexity,_NP">Time Complexity, NP</h2>
-<ul>
-<li>A language is in NP iff it can be decided by an NTM in polynomial time<ul>
-<li>Non-deterministically guess its verifier</li>
-<li>Construct the verifier with the accepting path in NTM</li>
-</ul>
-</li>
-<li>SAT $\in$ P iff P = NP</li>
-<li><p>3SAT reduce to CLIQUE (triples with two exceptions)</p>
-<blockquote>
-<p>Cook-Levin Theorem<br>  SAT is NP-complete</p>
-</blockquote>
-</li>
-<li><p>3SAT is NP-c (reduce to SAT)</p>
-</li>
-<li>CLIQUE is NP-c</li>
-<li>V-C is NP-c (recitation)</li>
-<li>HAMPATH is NP-c (3SAT, diamond, zigzag, add additional edge when $c_j$ contains $\not x_i$)</li>
-<li>UHAMPATH is NP-c (HAMPATH by disassembling)</li>
-<li>SUBSET SUM(3SAT)</li>
-</ul>
-<h2 id="Space_Complexity">Space Complexity</h2>
-<p>P $\subset$ NP $\subset$ PSPACE = NPSPACE $\subset$ EXPTIME</p>
-<ul>
-<li>If A can be decided in $t(n)$, then A has circuit complexity $t(n)^2$ (Reverse also true?)</li>
-<li>Circuit-SAT is NP-C</li>
-<li>Do exerices 9</li>
-</ul>
-<h3 id="Problems">Problems</h3>
-<ul>
-<li>$HAM-CYCLE \le HAM-PATH$<ul>
-<li>For each edge $(u, v)$, add “tenacle” $u’ v’$.</li>
-</ul>
-</li>
-<li>$TSP \le HAM-CYCLE$<ul>
-<li>Set weight of original edges to be $0$, others be $1$.</li>
-</ul>
-</li>
-<li>$SUBSET-SUM \le 3-SAT$<ul>
-<li>For a $n$-var, $k$-clause 3-SAT, we build a table of vectors where lower $n$ bits, upper $k$ bits. If $x_i$ or $\not x_i$ then the lower $i$ bit is 1. If it is present in the $j$th clause, then upper $j$ is 1. For each upper column, we add two “slack rows” where one is 1, the other is 2.</li>
-<li>If the $3-SAT$ is satisfiable, then we pick the rows representing true vars. We get first n bits 1s. We get each upper column 1, 2, or 3 (it cannot be 0 because there is at least 1 true var in each clause, it cannot be more than 3 because there are 3 vars in each clause). Then we pick corresponding slack rows to get all 4s on the upper bits. The reverse direction is similar.</li>
-</ul>
-</li>
-<li>$3-SAT\le VC$<ul>
-<li>Construct a triplet for each clause, a pair for each variable $x$: $(x, \not x)$.</li>
-<li>For a truth assignment, we pick 1 from the triplet to be true, the other 2 to be false. Add the false ones to the vertex cover. Add the true variable to the vertex cover. With-in edges are covered by true variables. Edges from pair to triplet have two cases. If the end in the triplet is selected(false), it is covered. If not(true), it is covered by the end in the pair.</li>
-<li>For a n+2k vertex cover, 1 vertex in the triplet is not covered by itself but by the end in the pair, which is true. So this variable is true.</li>
-</ul>
-</li>
-<li>$SAT\le 3-SAT$<ul>
-<li>Use parse tree to construct triplets with intermediate results.</li>
-</ul>
-</li>
-<li>$SUBSET-SUM\le PARTITION$<ul>
-<li>populate $x_1, …, x_n, 2t-a$, where $a$ is the sum</li>
-</ul>
-</li>
-<li>$SUBGRAPH-ISOMORPHIC$<ul>
-<li>CLIQUE reduces to this</li>
-</ul>
-</li>
-<li>$HALTS$</li>
-</ul>
+        <p>I started to get bored with writing a blog on wordpress.com. It should be more exciting to host my own blog. So I googled and found this blog framework <em>Hexo</em>. It’s super easy to use for someone with a basic understanding of nodejs applications and simple deployment on Github/Heroku etc. Anyway, it’s a fun thing to do! Hopefully I can keep writing more blogs.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2015/02/26/-15-251-NP/" data-id="5becai7isqdj4tjz" class="article-share-link">Share</a>
+      <a data-url="https://pavelkang.github.io/2014/10/05/Create-a-blog-with-hexo/" data-id="6fyzg5gg95syf8xs" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/251/">251</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/">math</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 
     </footer>
   </div>
@@ -218,11 +116,15 @@ ga('send', 'pageview');
     
 <nav id="article-nav">
   
-  
-    <a href="/2015/02/25/undergrad-schedule/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">undergrad schedule</div>
+    <a href="/2014/10/07/CacheLab-Part-B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          CacheLab Part B
+        
+      </div>
     </a>
+  
   
 </nav>
 
