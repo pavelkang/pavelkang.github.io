@@ -80,6 +80,50 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-最近想做的菜" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/04/06/最近想做的菜/" class="article-date">
+  <time datetime="2015-04-06T19:43:24.000Z" itemprop="datePublished">Apr 6 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/06/最近想做的菜/">最近想做的菜</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody" style="display:none">
+      
+        <ol>
+<li>Beef Stroganoff<br>非常好吃好做的一道菜，用上了paprika，希望能结合中式调料配上米饭，加入剁椒和姜让他带上辣味应该会更好吃</li>
+<li>Smoked Salmon Egg with Croissant<br>没什么提升空间感觉，但是肯定好做好吃，smoked salmon怎么做都好吃</li>
+<li>腌笃鲜<br>在美国应该是做不成了，但是很想学</li>
+<li>麻辣鸡<br>处理一只嫩鸡，要么凉拌加上麻辣汁，要么用郫县豆瓣和剁椒炖，加上金针菇，香菇，青笋做一个锅</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://pavelkang.github.io/2015/04/06/最近想做的菜/" data-id="1d7mo2npq27cwcqv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/food/">food</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-15251-randomness" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/03/31/15251-randomness/" class="article-date">
@@ -122,6 +166,15 @@ ga('send', 'pageview');
 <li>Fermat’s little theorem: $A^{p-1}\equiv_p 1$</li>
 </ul>
 <h3 id="Cryptography">Cryptography</h3>
+<ul>
+<li>generator: when taking exponents, produces all elements</li>
+<li>RSA: take the eth root to solve…</li>
+</ul>
+<h3 id="Key_Cryptography">Key Cryptography</h3>
+<ul>
+<li>Caesar shift</li>
+<li></li>
+</ul>
 
       
     </div>
@@ -705,172 +758,6 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-Machine-Learning-Notes" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/01/21/Machine-Learning-Notes/" class="article-date">
-  <time datetime="2015-01-21T15:41:09.000Z" itemprop="datePublished">Jan 21 2015</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/21/Machine-Learning-Notes/">Machine Learning Notes</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody" style="display:none">
-      
-        <h1 id="Lecture_17">Lecture 17</h1>
-<ul>
-<li>Find $h_map$:<ul>
-<li>如果不好直接算最大值就取log。和对likelihood取log，算导数一样</li>
-</ul>
-</li>
-<li>Example: Gaussian<ul>
-<li>Given data $x_1, x_2, …$, assume $\sigma^2 = 1$, estimate u</li>
-<li>hard bias: choice of gaussian; soft: max-likelihood method</li>
-<li></li>
-</ul>
-</li>
-</ul>
-<h1 id="Lecture_16">Lecture 16</h1>
-<ul>
-<li>Q1: How good is a hypothesis?<ul>
-<li>True error: $Err_D(h)$ (confidence interval of true error)</li>
-</ul>
-</li>
-<li>Q2: Is my hypothesis better than yours:<ul>
-<li>$d = Err_Dh_B - Err_Dh_A$</li>
-<li>$\hat{d} = Err<em>{SA}….Err</em>{SB}$: unbiased estimation (notes有公式，很像confidence interval. SA SB are two samples better be similar. Pair Test. 比如一个班做两套不同的卷子是不合理的)</li>
-</ul>
-</li>
-<li>Q3: Is my learning algorithm better than yours:<ul>
-<li>$h=L_A(s)$ (s is the training sample)</li>
-<li>We compare $Err_D(L_A(s))$, $Err_D(L_B(s))$. (s是蓝色的(observed), 所以这两个数都是observed，所以对于不同的training sample, 结果可能不一样。所以变成左右两边取expetation.)</li>
-<li>对于一些s当做training，用test sample测error，可以找到d hat。如果sample有限就每次拿出来一点当training另外的当testing</li>
-</ul>
-</li>
-</ul>
-<h3 id="Bayesian_Learning">Bayesian Learning</h3>
-<ul>
-<li>Probabilistic soft bias. $\forall h\in H, p(h)$ captures initial belief.</li>
-<li>Consistency -&gt; Match $P(D|h)$: likelihood</li>
-<li>Bayes Game<ul>
-<li>Start with $H = (h_1, h_2, …, h_n)$. PRIOR(INITIAL): $p(h)$.</li>
-<li>Data D</li>
-<li>Likelihood $P(D|h)$</li>
-<li>Bayes formula(MUST)<ul>
-<li>$P(h, D) = P(h) <em> P(D|h) = P(D) </em> P(h|D)$</li>
-<li>$P(h)$ captures the belief BEFORE seeing the data, PRIOR</li>
-<li>$P(h|D)$ captures … AFTER, POSTERIOR</li>
-<li>$P(h|D) = \frac{P(D|h) * P(h)}{P(D)}$</li>
-<li>If we have some prior belief and likelihood, after we see some data, the posterior is something we should believe. Bayesian learning updates your belief about life.</li>
-<li>$h_{map}$是maximize posterior $p(h|D)$的h</li>
-<li>如果$p(h)=\frac{1}{|H|}$, 那就相当于maximize$p(D|h)$, likelihood. 也叫 max likelihood hypothesis</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="Lecture_1">Lecture 1</h1>
-<h3 id="Jan_14_Wed">Jan 14 Wed</h3>
-<hr>
-<p><strong>Machine Learning</strong>: program that gets better at some tasks(functions) with experiences(data, examples)<br>Formalizing a task as a function learning task (f: board pos -&gt; next move)<br><em>Human Annotation</em>: human assigning scores</p>
-<ul>
-<li>f: INPUT -&gt; {choice1, choice2, …} : <em>classification</em></li>
-<li>f: INPUT -&gt; Real : <em>Regression</em></li>
-<li>f: INPUT -&gt; {0, 1} probability: <em>Logistic Regression</em></li>
-<li>f: INPUT -&gt; P(INPUT) <em>Probability Density Estimation</em><br>Binary Classification = Concept Learning = Learning a subset of $X$.</li>
-</ul>
-<h1 id="Lecture_2">Lecture 2</h1>
-<h3 id="Wed_Jan_21_10:48:53_EST_2015">Wed Jan 21 10:48:53 EST 2015</h3>
-<hr>
-<ul>
-<li><em>Input space</em>: A set of features</li>
-<li><em>Target Concept</em>: The concept or function to be learned, denoted by $c$, a boolean-<br>valued function defined over the instances $X$; that is, $c$ : $X \rightarrow {0, 1}$</li>
-<li><em>Training Examples</em>: $D$</li>
-<li><em>Hypothesis</em> Conjunctions of literals. Eg $&lt;?, Cold, High, ?, ?&gt;$. We are looking for $h$ in the set of all possible hypothesis $H$ such that $\forall x, h(x) = c(x)$</li>
-<li>$|X| \ll |H| \ll |C| = 2^x$, $|C|$ is the set of all possible functions (concept space)</li>
-<li>X is input space, H is hypothesis space (each item + 1), C is concept space ($2^{|X|}$)</li>
-</ul>
-<h1 id="Lecture_3">Lecture 3</h1>
-<p>$D={(x_1, c(x_1)), …}$ data<br>Each concept c_i is a bit vector.</p>
-<p><strong>Hypothesis consistency</strong> $Consistent(h, D) = \forall <x, c(x)="">\in D, h(x) = c(x)$<br><strong>Version space</strong> $VS_{H,D} = {h\in H| Consistent(h, D)}$</x,></p>
-<h3 id="Find-S_algorithm">Find-S algorithm</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">hypo = &lt;null, null, ...&gt; <span class="comment"># says NO to everything</span></div><div class="line"><span class="comment"># D is the data {(x1, c(x1)), (x2, c(x2)), ...}</span></div><div class="line"><span class="comment"># looking for target concept c in C</span></div><div class="line"><span class="keyword">for</span> positive_example <span class="keyword">in</span> D:</div><div class="line">    <span class="keyword">for</span> attribute_constraint <span class="keyword">in</span> hypo:</div><div class="line">        <span class="keyword">if</span> pos_example satisfied by attr_constraint: <span class="keyword">pass</span></div><div class="line">        <span class="keyword">else</span>: hypo := next more general constraint satisfied by attr_constraint</div><div class="line"><span class="keyword">return</span> hypo</div></pre></td></tr></table></figure>
-
-<h3 id="Problems_with_Find-S">Problems with Find-S</h3>
-<ul>
-<li>Fails when training data inconsistent</li>
-<li>Picks a maximally specific $h$</li>
-</ul>
-<h3 id="List-Then-Eliminate">List-Then-Eliminate</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hypos = a list containing every hypothesis</div><div class="line"><span class="keyword">for</span> &lt;x, c(x)&gt; <span class="keyword">in</span> D:</div><div class="line">    remove h <span class="keyword">in</span> hypos <span class="keyword">if</span> h(x) != c(x)</div><div class="line"><span class="keyword">return</span> hypos</div></pre></td></tr></table></figure>
-
-<h1 id="Lecture_4_Informaiton_theory">Lecture 4 Informaiton theory</h1>
-<p><strong>Bias</strong></p>
-<ul>
-<li>Hard bias: eg. “Language bias” (conjunctions)</li>
-<li>Soft bias: “ranking”, preference bias (prefer hypothesis that tends to say NO)</li>
-</ul>
-<p>Information = Reduction in Uncertainty<br>Suprisal = information received when observing an outcome = $I(\text{sunny}) = log_2 \frac{1}{prob(\text{sunny})} \in [0, \infty)$<br>Information is <em>additive</em>:</p>
-<h1 id="Lecture_5">Lecture 5</h1>
-<p>Suprise(Information learned) = $log<em>2\frac{1}{p(e)}$, where $p(e)$ is <em>subjective</em>, int <strong>BITS</strong>.<br><strong>Cross Entropy</strong> $\Sigma p_i I(s_i)$.<br><strong>Fundamental Inequality</strong><br><strong>Distance</strong> $D</em>{KL}(p||q) = E_p[log\frac{p(x)}{q(x)}]\ge 0$<br>A special case would be $p = q$, when we fully know the “truth”. $0\lte CH(p, p) \lte log k$, where $log k$ is fully uniform. <em>20 questions game</em>.<br>Ask questions which answers you think are equally likely to be $0$ and $1$, so that you can learn the most information.</p>
-<p>$H(Letter) = log{27} = 4.75 BITS$.</p>
-<h1 id="Lecture_6">Lecture 6</h1>
-<p>Entropy is a tight lower bound of efficiency of emitting events.<br><em>Regular Variable</em>: holds a <em>single</em> value.<br><em>Random Variable</em>: distribution<br>Joint Entropy, Conditional Entropy, Average Conditional Entropy.<br>Average Conditional Entropy, $H(T/M)$.<br>$H(T) - H(M/T)$, how much $M$ is telling us on average about $T$.<br>$H(T) - H(M/T) = H(M) - H(M/T)$<br>$I(X; Y; Z) = I(X,Y) - I(X,Y|Z)$<br>$I(X, Y) = H(X) - H(X|Y)$<br>$I(y, {x_1, x_2, …}) = I(y, x_1) + (y; x_2|x_1) + I(y, x_3|x_1, x_2) + …$</p>
-<h1 id="Lecture_7">Lecture 7</h1>
-<h3 id="Decision_Tree">Decision Tree</h3>
-<p>Same attribute will not appear twice in a single path</p>
-<h1 id="Lecture_8">Lecture 8</h1>
-<p>Draw a decision tree from $f(A, B, C, D, E) = (A\wedge B)\vee (C\wedge \not D\wedge E)$<br>Decision trees can represent any functions.</p>
-<h1 id="Lecture_9">Lecture 9</h1>
-<p>Law of total variance: $VAR(y) = VAR(E[y|x]) + E[VAR(y|x)]$<br>First: how far apart the centers are<br>Second: WITHIN-CLUSTER VARIANCE</p>
-<h1 id="Lecture_11">Lecture 11</h1>
-<h3 id="Linear_Regression">Linear Regression</h3>
-<p>To a multi-linear regression: $\beta<em>{OLS} = (X^TX)^{-1}(X^TY)$<br>Hard bias: …<br>Soft bias: square of residue<br>_Sparse Estimation</em>: p &gt;&gt; n. $\beta$ is non-identifiable</p>
-<ul>
-<li>L2 Norm(sum of squared beta): “Ridge Regression”</li>
-<li>L1 Norm(sum of abs beta): “Lasso Regression”</li>
-<li>L0 Norm(number of non-zero beta)<br><em>Regularization</em>: minimize $argmin(Error(data, param) + Complexity(Param))$<br>In this example: square of residues + norm of Beta</li>
-</ul>
-<h1 id="Lecture_12">Lecture 12</h1>
-<h3 id="Neural_Networks">Neural Networks</h3>
-<p>Works really well with <em>complex real-world sensor-data</em><br>Since human neurons switch slowly compared to computers, but is able to do complicated computations quickly. It is conjectured that humans do parallel computation.<br>Learning corresponds to assigning weights to edges in an acyclic directed graph.</p>
-<p><em>Perceptrons</em>: Takes a vector of real inputs, calculates a linear comb. If bigger threshold, output 1; 0 otherwise<br>Learning a perceptron = choosing values for the <em>coeffs</em>!<br>It can represent primitive boolean functions AND, OR, NAND, …<br>And all boolean functions in general<br>Training a perceptron: start with arbitrary weights, repeat… (p88)<br>to modify $w_i$ to new $w_i$: $\Delta w_i = \ita (t-o)x_i$, where $\ita$ is the Learning Rate, which is a small value.</p>
-<h1 id="Lecture_13">Lecture 13</h1>
-<p>Single Linear Unit / Network of L.U.’s / Perceptron(STEP fxn,Classifier) / Network of Perceptrons<br>Expressive Power(hard bias): All Linear fxns / Still Linear, / Linear Classifiers / Any decision problem<br>Optimization Criterion(soft bias): Mean Squared Error / Same / Misclassific Rate / Same<br>Computational complexity: Algebraically, Gradient Decent / Same / Perceptron Learning Rule / Not continuous (No known feasible algo.)</p>
-<p>(no bias -&gt; no learning)<br>Sigmoid function:<br>Network of Sigmoid: any function / MSE / Gradient Decent (exists local minimal)</p>
-<p><em>Back Propagation</em>:</p>
-<h1 id="Midterm_Prep">Midterm Prep</h1>
-<p>Data mining: extract information from a large data set and transform it to a structure for future use<br>Target function<br>Hypothesis: h is a <em>conjunction</em> of constraints on attributes<br>constraints: value; don’t care; no value allowed;<br>Concept learning:<br>Training example: &lt;$x_1$, c($x_1$)&gt;, where c is the <em>target function</em> or <em>concept</em>.<br>Determine: h such that h(x) = c(x) for all x in D<br>Find-S: h0 = most specific (no to everything); for each pos example, “merge” the attribute constraint<br>consistent: (h, D) if h(x) = c(x) for all c in D<br>version space: subset of H(hypothesis space) consistent with all training data D<br>List-then-Eliminate: start with the biggest hypothesis space; find version space by checking each training example<br>Input Space: X, Hypothesis Space: H (+1), Concept Space: $2^{|X|}$</p>
-<p>Information Theory<br>Information: Reduction in uncertainty: $I(E)=log_2\frac{1}{P(E)}$<br>Entropy: From a Zero-memory source S, the entropy is $\Sigma_i p_i * I(s_i) = E[log\frac{1}{p_i}]$<br>avg amount of information<br>H(T, M) &lt; H(T) + H(M) ???<br>q distribution ???<br>H(T) - H(T|M) = H(M) - H(M|T) ???</p>
-<h1 id="Lecture_15">Lecture 15</h1>
-<h3 id="Hypothesis_Testing">Hypothesis Testing</h3>
-<p>Q1: Given a hypothesis, how good is it?<br>Q2: Given two hypothesis, which one is better?<br>Q3: Given two learning algorithms, which one is better?<br>Not about the portion of the mistakes in the whole input space, but the probability of making errors.(Consider when most of the examples are mistakes)<br>$Err_r(h)$ is an estimator of $Err_D(h)$.<br>$BIAS = E[EST] - TRUTH$ (Mean is around the truth)<br>$VARIANCE = E[EST - E[EST]]^2$(Also needs to be accurate (sharp around the truth))<br>True Error to Sample Error (Probability calculation)<br>Sample Error to True Error (Statistical Inferrence)</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2015/01/21/Machine-Learning-Notes/" data-id="vcrxzwcsv358nhfc" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/machine-learning/">machine learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/notes/">notes</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -886,7 +773,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/251/">251</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cachelab/">cachelab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">food</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/">machine learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/">notes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/schedule/">schedule</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/251/">251</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cachelab/">cachelab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">food</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/">machine learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/">notes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/schedule/">schedule</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -904,7 +791,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -914,6 +801,10 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/04/06/最近想做的菜/">最近想做的菜</a>
+          </li>
         
           <li>
             <a href="/2015/03/31/15251-randomness/">15251-randomness</a>
@@ -929,10 +820,6 @@ ga('send', 'pageview');
         
           <li>
             <a href="/2015/02/25/undergrad-schedule/">undergrad schedule</a>
-          </li>
-        
-          <li>
-            <a href="/2015/02/24/-15-251-Graph-Algorithms/">[15-251] Graph Algorithms</a>
           </li>
         
       </ul>

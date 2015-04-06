@@ -102,7 +102,25 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody" style="display:none">
       
-        <h1 id="Lecture_17">Lecture 17</h1>
+        <p>1st-order Markov Assumption</p>
+<p>L-Z compression(1/3)<br>本来有一段信息basketball，compress。这需要compression algorithm to be adaptive<br>做20次添加到basketball的末尾，比对compress的结果。最后compression最短的那个添加的东西和basketball最有关</p>
+<p>传送信息的时候，有小的DT但是有exceptions, 我们要找到rule + 处理exception的平衡（最短的）<br>MDL: Minimum Description Length</p>
+<h3 id="Naive_Bayes_Algorithm">Naive Bayes Algorithm</h3>
+<ul>
+<li>Conjunction of attributes to a finite set of output</li>
+</ul>
+<h1 id="Lecture_19_Naive_Bayes">Lecture 19 Naive Bayes</h1>
+<ul>
+<li>Conditional independent vs. truly independent<ul>
+<li>z = x XOR y: if z=0, then x tells me y, y tells me x, but x, y independent</li>
+</ul>
+</li>
+<li>Naive Bayes: overly confident<ul>
+<li>因为对于不是iid的data，假设了他们都independent，都乘起来就会overly confident</li>
+</ul>
+</li>
+</ul>
+<h1 id="Lecture_17">Lecture 17</h1>
 <ul>
 <li>Find $h_map$:<ul>
 <li>如果不好直接算最大值就取log。和对likelihood取log，算导数一样</li>
@@ -110,8 +128,7 @@ ga('send', 'pageview');
 </li>
 <li>Example: Gaussian<ul>
 <li>Given data $x_1, x_2, …$, assume $\sigma^2 = 1$, estimate u</li>
-<li>hard bias: choice of gaussian; soft: max-likelihood method</li>
-<li></li>
+<li>hard bias: choice of gaussian; soft: max-likelihood method<br>-</li>
 </ul>
 </li>
 </ul>
@@ -257,7 +274,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/251/">251</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cachelab/">cachelab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">food</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/">machine learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/">notes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/schedule/">schedule</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/251/">251</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cachelab/">cachelab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">food</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/">machine learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/">notes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/schedule/">schedule</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -275,7 +292,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -285,6 +302,10 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/04/06/最近想做的菜/">最近想做的菜</a>
+          </li>
         
           <li>
             <a href="/2015/03/31/15251-randomness/">15251-randomness</a>
@@ -300,10 +321,6 @@ ga('send', 'pageview');
         
           <li>
             <a href="/2015/02/25/undergrad-schedule/">undergrad schedule</a>
-          </li>
-        
-          <li>
-            <a href="/2015/02/24/-15-251-Graph-Algorithms/">[15-251] Graph Algorithms</a>
           </li>
         
       </ul>
