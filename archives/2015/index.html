@@ -80,6 +80,96 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-251-Final-Review" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/05/06/251-Final-Review/" class="article-date">
+  <time datetime="2015-05-06T15:28:58.000Z" itemprop="datePublished">May 6 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/05/06/251-Final-Review/">251 Final Review</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody" style="display:none">
+      
+        <h3 id="Deductive_System">Deductive System</h3>
+<p>A <strong>Deductive</strong> System consists of</p>
+<ul>
+<li>One or more <strong>initial objects</strong></li>
+<li>One or more <strong>deduction rules</strong></li>
+</ul>
+<h3 id="Propositional_Logic">Propositional Logic</h3>
+<p><em>doesn’t</em> have quantifiers, or “First Order Logic”</p>
+<ul>
+<li><strong>Propositional Variables</strong>: basic statements that can be either true or false, like $p, w, r, x_1, x_2, x_3$</li>
+<li><strong>Connectives</strong>:<ul>
+<li>Not $\neg$</li>
+<li>And $\wedge$</li>
+<li>Or $\vee$</li>
+<li>Implies $\rightarrow$</li>
+<li>If and Only if $\leftrightarrow$</li>
+</ul>
+</li>
+</ul>
+<p><strong>formula</strong>: Connectives and P.V.<br><em>well-formed formula</em>:</p>
+<ul>
+<li>Initial: Any variable</li>
+<li>Deduction Rules: From $A$, can obtain $\neg A$. From $A, B$, can obtain $A\vee B$, $A\wedge B$, $A\rightarrow B$, $A\leftrightarrow B$.</li>
+</ul>
+<p>A formula is a binary tree in which:</p>
+<ul>
+<li>2-child nodes are labeled by <em>binary ops</em></li>
+<li>1-child nodes are labeled by <em>unary ops</em></li>
+<li>0-child nodes are labeled by <em>variables</em></li>
+</ul>
+<p><em>Truth Assignment V</em>: setting of true and false for each variable<br>Given a formula $S$, its truth value $V[S]$ can be defined by <em>structural induction</em></p>
+<p><strong>Satisfiability</strong>:</p>
+<ul>
+<li>$V$ satisfies $S$: $V[S] = T$</li>
+<li>$S$ is satisfiable: $\exists V$ such that $V[S] = T$</li>
+<li>$S$ is unsatisfiable: $\forall V, V[S] = F$</li>
+<li>$S$ is tautology: $\forall V, V[S] = T$</li>
+</ul>
+<p><em>Equivalent</em>: Formulas $R$ and $S$ are equivalent, $R \equiv S$ if $\forall V, V[R] = V[S]$.</p>
+<p><em>Entailment</em>: Formulas $A_1, …, A_m$ entail formula $S$, written $A_1, …, A_m \models S$ if every truth assignment which makes $A_i$ true makes $S$ true.</p>
+<p><em>Truth table</em>: It represents a <em>Boolean function</em>, $f: {0, 1}^n \rightarrow {0, 1}$.</p>
+<ul>
+<li>There are $2^{2^n}$ truth tables on n variables.</li>
+<li>Every truth table can be computed by some formula, only using $\neg, \vee, \wedge$</li>
+</ul>
+<p><strong>Circuits</strong></p>
+<ul>
+<li>In circuits, nodes (gates) may have fan-out &gt; 1.</li>
+<li>Formulas are trees: all nodes have fan-out 1.</li>
+<li>Circuits can reuse already-computed pieces. Formulas cannot; everything must be “rebuilt”.</li>
+<li>Deduction viewpoint: The circuit is the deduction. The formula is the last line.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://pavelkang.github.io/2015/05/06/251-Final-Review/" data-id="t80p7im4brm0q0cm" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/251/">251</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/">math</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-最近想做的菜" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/04/06/最近想做的菜/" class="article-date">
@@ -146,7 +236,41 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody" style="display:none">
       
-        <ul>
+        <h3 id="Communication_Complexity">Communication Complexity</h3>
+<ul>
+<li>$D_2(F)$ = min cost of a protocol computing F. (min of max)</li>
+<li>$R_2^e(F)$ min cost of a randomized protocol computing $F$.</li>
+<li>$0 \lte R \lte D \lte n+1$</li>
+<li>If TM decides L in $T(n)$ time and $S(n)$ space on input $3n$, then $T(n)*S(n)=\Omega(n^2)$</li>
+<li>$C^D(F)$ be the minimum number of monochromatic rectangles to partition</li>
+<li>$2^c \ge C^D(F)$</li>
+</ul>
+<h3 id="Markov_Chain">Markov Chain</h3>
+<p>The future is independent of the past, given the present</p>
+<ul>
+<li>stationary/invariant distribution</li>
+<li>Mean Recurrence Theorem</li>
+<li>transition matrix: $K[i, j] = Pr[X_1=j | X_0 = i]$</li>
+<li>Probability of being at state $i$ after $t$ steps: $\pi_t[i] = (\pi_0K^t)[i]$</li>
+<li>$E[T_{ii}] = E[#\text{steps to go from i to i}]$ = $1/\pi[i]$<br>-</li>
+</ul>
+<h3 id="Midterm_3_Review">Midterm 3 Review</h3>
+<h4 id="Polynomial_And_Field">Polynomial And Field</h4>
+<ul>
+<li>There is a field with q elements iff q is a power of prime</li>
+<li><strong>isomorphism</strong>: all fields with q elements have the same add&amp;mult table, just renaming</li>
+<li>F[x] denotes the set of polynomials with variable x and coeffs. in field F. F[x] is not a field because division is not well-defined</li>
+<li>Polynomial division: deg(R(x)) &lt; deg(B(x))</li>
+<li>A nonzero degree-d polynomial has at most d roots(depending on which field it may vary)</li>
+<li>There is exactly one poly of degree &lt;= d which satisfies d+1 data points.</li>
+<li>Reed-Solomon Code: Sending as polynomials to avoid loss. 1. k erasures: send d+k+1 value-pairs 2. k corruptions: send d+2k+1 pairs, then there is a unique poly that differs with data at at most k points.<h4 id="Cryptography">Cryptography</h4>
+</li>
+<li>Euler’s Theorem &amp; Fermat’s Little Theorem</li>
+<li>One-time pad (XOR); cannot be reused; Shannon’s Theorem: cannot have a pad smaller than the key size</li>
+<li>Diffie-Hellman Key Exchange: prime p, generator b, random r1 -p, b, $b^{r1}$&gt; random r2 -&gt; $b^{r2}$</li>
+<li>Public Secure Key: RSA</li>
+</ul>
+<ul>
 <li>Monte Carlo: possible to make errors, guarantee runtime<ul>
 <li>Min-cut: poly time. 1 - $\frac{1}{e}$</li>
 </ul>
@@ -164,16 +288,6 @@ ga('send', 'pageview');
 <li>Euler totient: $\phi(x)$</li>
 <li>Euler’s theorem: $A^{\phi(M)} \equiv_M 1$, A,M relatively prime</li>
 <li>Fermat’s little theorem: $A^{p-1}\equiv_p 1$</li>
-</ul>
-<h3 id="Cryptography">Cryptography</h3>
-<ul>
-<li>generator: when taking exponents, produces all elements</li>
-<li>RSA: take the eth root to solve…</li>
-</ul>
-<h3 id="Key_Cryptography">Key Cryptography</h3>
-<ul>
-<li>Caesar shift</li>
-<li></li>
 </ul>
 
       
@@ -666,98 +780,6 @@ ga('send', 'pageview');
 
 
   
-    <article id="post--15251-Formalization-of-Proof-Finite-Automata" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/01/22/-15251-Formalization-of-Proof-Finite-Automata/" class="article-date">
-  <time datetime="2015-01-22T23:53:05.000Z" itemprop="datePublished">Jan 22 2015</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/22/-15251-Formalization-of-Proof-Finite-Automata/">[15251] Formalization of Proof, Finite Automata</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody" style="display:none">
-      
-        <h1 id="Formalization_of_Proof">Formalization of Proof</h1>
-<p><em>First Order Logic</em> = Prop. Logic + {$\forall$, $\exists$, $=$, “constants”, “relations”, “functions”}<br>Variables are now <em>objects</em>.<br><em>Vocabulary</em> is a collection of constant-names, function-names, relation-names.<br><em>Interpretation</em></p>
-<ul>
-<li>Specifies the <em>universe</em></li>
-<li>Maps constant-name to object</li>
-<li>Maps relation-name to actual relation</li>
-<li>Maps function-name to actual function<br><em>Satisfiability/Tautology</em>: Similar to that in first order logic.</li>
-</ul>
-<h1 id="Finite_Automata">Finite Automata</h1>
-<p><em>Alphabet</em>: A nonempty finite set $\Sigma$ of symbols, $\Sigma = {0, 1}$ usually.<br><em>String</em>: A finite sequence of 0 or more symbols.</p>
-<ul>
-<li>The length-0 string is $\epsilon$</li>
-<li>$\Sigma^n$ means all strings with length n.</li>
-<li>$\Sigma^{*}$ means all strings over $\Sigma$</li>
-</ul>
-<p><em>Language</em>: A collection of strings. A subset of $\Sigma^{*}$.</p>
-<p>Thus, we can think of a decision problem as a function:<br>$f: \Sigma^{*} \rightarrow {NO, YES}$<br>Decision problem is finding a language L such that f(element in L) is true</p>
-<p><strong>DFA</strong>: $L(M) = x\in \Sigma^{*}: M \text{accepts } x$.</p>
-<p>A <strong>deterministic finite automaton</strong> is a 5-tuple:</p>
-<ul>
-<li>$Q$ is a nonempty finite set of states</li>
-<li>$\Sigma$ is an alphabet</li>
-<li>$\delta: Q * \Sigma \rightarrow Q$ is the transition function</li>
-<li>$q_0\in Q$ is the start state</li>
-<li>$F\subset Q$ is the set of accepting states</li>
-</ul>
-<p><strong>Accept</strong><br>Let $w = w_1w_2w_3…w_n$<br>We say that <strong>M accepts string w</strong> if there exists states $r_0r_1…r_n\in Q$ such that</p>
-<ul>
-<li>$r_0 = q_0$</li>
-<li>$\delta(r_{t-1}, w_t) = r_t$ for all $t$</li>
-<li>$r_n\in F$.<br>Otherwise, we say $M$ <strong>rejects</strong> $w$.<br>The sequence $r_1r_2…r_n$ is called the <em>computation trace</em>.</li>
-</ul>
-<p><strong>Regular Languages</strong><br>A language is regular if there is a DFA that decides it</p>
-<p><strong>Proving a language is not regular</strong></p>
-<ol>
-<li>Assume for contradiction there is a DFA M which decides language L</li>
-<li>Argue there are two strings x, y which reach the same state in M.</li>
-<li>Show there is a string z such that $xz\in L$ and $yz\notin L$.<br>Example: $a^nb^n$</li>
-</ol>
-<ul>
-<li>$L_1\cup L_2$ is regular if $L_1$ and $L_2$ are.(Union Theorem)</li>
-<li>$L_1\dot L_2$ (concatenation)</li>
-<li>$L^{*}$ is regular if $L$ is.</li>
-</ul>
-<p><strong>More on Regular Languages</strong></p>
-<ol>
-<li>The empty language is regular</li>
-<li>The singleton of empty string is regular</li>
-<li>The singleton of each character in the alpahbet is regular</li>
-<li>Union</li>
-<li>Concatenation</li>
-<li>Kleene star</li>
-<li>In fact, all set operations can be performed<br>(On how to prove a language is regular)[<a href="http://cseweb.ucsd.edu/~clbailey/ClosureProofTemplate.htm" target="_blank" rel="external">http://cseweb.ucsd.edu/~clbailey/ClosureProofTemplate.htm</a>]<br>(On how to prove regular languages are closed under reverse)[<a href="http://web.cecs.pdx.edu/~hook/cs581sp11/reverse.pdf" target="_blank" rel="external">http://web.cecs.pdx.edu/~hook/cs581sp11/reverse.pdf</a>]<br><em>Pumping Lemma</em> Not really understand</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2015/01/22/-15251-Formalization-of-Proof-Finite-Automata/" data-id="rd7irjl9y0damy3o" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/251/">251</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/">math</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/archives/2015/page/2/">2</a><a class="extend next" rel="next" href="/archives/2015/page/2/">Next &raquo;</a>
@@ -773,7 +795,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/251/">251</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cachelab/">cachelab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">food</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/">machine learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/">notes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/schedule/">schedule</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/251/">251</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cachelab/">cachelab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">food</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/">machine learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/">notes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/schedule/">schedule</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -791,7 +813,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -801,6 +823,10 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/05/06/251-Final-Review/">251 Final Review</a>
+          </li>
         
           <li>
             <a href="/2015/04/06/最近想做的菜/">最近想做的菜</a>
@@ -816,10 +842,6 @@ ga('send', 'pageview');
         
           <li>
             <a href="/2015/02/26/-15-251-NP/">[15-251] NP</a>
-          </li>
-        
-          <li>
-            <a href="/2015/02/25/undergrad-schedule/">undergrad schedule</a>
           </li>
         
       </ul>

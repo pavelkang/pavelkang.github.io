@@ -5,48 +5,30 @@
   
   <title>15251-randomness | Kai Kang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Monte Carlo: possible to make errors, guarantee runtime
-Min-cut: poly time. 1 - $\frac{1}{e}$
+  <meta name="description" content="Communication Complexity
 
-
-Las Vegas  : guarantee answer, possible worst running time
-Quicksort
-
-
-
-Primality testing
-
-Miller-Rabin">
+$D_2(F)$ = min cost of a protocol computing F. (min of max)
+$R_2^e(F)$ min cost of a randomized protocol computing $F$.
+$0 \lte R \lte D \lte n+1$
+If TM decides L in $T(n)$ t">
 <meta property="og:type" content="article">
 <meta property="og:title" content="15251-randomness">
 <meta property="og:url" content="https://pavelkang.github.io/2015/03/31/15251-randomness/">
 <meta property="og:site_name" content="Kai Kang">
-<meta property="og:description" content="Monte Carlo: possible to make errors, guarantee runtime
-Min-cut: poly time. 1 - $\frac{1}{e}$
+<meta property="og:description" content="Communication Complexity
 
-
-Las Vegas  : guarantee answer, possible worst running time
-Quicksort
-
-
-
-Primality testing
-
-Miller-Rabin">
+$D_2(F)$ = min cost of a protocol computing F. (min of max)
+$R_2^e(F)$ min cost of a randomized protocol computing $F$.
+$0 \lte R \lte D \lte n+1$
+If TM decides L in $T(n)$ t">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="15251-randomness">
-<meta name="twitter:description" content="Monte Carlo: possible to make errors, guarantee runtime
-Min-cut: poly time. 1 - $\frac{1}{e}$
+<meta name="twitter:description" content="Communication Complexity
 
-
-Las Vegas  : guarantee answer, possible worst running time
-Quicksort
-
-
-
-Primality testing
-
-Miller-Rabin">
+$D_2(F)$ = min cost of a protocol computing F. (min of max)
+$R_2^e(F)$ min cost of a randomized protocol computing $F$.
+$0 \lte R \lte D \lte n+1$
+If TM decides L in $T(n)$ t">
 
   
     <link rel="alternative" href="/atom.xml" title="Kai Kang" type="application/atom+xml">
@@ -133,7 +115,41 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
+        <h3 id="Communication_Complexity">Communication Complexity</h3>
+<ul>
+<li>$D_2(F)$ = min cost of a protocol computing F. (min of max)</li>
+<li>$R_2^e(F)$ min cost of a randomized protocol computing $F$.</li>
+<li>$0 \lte R \lte D \lte n+1$</li>
+<li>If TM decides L in $T(n)$ time and $S(n)$ space on input $3n$, then $T(n)*S(n)=\Omega(n^2)$</li>
+<li>$C^D(F)$ be the minimum number of monochromatic rectangles to partition</li>
+<li>$2^c \ge C^D(F)$</li>
+</ul>
+<h3 id="Markov_Chain">Markov Chain</h3>
+<p>The future is independent of the past, given the present</p>
+<ul>
+<li>stationary/invariant distribution</li>
+<li>Mean Recurrence Theorem</li>
+<li>transition matrix: $K[i, j] = Pr[X_1=j | X_0 = i]$</li>
+<li>Probability of being at state $i$ after $t$ steps: $\pi_t[i] = (\pi_0K^t)[i]$</li>
+<li>$E[T_{ii}] = E[#\text{steps to go from i to i}]$ = $1/\pi[i]$<br>-</li>
+</ul>
+<h3 id="Midterm_3_Review">Midterm 3 Review</h3>
+<h4 id="Polynomial_And_Field">Polynomial And Field</h4>
+<ul>
+<li>There is a field with q elements iff q is a power of prime</li>
+<li><strong>isomorphism</strong>: all fields with q elements have the same add&amp;mult table, just renaming</li>
+<li>F[x] denotes the set of polynomials with variable x and coeffs. in field F. F[x] is not a field because division is not well-defined</li>
+<li>Polynomial division: deg(R(x)) &lt; deg(B(x))</li>
+<li>A nonzero degree-d polynomial has at most d roots(depending on which field it may vary)</li>
+<li>There is exactly one poly of degree &lt;= d which satisfies d+1 data points.</li>
+<li>Reed-Solomon Code: Sending as polynomials to avoid loss. 1. k erasures: send d+k+1 value-pairs 2. k corruptions: send d+2k+1 pairs, then there is a unique poly that differs with data at at most k points.<h4 id="Cryptography">Cryptography</h4>
+</li>
+<li>Euler’s Theorem &amp; Fermat’s Little Theorem</li>
+<li>One-time pad (XOR); cannot be reused; Shannon’s Theorem: cannot have a pad smaller than the key size</li>
+<li>Diffie-Hellman Key Exchange: prime p, generator b, random r1 -p, b, $b^{r1}$&gt; random r2 -&gt; $b^{r2}$</li>
+<li>Public Secure Key: RSA</li>
+</ul>
+<ul>
 <li>Monte Carlo: possible to make errors, guarantee runtime<ul>
 <li>Min-cut: poly time. 1 - $\frac{1}{e}$</li>
 </ul>
@@ -151,16 +167,6 @@ ga('send', 'pageview');
 <li>Euler totient: $\phi(x)$</li>
 <li>Euler’s theorem: $A^{\phi(M)} \equiv_M 1$, A,M relatively prime</li>
 <li>Fermat’s little theorem: $A^{p-1}\equiv_p 1$</li>
-</ul>
-<h3 id="Cryptography">Cryptography</h3>
-<ul>
-<li>generator: when taking exponents, produces all elements</li>
-<li>RSA: take the eth root to solve…</li>
-</ul>
-<h3 id="Key_Cryptography">Key Cryptography</h3>
-<ul>
-<li>Caesar shift</li>
-<li></li>
 </ul>
 
       
@@ -207,7 +213,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/251/">251</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cachelab/">cachelab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">food</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/">machine learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/">notes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/schedule/">schedule</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/251/">251</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cachelab/">cachelab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">food</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/">machine learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/">notes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/schedule/">schedule</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -225,7 +231,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -235,6 +241,10 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/05/06/251-Final-Review/">251 Final Review</a>
+          </li>
         
           <li>
             <a href="/2015/04/06/最近想做的菜/">最近想做的菜</a>
@@ -250,10 +260,6 @@ ga('send', 'pageview');
         
           <li>
             <a href="/2015/02/26/-15-251-NP/">[15-251] NP</a>
-          </li>
-        
-          <li>
-            <a href="/2015/02/25/undergrad-schedule/">undergrad schedule</a>
           </li>
         
       </ul>
