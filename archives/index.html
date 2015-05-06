@@ -102,13 +102,13 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody" style="display:none">
       
-        <h3 id="Deductive_System">Deductive System</h3>
+        <h1 id="Deductive_System">Deductive System</h1>
 <p>A <strong>Deductive</strong> System consists of</p>
 <ul>
 <li>One or more <strong>initial objects</strong></li>
 <li>One or more <strong>deduction rules</strong></li>
 </ul>
-<h3 id="Propositional_Logic">Propositional Logic</h3>
+<h1 id="Propositional_Logic">Propositional Logic</h1>
 <p><em>doesn’t</em> have quantifiers, or “First Order Logic”</p>
 <ul>
 <li><strong>Propositional Variables</strong>: basic statements that can be either true or false, like $p, w, r, x_1, x_2, x_3$</li>
@@ -154,6 +154,60 @@ ga('send', 'pageview');
 <li>Circuits can reuse already-computed pieces. Formulas cannot; everything must be “rebuilt”.</li>
 <li>Deduction viewpoint: The circuit is the deduction. The formula is the last line.</li>
 </ul>
+<h1 id="Formalization_of_Proof">Formalization of Proof</h1>
+<p><em>First Order Logic</em> = Prop. Logic + {$\forall$, $\exists$, $=$, “constants”, “relations”, “functions”}<br>Variables are now <em>objects</em>.<br><em>Vocabulary</em> is a collection of constant-names, function-names, relation-names.<br><em>Interpretation</em></p>
+<ul>
+<li>Specifies the <em>universe</em></li>
+<li>Maps constant-name to object</li>
+<li>Maps relation-name to actual relation</li>
+<li>Maps function-name to actual function<br><em>Satisfiability/Tautology</em>: Similar to that in first order logic.</li>
+</ul>
+<h1 id="Finite_Automata">Finite Automata</h1>
+<p><em>Alphabet</em>: A nonempty finite set $\Sigma$ of symbols, $\Sigma = {0, 1}$ usually.<br><em>String</em>: A finite sequence of 0 or more symbols.</p>
+<ul>
+<li>The length-0 string is $\epsilon$</li>
+<li>$\Sigma^n$ means all strings with length n.</li>
+<li>$\Sigma^{*}$ means all strings over $\Sigma$</li>
+</ul>
+<p><em>Language</em>: A collection of strings. A subset of $\Sigma^{*}$.</p>
+<p>Thus, we can think of a decision problem as a function:<br>$f: \Sigma^{*} \rightarrow {NO, YES}$<br>Decision problem is finding a language L such that f(element in L) is true</p>
+<p><strong>DFA</strong>: $L(M) = x\in \Sigma^{*}: M \text{accepts } x$.</p>
+<p>A <strong>deterministic finite automaton</strong> is a 5-tuple:</p>
+<ul>
+<li>$Q$ is a nonempty finite set of states</li>
+<li>$\Sigma$ is an alphabet</li>
+<li>$\delta: Q * \Sigma \rightarrow Q$ is the transition function</li>
+<li>$q_0\in Q$ is the start state</li>
+<li>$F\subset Q$ is the set of accepting states</li>
+</ul>
+<p><strong>Accept</strong><br>Let $w = w_1w_2w_3…w_n$<br>We say that <strong>M accepts string w</strong> if there exists states $r_0r_1…r_n\in Q$ such that</p>
+<ul>
+<li>$r_0 = q_0$</li>
+<li>$\delta(r_{t-1}, w_t) = r_t$ for all $t$</li>
+<li>$r_n\in F$.<br>Otherwise, we say $M$ <strong>rejects</strong> $w$.<br>The sequence $r_1r_2…r_n$ is called the <em>computation trace</em>.</li>
+</ul>
+<p><strong>Regular Languages</strong><br>A language is regular if there is a DFA that decides it</p>
+<p><strong>Proving a language is not regular</strong></p>
+<ol>
+<li>Assume for contradiction there is a DFA M which decides language L</li>
+<li>Argue there are two strings x, y which reach the same state in M.</li>
+<li>Show there is a string z such that $xz\in L$ and $yz\notin L$.<br>Example: $a^nb^n$</li>
+</ol>
+<ul>
+<li>$L_1\cup L_2$ is regular if $L_1$ and $L_2$ are.(Union Theorem)</li>
+<li>$L_1\dot L_2$ (concatenation)</li>
+<li>$L^{*}$ is regular if $L$ is.</li>
+</ul>
+<p><strong>More on Regular Languages</strong></p>
+<ol>
+<li>The empty language is regular</li>
+<li>The singleton of empty string is regular</li>
+<li>The singleton of each character in the alpahbet is regular</li>
+<li>Union</li>
+<li>Concatenation</li>
+<li>Kleene star</li>
+<li>In fact, all set operations can be performed<br>(On how to prove a language is regular)[<a href="http://cseweb.ucsd.edu/~clbailey/ClosureProofTemplate.htm" target="_blank" rel="external">http://cseweb.ucsd.edu/~clbailey/ClosureProofTemplate.htm</a>]<br>(On how to prove regular languages are closed under reverse)[<a href="http://web.cecs.pdx.edu/~hook/cs581sp11/reverse.pdf" target="_blank" rel="external">http://web.cecs.pdx.edu/~hook/cs581sp11/reverse.pdf</a>]<br><em>Pumping Lemma</em> Not really understand</li>
+</ol>
 
       
     </div>
