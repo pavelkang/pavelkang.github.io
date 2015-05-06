@@ -208,6 +208,145 @@ ga('send', 'pageview');
 <li>Kleene star</li>
 <li>In fact, all set operations can be performed<br>(On how to prove a language is regular)[<a href="http://cseweb.ucsd.edu/~clbailey/ClosureProofTemplate.htm" target="_blank" rel="external">http://cseweb.ucsd.edu/~clbailey/ClosureProofTemplate.htm</a>]<br>(On how to prove regular languages are closed under reverse)[<a href="http://web.cecs.pdx.edu/~hook/cs581sp11/reverse.pdf" target="_blank" rel="external">http://web.cecs.pdx.edu/~hook/cs581sp11/reverse.pdf</a>]<br><em>Pumping Lemma</em> Not really understand</li>
 </ol>
+<ul>
+<li>Injective: $a \neq a’ \rightarrow f(a) \neq f(a’)$</li>
+<li>Surjective: $\forall b\in B, \exists a\in A, f(a) = b$</li>
+<li>Bijective</li>
+</ul>
+<p>$\mathbb{N} = \mathbb{Z}$<br><em>Countable</em> = finite or countably infinite<br><strong>Cantor’s Theorem</strong><br>For any non-empty set $A$, $|A|\lt |P(A)|$. This can be proven by <em>diagonalization</em>. $S = a\in A: a\notin f(a)$ $S$ is defined by diagonalization so that $S$ cannot equal any $f(a)$.<br><strong>Continuum Hypothesis (Hilbert’s 1st Problem)</strong><br>There is no set $S$ such that $|\mathbb{N}|\lt |S|\lt |P(\mathbb{N})|$</p>
+<p><em>String encoding</em>: Computational problems can be <em>serialized</em> into a string</p>
+<h1 id="Computational_Complexity">Computational Complexity</h1>
+<ul>
+<li>Every multitape TM has an equivalent single tape TM.</li>
+<li>Running time depends on the particular model you choose</li>
+<li>Running time is defined as $T_A(n) = max{# \text{steps A takes on I}}$ (max input instance)</li>
+<li><em>intrinsic complexity</em> is defined by $min$ (min algorithm).</li>
+<li>Entscheidungsproblem: Decide whether a given statement is valid with a given set of axioms</li>
+<li>To compute summations:<ul>
+<li>Rough bounding</li>
+<li>Exact computation</li>
+<li>Induction</li>
+<li>Telescoping series ($\frac{1}{i(i+1)}$)</li>
+<li>Comparison with an integral</li>
+</ul>
+</li>
+<li><strong>Master Method</strong><br>For $T(n) \le a\dot T(\frac{n}{b}) + O(n^d)$,<ul>
+<li>$a = b^d$, $O(n^dlog n)$</li>
+<li>$a &lt; b^d$, $O(n^d)$</li>
+<li>$a &gt; b^d$, $O(n^{log_ba})$</li>
+</ul>
+</li>
+</ul>
+<p>Prove Countability or Uncountability:</p>
+<ul>
+<li>countable cartesian product of countable sets<ul>
+<li>Prime factorization</li>
+</ul>
+</li>
+<li>Countable union of countable sets</li>
+<li>Set of Finite Subsets of Countable Set<ul>
+<li>Induction</li>
+</ul>
+</li>
+</ul>
+<p><strong>Strong Church-Turing Thesis</strong>: The intuitive notion of “efficiently computable” is captured by functions efficiently computable by a TM.</p>
+<h1 id="Polynomial_time_and_the_class_P">Polynomial time and the class P</h1>
+<p>$DTIME(T(n)) = $ the language decided by an $O(T(n))$ time algorithm.<br>$P=DTIME(n^k)$ union of all<br>$EXP=DTIME(2^{n^k})$ union of all<br>P is a subset of EXP.<br>We can prove that <strong>Polynomial time algorithms can solve every decidable problem</strong><br>$HWTB$ is the language <m> such that M<m> takes at most $n^3$ steps. This cannot be decided in $O(n^2)$ steps, which can be proved with diagonalization algorithm.<br><strong>Time Hierarchy Theorem</strong><br>Let $T(n)$ be a time-constructible algorithm. $\epsilon &gt; 0$. Then there is a problem which cannot be decided in time $T(n)$, but can be decided in time $T(n)^{1+\epsilon}$. $DTIME(T(n))$ is a PROPER subset of $DTIME(T(n)^{1+\epsilon})$.</m></m></p>
+<p><strong>Space Complexity</strong></p>
+<ul>
+<li>Use two-tape TM that has a work tape and an input tape that is read-only.<br>$DSPACE(T(n)) = $ the language decided by an $O(T(n))$ space algorithm.<br>PSPACE, L is log space. L is a subset of PSPACE.<br><strong>Space Hierarchy Theorem</strong><br>If a TM uses $S(n)\ge log_2(n)$, then it decides the language using $\le 2^{O(S(n))}$ time (because of the number of possible configurations)</li>
+<li>$L\subset P$</li>
+<li>$PSPACE\subset EXP$<br><strong>Circuit Complexity</strong><br>A circuit family is an infinite answer to infinite number of questions</li>
+<li>The size of a circuit is the total number of gates, including inputs as gates too</li>
+<li><strong>Circuit complexity</strong> is the size of the minimal circuit family that decides the language<br>Circuit complexity is ALWAYS bounded by $2^n$.<br>$f_A(x_1, x_2, …, x_n) = (x_1\wedge f_A(1, x_2, …, x_n))\wedge (\not x_1\wedge (f_A(0, x_2, .., x_n)))$<br>This has recurrence $s(n) \le 2s(n-1)+5$.<br>W.T.S.: There is a language L whose circuit complexity is at least $2^n/4n$.</li>
+</ul>
+<ol>
+<li>Number of possible functions is $2^{2^n}$</li>
+<li>Number of circuits of size s is $\le 2^{4slogs}$<br>Claim 2: for each gate, 2 bits for its type, 2logs bits for which gates the inputs are from.</li>
+</ol>
+<h1 id="Basics">Basics</h1>
+<ul>
+<li>Regular: all nodes have same degrees</li>
+<li>Walk</li>
+<li>Path: Walk with no repeated vertices</li>
+<li>Cycle: a walk from u to u where the only repeated vertex is u</li>
+<li>Tree: connected; n-1 edges; acyclic</li>
+<li>Local Search guarantees to get $\ge \frac{m}{2}$<ul>
+<li>Each vertex has $\ge \frac{deg(v)}{2}$ edges cut because otherwise we can flip its color to get more cuts</li>
+</ul>
+</li>
+</ul>
+<p>Problem: Identify all nodes reachable from s.<br>BFS, DFS, AFS<br>AFS finds a <em>spanning tree</em> rooted at s (bag, mark)<br>Why does AFS halt?<br>If we put <em>edge</em> in the bag, get a spanning tree.<br>Full AFS finds all connected components<br>CFS: Cheapest First Search<br><em>MST</em>: subset of edges of minimum total cost such that all vertices connected<br>Prim: put the cheapest edge in the bag. If use Priority Queue, $O(Elog(E))$ run-time.<br><em>MST Cut Property</em> e is the cheapest edge from S to not S, then must be in the MST.<br><em>Kruskal</em>: Go through edges, add as long as it does not make cycles<br><em>Boruvka</em>: Add the cheapest edges out of each c.c.</p>
+<h2 id="Matching">Matching</h2>
+<p><em>Bipartite Graph</em>: there is a bipartition X and Y such that each edge connects x and y.<br><em>Matching</em>: a subset of edges that do not share an endpoint.<br><em>Maximum Matching</em>: A matching with largest number of edges<br><em>Perfect Matching</em>: A matching that covers all vertices<br><em>Stable matching</em>: There is no unstable pair(u, v not matched to each other, but they prefer each other to their current partners)<br>GS-algorithm: While a man is unmatched: propose to w(highest in the list)</p>
+<ul>
+<li>$O(n^2)$ (because number of proposals are $n^2$).</li>
+<li>Perfect Matching</li>
+<li>Stable<br>GS always finds the <em>Best Valid Partner</em><br>Prove: Man always finds the best. Woman always finds the worst.</li>
+</ul>
+<h3 id="Maximum_Matching">Maximum Matching</h3>
+<p><em>Augmenting path</em>(with respect to matching M): edges alternate between in M and not in M.<br>Prove: If there is an aug. path, M is not maximum<br>Find Maximum Matching: start with an edge, find augment path, …<br>To find aug. path: direct edges in M from left to right.</p>
+<h3 id="NP_and_NP-completeness">NP and NP-completeness</h3>
+<p><em>NP</em>: We have a simple proof to verify a solution</p>
+<ul>
+<li>length of proof is polynomial</li>
+<li>proof can be verified in polynomial time<br><em>Cook-Levin Theorem</em>: SAT is NP-complete</li>
+</ul>
+<p>To show A is NP-complete:</p>
+<ol>
+<li>A is in NP</li>
+<li>Pick a NP-complete problem L</li>
+<li>Show L reduces to A</li>
+</ol>
+<p>NP: Nondeterminsitic Polynomial Time</p>
+<p>C-hard: C can be reduced to A $\forall C \in C$<br>C-complete: C is in $C$.</p>
+<h3 id="Problems">Problems</h3>
+<ul>
+<li>$HAM-CYCLE \le HAM-PATH$<ul>
+<li>For each edge $(u, v)$, add “tenacle” $u’ v’$.</li>
+</ul>
+</li>
+<li>$TSP \le HAM-CYCLE$<ul>
+<li>Set weight of original edges to be $0$, others be $1$.</li>
+</ul>
+</li>
+<li>$SUBSET-SUM \le 3-SAT$<ul>
+<li>For a $n$-var, $k$-clause 3-SAT, we build a table of vectors where lower $n$ bits, upper $k$ bits. If $x_i$ or $\not x_i$ then the lower $i$ bit is 1. If it is present in the $j$th clause, then upper $j$ is 1. For each upper column, we add two “slack rows” where one is 1, the other is 2.</li>
+<li>If the $3-SAT$ is satisfiable, then we pick the rows representing true vars. We get first n bits 1s. We get each upper column 1, 2, or 3 (it cannot be 0 because there is at least 1 true var in each clause, it cannot be more than 3 because there are 3 vars in each clause). Then we pick corresponding slack rows to get all 4s on the upper bits. The reverse direction is similar.</li>
+</ul>
+</li>
+<li>$3-SAT\le VC$<ul>
+<li>Construct a triplet for each clause, a pair for each variable $x$: $(x, \not x)$.</li>
+<li>For a truth assignment, we pick 1 from the triplet to be true, the other 2 to be false. Add the false ones to the vertex cover. Add the true variable to the vertex cover. With-in edges are covered by true variables. Edges from pair to triplet have two cases. If the end in the triplet is selected(false), it is covered. If not(true), it is covered by the end in the pair.</li>
+<li>For a n+2k vertex cover, 1 vertex in the triplet is not covered by itself but by the end in the pair, which is true. So this variable is true.</li>
+</ul>
+</li>
+<li>$SAT\le 3-SAT$<ul>
+<li>Use parse tree to construct triplets with intermediate results.</li>
+</ul>
+</li>
+<li>$SUBSET-SUM\le PARTITION$<ul>
+<li>populate $x_1, …, x_n, 2t-a$, where $a$ is the sum</li>
+</ul>
+</li>
+<li>$SUBGRAPH-ISOMORPHIC$<ul>
+<li>CLIQUE reduces to this</li>
+</ul>
+</li>
+<li>$HALTS$</li>
+</ul>
+<h1 id="Probability">Probability</h1>
+<ul>
+<li>RandInt(m): 1, 2, 3, … m with $p=\frac{1}{m}$</li>
+<li>Bernoulli(p): 1 with $p=p$</li>
+</ul>
+<p><em>outcome</em>: A leaf in probability tree</p>
+<p><em>Sample Space</em>: Set of all outcomes</p>
+<p><em>Event</em>: A subset of outcomes</p>
+<p><em>Law of Total Probability</em>: $p[b] = p[a] <em> p[b|a] + p[a^c] </em> p[b|a^c]$</p>
+<p><em>Independence of Multiple Events</em>: for all subsets, for all size.</p>
+<p><em>Random Variable</em>: function from sample space to reals.</p>
+<p><em>Indicator</em>: R.V. x which is 1 when event A occurs, 0 otherwise.</p>
 
       
     </div>
@@ -235,7 +374,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/251/">251</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cachelab/">cachelab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">food</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/">machine learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/">notes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/schedule/">schedule</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/251/">251</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cachelab/">cachelab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">food</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/">machine learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/">notes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/schedule/">schedule</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -253,7 +392,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
