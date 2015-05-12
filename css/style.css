@@ -200,7 +200,7 @@ body {
 #toc {
   line-height: 1em;
   font-size: 0.9em;
-  float: right;
+  float: left;
 }
 #toc .toc {
   padding: 0;
