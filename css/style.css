@@ -185,6 +185,21 @@ body {
 .mobile-nav-on #wrap {
   left: 280px;
 }
+#nav-rss-link:before {
+  content: "\f09e";
+}
+#nav-twitter-link:before {
+  content: "\f099";
+}
+#nav-linkedin-link:before {
+  content: "\f0e1";
+}
+#nav-github-link:before {
+  content: "\f113";
+}
+#nav-search-btn:before {
+  content: "\f002";
+}
 .toc-article {
   background: #eee;
   border: 1px solid #bbb;
@@ -420,6 +435,21 @@ body {
 #main-nav {
   float: left;
   margin-left: -15px;
+}
+#nav-rss-link:before {
+  content: "\f09e";
+}
+#nav-twitter-link:before {
+  content: "\f099";
+}
+#nav-linkedin-link:before {
+  content: "\f0e1";
+}
+#nav-github-link:before {
+  content: "\f113";
+}
+#nav-search-btn:before {
+  content: "\f002";
 }
 .nav-icon,
 .main-nav-link {
