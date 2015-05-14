@@ -111,7 +111,22 @@ ga('send', 'pageview');
 <li>List definition: <code>&#39;(a, b, c, d, ...)</code></li>
 <li>lists can be programs AND data</li>
 <li><em>Atom</em>: indivisible element</li>
-<li>Atoms contain: numbers, symbols, …</li>
+<li>Atoms contain: numbers, symbols, …<h2 id="Run_a_Program">Run a Program</h2>
+</li>
+<li><code>&#39;</code> tells List to do nothing with the list, otherwise, use the first element in the list as the function</li>
+<li>Use <code>C-x C-e</code> to evaluate a lisp expression in emacs<h2 id="Generate_an_Error_Message">Generate an Error Message</h2>
+</li>
+<li>Evaluate <code>(a, b, c, d)</code> will generate an error, type <code>q</code> to quit<h2 id="Functions_and_Arguments">Functions and Arguments</h2>
+</li>
+<li><code>concat number-to-string</code><h2 id="The_message_function">The <code>message</code> function</h2>
+</li>
+<li><code>(message &quot;This is a message&quot;)</code></li>
+<li><code>(message &quot;The current buffer is %s&quot; (buffer-name))</code><h2 id="Setting_the_Value_of_a_Variable">Setting the Value of a Variable</h2>
+</li>
+<li>Using <code>set</code>: <code>(set &#39;flowers &#39;(rose violet daisy buttercup))</code></li>
+<li>Using <code>setq</code>: <code>(setq flowers &#39;(rose violet daisy buttercup))</code><h1 id="Practicing_Evaluation">Practicing Evaluation</h1>
+</li>
+<li>To view documentation: <code>(info &quot;(elisp)Files&quot;)</code></li>
 </ul>
 
       
