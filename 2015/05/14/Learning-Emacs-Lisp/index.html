@@ -162,8 +162,20 @@ ga('send', 'pageview');
 </li>
 <li>A typical list function:</li>
 </ul>
-<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="list">(<span class="title">defun</span> function_name <span class="list">(<span class="title">args</span>)</span></span></div><div class="line">  <span class="string">"documentation"</span></div><div class="line">  <span class="list">(<span class="title">interactive</span> argument-passing-info)</span> <span class="comment">; optional</span></div><div class="line">  body...)</div></pre></td></tr></table></figure>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="list">(<span class="title">defun</span> function_name <span class="list">(<span class="title">args</span>)</span></span></div><div class="line"><span class="string">"documentation"</span></div><div class="line"><span class="list">(<span class="title">interactive</span> argument-passing-info)</span> <span class="comment">; optional</span></div><div class="line">body...)</div></pre></td></tr></table></figure>
 
+<ul>
+<li><code>interactive</code>: <code>(interactive &quot;p&quot;)</code> uses <em>prefix</em></li>
+<li><em>let</em>:</li>
+</ul>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="list">(<span class="title">let</span> <span class="list">(<span class="list">(<span class="title">var_name</span>, var_value)</span>,</span></span></div><div class="line">      <span class="list">(<span class="title">var_name</span>, var_value)</span>...)</div><div class="line">      body...</div><div class="line">)</div></pre></td></tr></table></figure>
+
+<ul>
+<li><em>if</em>:</li>
+</ul>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="list">(<span class="title">if</span> <span class="list">(<span class="title">&gt;</span> <span class="number">5</span> <span class="number">4</span>)</span></span></div><div class="line"><span class="list">(<span class="title">message</span> <span class="string">"5 is greater than 4"</span>)</span></div><div class="line"><span class="list">(<span class="title">message</span> <span class="string">"otherwise"</span>)</span>)</div></pre></td></tr></table></figure>
+
+<p>-</p>
 
       
     </div>
