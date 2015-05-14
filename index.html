@@ -127,7 +127,14 @@ ga('send', 'pageview');
 <li>Using <code>setq</code>: <code>(setq flowers &#39;(rose violet daisy buttercup))</code><h1 id="Practicing_Evaluation">Practicing Evaluation</h1>
 </li>
 <li>To view documentation: <code>(info &quot;(elisp)Files&quot;)</code></li>
+<li>Each keystroke calls the <code>self-insert-command</code>, an <em>interactive function</em></li>
+<li><code>(buffer-size)</code> <code>(point)</code><h1 id="How_to_Write_Function_Definitions">How to Write Function Definitions</h1>
+<h2 id="The_defun_Macro">The <code>defun</code> Macro</h2>
+</li>
+<li>A typical list function:</li>
 </ul>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="list">(<span class="title">defun</span> function_name <span class="list">(<span class="title">args</span>)</span></span></div><div class="line">  <span class="string">"documentation"</span></div><div class="line">  <span class="list">(<span class="title">interactive</span> argument-passing-info)</span> <span class="comment">; optional</span></div><div class="line">  body...)</div></pre></td></tr></table></figure>
+
 
       
     </div>
