@@ -3,17 +3,29 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: Python | Kai Kang</title>
+  <title>Operating System Notes | Kai Kang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="a place of sharing tech, food">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Kai Kang">
-<meta property="og:url" content="https://pavelkang.github.io/tags/Python/">
+  <meta name="description" content="Introduction
+What Operating Systems Do
+
+A computer system can be divided into: hardware, operating system, application programs, users
+An operating system performs no useful function by itself, but pr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Operating System Notes">
+<meta property="og:url" content="https://pavelkang.github.io/2015/05/17/Operating-System-Notes/">
 <meta property="og:site_name" content="Kai Kang">
-<meta property="og:description" content="a place of sharing tech, food">
+<meta property="og:description" content="Introduction
+What Operating Systems Do
+
+A computer system can be divided into: hardware, operating system, application programs, users
+An operating system performs no useful function by itself, but pr">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kai Kang">
-<meta name="twitter:description" content="a place of sharing tech, food">
+<meta name="twitter:title" content="Operating System Notes">
+<meta name="twitter:description" content="Introduction
+What Operating Systems Do
+
+A computer system can be divided into: hardware, operating system, application programs, users
+An operating system performs no useful function by itself, but pr">
 
   
     <link rel="alternative" href="/atom.xml" title="Kai Kang" type="application/atom+xml">
@@ -81,12 +93,10 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Tech-Interview-1" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Operating-System-Notes" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2014/11/15/Tech-Interview-1/" class="article-date">
-  <time datetime="2014-11-15T20:27:33.000Z" itemprop="datePublished">Nov 15 2014</time>
+    <a href="/2015/05/17/Operating-System-Notes/" class="article-date">
+  <time datetime="2015-05-17T08:23:21.000Z" itemprop="datePublished">May 17 2015</time>
 </a>
     
   </div>
@@ -96,64 +106,80 @@ ga('send', 'pageview');
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/11/15/Tech-Interview-1/">Tech Interview</a>
+    <h1 class="article-title" itemprop="name">
+      Operating System Notes
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody" style="display:none">
+    <div class="article-entry" itemprop="articleBody">
       
-        <p>Some topics from either oj.leetcode.com or hackerrank:</p>
-<h3 id="Palindrome">Palindrome</h3>
+        <!-- Table of Contents -->
+        
+            <div id="toc" class="toc-article">
+                <strong class="toc-title">Table of Contents</strong>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#What_Operating_Systems_Do"><span class="toc-number">1.1.</span> <span class="toc-text">What Operating Systems Do</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Computer-system_Organization"><span class="toc-number">1.2.</span> <span class="toc-text">Computer-system Organization</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Computer-system_Architechture"><span class="toc-number">1.3.</span> <span class="toc-text">Computer-system Architechture</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Operating-system_Structure"><span class="toc-number">1.4.</span> <span class="toc-text">Operating-system Structure</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Operating-system_Operations"><span class="toc-number">1.5.</span> <span class="toc-text">Operating-system Operations</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Process_Management"><span class="toc-number">1.6.</span> <span class="toc-text">Process Management</span></a></li></ol></li></ol>
+            </div>
+        
+        <h1 id="Introduction">Introduction</h1>
+<h2 id="What_Operating_Systems_Do">What Operating Systems Do</h2>
 <ul>
-<li><a href="https://oj.leetcode.com/problems/palindrome-number/" target="_blank" rel="external">Palindrome Number</a><br>Is a number palindrome?<br>Solution: reverse the integer and see if they equal. Pay attention to the sign<br>Big-O: 0 space n time (n is the length of number)</li>
-<li><a href="https://oj.leetcode.com/problems/palindrome-partitioning/" target="_blank" rel="external">Palindrome Partition I</a><br>Find all possible ways to partition a string into palindrome substrings<br>Solution: DP<br>Big-O: n^2 space 2^n time (n is the length of string)</li>
-<li><a href="https://oj.leetcode.com/problems/palindrome-partitioning-ii/" target="_blank" rel="external">Palindrome Partition II</a><br>Find the minimum number of cuts to partition a string into palindrome substrings<br>Solution: Double DP. If use the previous problem, too much space and time.<br>Find P[i][j] s.t. P[i][j] is true if s[i:j] is palindrome. D[i] is the mincut<br>of s[i:].<br>Big-O: n^2 space n^2 time (n is the length of string)</li>
-<li><a href="https://www.hackerrank.com/challenges/palindrome-index" target="_blank" rel="external">Palindrome Index</a><br>Find the index in the string which if removed, makes the string palindrome<br>Solution: TODO</li>
-<li><a href="https://oj.leetcode.com/problems/longest-palindromic-substring/" target="_blank" rel="external">Longest Palindrome Substring</a><br>Solution: We can use the DP in “Pal Part II”, which will have O(n^2) big-O. Or we can use <strong>manacher’s algorithm</strong> in O(n).</li>
-</ul>
-<hr>
-<h3 id="Binary_Tree">Binary Tree</h3>
-<ul>
-<li><a href="https://oj.leetcode.com/problems/binary-tree-preorder-traversal/" target="_blank" rel="external">Preorder Traversal</a><br>Solution: Trivial</li>
-<li><a href="https://oj.leetcode.com/problems/binary-tree-postorder-traversal/" target="_blank" rel="external">Postorder Traversal</a><br>Solution: Trivial</li>
-<li><a href="https://oj.leetcode.com/problems/binary-tree-inorder-traversal/" target="_blank" rel="external">Inorder Traversal</a><br>Solution: Trivial</li>
-<li><a href="https://oj.leetcode.com/problems/binary-tree-maximum-path-sum/" target="_blank" rel="external">Binary Tree Maximum Sum</a><br>Solution: This problem has a lot of edge cases, and the “path” is not so well-defined in the problem.<br>This problem seems to be a DP problem at the first sight, but if you think about it, you can expand in<br>two directions at the root, but not at children of root, which is not a “path”. I used a hash table<br>to store each node’s single path sum, defined as the max sum reached by going either to the left<br>or to the right, but not both. And traverse the tree to compute each node’s maxPathSum.<br>Big-O: n space nlogn time</li>
-<li><a href="https://oj.leetcode.com/problems/flatten-binary-tree-to-linked-list/" target="_blank" rel="external">Flatten Binary Tree to Linked List</a><br>Solution: Use a queue. Brute force solution.<br>Big-O: n space n time</li>
-<li><a href="https://oj.leetcode.com/problems/minimum-depth-of-binary-tree/" target="_blank" rel="external">Minimum depth of tree</a><br>Find the minimum distance from root to a leaf node<br>Solution: this problem is not complicated, but not as trivial as it first appears. Consider (1, #, 2) as<br>an edge case.<br>Big-O: 1 space d work</li>
-<li><a href="https://oj.leetcode.com/problems/balanced-binary-tree/" target="_blank" rel="external">Balanced Binary Tree</a><br>Solution: Trivial<blockquote>
-<p>TODO: AVL Tree</p>
-</blockquote>
+<li>A computer system can be divided into: <em>hardware</em>, <em>operating system</em>, <em>application programs</em>, <em>users</em></li>
+<li>An operating system performs no useful function by itself, but provides an environment within which other programs can do useful work.<h2 id="Computer-system_Organization">Computer-system Organization</h2>
 </li>
-<li><a href="https://oj.leetcode.com/problems/convert-sorted-array-to-binary-search-tree/" target="_blank" rel="external">Sorted Array to Binary Tree</a><br>Solution: similar to binary search<br>Big-O: n space n time</li>
-<li><a href="https://oj.leetcode.com/problems/convert-sorted-list-to-binary-search-tree/" target="_blank" rel="external">Sorted list to Binary Tree</a><br>Solution: Use the above program<br>Big-O: n space n time</li>
-<li><a href="https://oj.leetcode.com/problems/maximum-depth-of-binary-tree/" target="_blank" rel="external">Maximum Depth of Binary Tree </a><br>Solution: Trivial</li>
-<li><a href="https://oj.leetcode.com/problems/binary-tree-level-order-traversal/" target="_blank" rel="external">Level order Traversal</a><br>Solution: Create a hash table of <node, height=""><br>Big-O: n time n space</node,></li>
-<li><a href="https://oj.leetcode.com/problems/binary-tree-level-order-traversal-ii/" target="_blank" rel="external">Level order Traversal II</a><br>Solution: Similar to the above problem.</li>
-<li><a href="https://oj.leetcode.com/problems/binary-tree-zigzag-level-order-traversal/" target="_blank" rel="external">Zigzag level order traversal</a><br>Solution: Similar to the above</li>
-<li><a href="https://oj.leetcode.com/problems/same-tree/" target="_blank" rel="external">Same Tree</a><br>Solution: Trivial</li>
+<li>Bootstrap program in <strong>ROM</strong></li>
+<li><strong>interrupt vector</strong> is an array of pointers to interrupt routines.</li>
+<li>I/O and storage<h2 id="Computer-system_Architechture">Computer-system Architechture</h2>
+</li>
+<li>Multicore systems are multiprocessor, not all multiprocessor are multicore</li>
+<li><strong>Blade servers</strong> : each processor boots independently and runs its own OS.</li>
+<li><strong>Clustered System</strong>: Individual systems are joined via LAN to provide <strong>high availability</strong> (service will continue even one fails)<h2 id="Operating-system_Structure">Operating-system Structure</h2>
+</li>
+<li><strong>Multiprogramming</strong>: Run multiple programs to increase the utilization of the CPU.</li>
+<li><strong>Time Sharing</strong>: is a logical extension of multiprogramming that CPU executes multiple jobs by switching fast.</li>
+<li>To ensure reasonable response time, use <strong>swapping</strong> or <strong>virtual memory</strong>.<h2 id="Operating-system_Operations">Operating-system Operations</h2>
+</li>
+<li>A <strong>trap</strong> is a software-generated interrupt caused either by an error or request</li>
+<li>Use a mode bit to indicate in <strong>user mode</strong> or <strong>kernel mode</strong> to avoid user programs to crash OS.</li>
+<li>A <strong>Timer</strong> is used to detect possible infinite loops in user programs.<h2 id="Process_Management">Process Management</h2>
+-</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2014/11/15/Tech-Interview-1/" data-id="nvg1p85unjbxi07k" class="article-share-link">Share</a>
+      <a data-url="https://pavelkang.github.io/2015/05/17/Operating-System-Notes/" data-id="y1lomdpe28j4dwif" class="article-share-link">Share</a>
       
-        <a href="https://pavelkang.github.io/2014/11/15/Tech-Interview-1/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="https://pavelkang.github.io/2015/05/17/Operating-System-Notes/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interview/">Interview</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/410/">410</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OS/">OS</a></li></ul>
 
     </footer>
   </div>
   
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/05/14/Learning-Emacs-Lisp/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Learning Emacs Lisp</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
 
-  
-  
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
 </section>
         
           <aside id="sidebar">
@@ -246,11 +272,13 @@ ga('send', 'pageview');
 <script>
   var disqus_shortname = 'sclingtt';
   
+  var disqus_url = 'https://pavelkang.github.io/2015/05/17/Operating-System-Notes/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
