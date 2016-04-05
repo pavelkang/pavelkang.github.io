@@ -81,10 +81,10 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
-    <article id="post--15251-Computational-Complexity" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post--15-251-Graph-Algorithms" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/02/16/-15251-Computational-Complexity/" class="article-date">
-  <time datetime="2015-02-15T22:49:09.000Z" itemprop="datePublished">Feb 16 2015</time>
+    <a href="/2015/02/24/-15-251-Graph-Algorithms/" class="article-date">
+  <time datetime="2015-02-24T06:38:34.000Z" itemprop="datePublished">Feb 24 2015</time>
 </a>
     
   </div>
@@ -95,7 +95,69 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/02/16/-15251-Computational-Complexity/">[15251]-Computational Complexity</a>
+      <a class="article-title" href="/2015/02/24/-15-251-Graph-Algorithms/">[15-251] Graph Algorithms</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody" style="display:none">
+      
+        <h3 id="Basics">Basics</h3>
+<ul>
+<li>Regular: all nodes have same degrees</li>
+<li>Walk</li>
+<li>Path: Walk with no repeated vertices</li>
+<li>Cycle: a walk from u to u where the only repeated vertex is u</li>
+<li>Tree: connected; n-1 edges; acyclic</li>
+<li>Local Search guarantees to get $\ge \frac{m}{2}$<ul>
+<li>Each vertex has $\ge \frac{deg(v)}{2}$ edges cut because otherwise we can flip its color to get more cuts</li>
+</ul>
+</li>
+</ul>
+<p>Problem: Identify all nodes reachable from s.<br>BFS, DFS, AFS<br>AFS finds a <em>spanning tree</em> rooted at s (bag, mark)<br>Why does AFS halt?<br>If we put <em>edge</em> in the bag, get a spanning tree.<br>Full AFS finds all connected components<br>CFS: Cheapest First Search<br><em>MST</em>: subset of edges of minimum total cost such that all vertices connected<br>Prim: put the cheapest edge in the bag. If use Priority Queue, $O(Elog(E))$ run-time.<br><em>MST Cut Property</em> e is the cheapest edge from S to not S, then must be in the MST.<br><em>Kruskal</em>: Go through edges, add as long as it does not make cycles<br><em>Boruvka</em>: Add the cheapest edges out of each c.c.</p>
+<h2 id="Matching">Matching</h2>
+<p><em>Bipartite Graph</em>: there is a bipartition X and Y such that each edge connects x and y.<br><em>Matching</em>: a subset of edges that do not share an endpoint.<br><em>Maximum Matching</em>: A matching with largest number of edges<br><em>Perfect Matching</em>: A matching that covers all vertices<br><em>Stable matching</em>: There is no unstable pair(u, v not matched to each other, but they prefer each other to their current partners)<br>GS-algorithm: While a man is unmatched: propose to w(highest in the list)</p>
+<ul>
+<li>$O(n^2)$ (because number of proposals are $n^2$).</li>
+<li>Perfect Matching</li>
+<li>Stable<br>GS always finds the <em>Best Valid Partner</em><br>Prove: Man always finds the best. Woman always finds the worst.</li>
+</ul>
+<h3 id="Maximum_Matching">Maximum Matching</h3>
+<p><em>Augmenting path</em>(with respect to matching M): edges alternate between in M and not in M.<br>Prove: If there is an aug. path, M is not maximum<br>Find Maximum Matching: start with an edge, find augment path, …<br>To find aug. path: direct edges in M from left to right.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://pavelkang.github.io/2015/02/24/-15-251-Graph-Algorithms/" data-id="rrh1z2unvmqn5if9" class="article-share-link">Share</a>
+      
+        <a href="https://pavelkang.github.io/2015/02/24/-15-251-Graph-Algorithms/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/251/">251</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/">math</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post--15251-Computational-Complexity" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/02/15/-15251-Computational-Complexity/" class="article-date">
+  <time datetime="2015-02-15T22:49:09.000Z" itemprop="datePublished">Feb 15 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/15/-15251-Computational-Complexity/">[15251]-Computational Complexity</a>
     </h1>
   
 
@@ -130,9 +192,9 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2015/02/16/-15251-Computational-Complexity/" data-id="7ydmwam6icjyecgy" class="article-share-link">Share</a>
+      <a data-url="https://pavelkang.github.io/2015/02/15/-15251-Computational-Complexity/" data-id="7ydmwam6icjyecgy" class="article-share-link">Share</a>
       
-        <a href="https://pavelkang.github.io/2015/02/16/-15251-Computational-Complexity/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="https://pavelkang.github.io/2015/02/15/-15251-Computational-Complexity/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/251/">251</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/">math</a></li></ul>
@@ -146,8 +208,8 @@ ga('send', 'pageview');
   
     <article id="post--15251-Uncountability-and-Uncomputability" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/02/01/-15251-Uncountability-and-Uncomputability/" class="article-date">
-  <time datetime="2015-01-31T22:55:35.000Z" itemprop="datePublished">Feb 1 2015</time>
+    <a href="/2015/01/31/-15251-Uncountability-and-Uncomputability/" class="article-date">
+  <time datetime="2015-01-31T22:55:35.000Z" itemprop="datePublished">Jan 31 2015</time>
 </a>
     
   </div>
@@ -158,7 +220,7 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/02/01/-15251-Uncountability-and-Uncomputability/">[15251 Uncountability and Uncomputability]</a>
+      <a class="article-title" href="/2015/01/31/-15251-Uncountability-and-Uncomputability/">[15251 Uncountability and Uncomputability]</a>
     </h1>
   
 
@@ -211,9 +273,9 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2015/02/01/-15251-Uncountability-and-Uncomputability/" data-id="aotud5mb20zvj18y" class="article-share-link">Share</a>
+      <a data-url="https://pavelkang.github.io/2015/01/31/-15251-Uncountability-and-Uncomputability/" data-id="aotud5mb20zvj18y" class="article-share-link">Share</a>
       
-        <a href="https://pavelkang.github.io/2015/02/01/-15251-Uncountability-and-Uncomputability/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="https://pavelkang.github.io/2015/01/31/-15251-Uncountability-and-Uncomputability/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/251/">251</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/">math</a></li></ul>
@@ -227,8 +289,8 @@ ga('send', 'pageview');
   
     <article id="post--15251-Formalization-of-Proof-Finite-Automata" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/01/23/-15251-Formalization-of-Proof-Finite-Automata/" class="article-date">
-  <time datetime="2015-01-22T23:53:05.000Z" itemprop="datePublished">Jan 23 2015</time>
+    <a href="/2015/01/22/-15251-Formalization-of-Proof-Finite-Automata/" class="article-date">
+  <time datetime="2015-01-22T23:53:05.000Z" itemprop="datePublished">Jan 22 2015</time>
 </a>
     
   </div>
@@ -239,7 +301,7 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/23/-15251-Formalization-of-Proof-Finite-Automata/">[15251] Formalization of Proof, Finite Automata</a>
+      <a class="article-title" href="/2015/01/22/-15251-Formalization-of-Proof-Finite-Automata/">[15251] Formalization of Proof, Finite Automata</a>
     </h1>
   
 
@@ -305,9 +367,9 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2015/01/23/-15251-Formalization-of-Proof-Finite-Automata/" data-id="rd7irjl9y0damy3o" class="article-share-link">Share</a>
+      <a data-url="https://pavelkang.github.io/2015/01/22/-15251-Formalization-of-Proof-Finite-Automata/" data-id="rd7irjl9y0damy3o" class="article-share-link">Share</a>
       
-        <a href="https://pavelkang.github.io/2015/01/23/-15251-Formalization-of-Proof-Finite-Automata/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="https://pavelkang.github.io/2015/01/22/-15251-Formalization-of-Proof-Finite-Automata/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/251/">251</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/">math</a></li></ul>
@@ -540,8 +602,8 @@ ga('send', 'pageview');
   
     <article id="post--15251-Deductive-Systems-and-Propositional-Logic" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/01/16/-15251-Deductive-Systems-and-Propositional-Logic/" class="article-date">
-  <time datetime="2015-01-16T02:42:59.000Z" itemprop="datePublished">Jan 16 2015</time>
+    <a href="/2015/01/15/-15251-Deductive-Systems-and-Propositional-Logic/" class="article-date">
+  <time datetime="2015-01-16T02:42:59.000Z" itemprop="datePublished">Jan 15 2015</time>
 </a>
     
   </div>
@@ -552,7 +614,7 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/16/-15251-Deductive-Systems-and-Propositional-Logic/">[15251] Deductive Systems and Propositional Logic</a>
+      <a class="article-title" href="/2015/01/15/-15251-Deductive-Systems-and-Propositional-Logic/">[15251] Deductive Systems and Propositional Logic</a>
     </h1>
   
 
@@ -614,9 +676,9 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2015/01/16/-15251-Deductive-Systems-and-Propositional-Logic/" data-id="zzwj5bs25obm0219" class="article-share-link">Share</a>
+      <a data-url="https://pavelkang.github.io/2015/01/15/-15251-Deductive-Systems-and-Propositional-Logic/" data-id="zzwj5bs25obm0219" class="article-share-link">Share</a>
       
-        <a href="https://pavelkang.github.io/2015/01/16/-15251-Deductive-Systems-and-Propositional-Logic/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="https://pavelkang.github.io/2015/01/15/-15251-Deductive-Systems-and-Propositional-Logic/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/251/">251</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/">math</a></li></ul>
@@ -630,8 +692,8 @@ ga('send', 'pageview');
   
     <article id="post-Dark-Meat-vs-White-Meat-Which-meat-to-have-at-KFC" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/01/14/Dark-Meat-vs-White-Meat-Which-meat-to-have-at-KFC/" class="article-date">
-  <time datetime="2015-01-14T01:10:51.000Z" itemprop="datePublished">Jan 14 2015</time>
+    <a href="/2015/01/13/Dark-Meat-vs-White-Meat-Which-meat-to-have-at-KFC/" class="article-date">
+  <time datetime="2015-01-14T01:10:51.000Z" itemprop="datePublished">Jan 13 2015</time>
 </a>
     
   </div>
@@ -642,7 +704,7 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/14/Dark-Meat-vs-White-Meat-Which-meat-to-have-at-KFC/">Dark Meat vs. White Meat - Which meat to have at KFC</a>
+      <a class="article-title" href="/2015/01/13/Dark-Meat-vs-White-Meat-Which-meat-to-have-at-KFC/">Dark Meat vs. White Meat - Which meat to have at KFC</a>
     </h1>
   
 
@@ -655,9 +717,9 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2015/01/14/Dark-Meat-vs-White-Meat-Which-meat-to-have-at-KFC/" data-id="smwpiy29p04l69pc" class="article-share-link">Share</a>
+      <a data-url="https://pavelkang.github.io/2015/01/13/Dark-Meat-vs-White-Meat-Which-meat-to-have-at-KFC/" data-id="smwpiy29p04l69pc" class="article-share-link">Share</a>
       
-        <a href="https://pavelkang.github.io/2015/01/14/Dark-Meat-vs-White-Meat-Which-meat-to-have-at-KFC/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="https://pavelkang.github.io/2015/01/13/Dark-Meat-vs-White-Meat-Which-meat-to-have-at-KFC/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/food/">food</a></li></ul>
@@ -725,8 +787,8 @@ ga('send', 'pageview');
   
     <article id="post-Tech-Interview-1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2014/11/16/Tech-Interview-1/" class="article-date">
-  <time datetime="2014-11-15T20:27:33.000Z" itemprop="datePublished">Nov 16 2014</time>
+    <a href="/2014/11/15/Tech-Interview-1/" class="article-date">
+  <time datetime="2014-11-15T20:27:33.000Z" itemprop="datePublished">Nov 15 2014</time>
 </a>
     
   </div>
@@ -737,7 +799,7 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/11/16/Tech-Interview-1/">Tech Interview</a>
+      <a class="article-title" href="/2014/11/15/Tech-Interview-1/">Tech Interview</a>
     </h1>
   
 
@@ -779,9 +841,9 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2014/11/16/Tech-Interview-1/" data-id="nvg1p85unjbxi07k" class="article-share-link">Share</a>
+      <a data-url="https://pavelkang.github.io/2014/11/15/Tech-Interview-1/" data-id="nvg1p85unjbxi07k" class="article-share-link">Share</a>
       
-        <a href="https://pavelkang.github.io/2014/11/16/Tech-Interview-1/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="https://pavelkang.github.io/2014/11/15/Tech-Interview-1/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interview/">Interview</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
@@ -868,50 +930,9 @@ Upperbound for misses: 300<br>Please refer to the image for 32 <em> 32. In this 
 
 
   
-    <article id="post-Create-a-blog-with-hexo" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/10/06/Create-a-blog-with-hexo/" class="article-date">
-  <time datetime="2014-10-06T02:13:18.000Z" itemprop="datePublished">Oct 6 2014</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/06/Create-a-blog-with-hexo/">Create a blog with hexo</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody" style="display:none">
-      
-        <p>I started to get bored with writing a blog on wordpress.com. It should be more exciting to host my own blog. So I googled and found this blog framework <em>Hexo</em>. It’s super easy to use for someone with a basic understanding of nodejs applications and simple deployment on Github/Heroku etc. Anyway, it’s a fun thing to do! Hopefully I can keep writing more blogs.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2014/10/06/Create-a-blog-with-hexo/" data-id="6fyzg5gg95syf8xs" class="article-share-link">Share</a>
-      
-        <a href="https://pavelkang.github.io/2014/10/06/Create-a-blog-with-hexo/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 </section>
@@ -942,7 +963,7 @@ Upperbound for misses: 300<br>Please refer to the image for 32 <em> 32. In this 
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -954,23 +975,23 @@ Upperbound for misses: 300<br>Please refer to the image for 32 <em> 32. In this 
       <ul>
         
           <li>
+            <a href="/2016/04/05/graph/">graph</a>
+          </li>
+        
+          <li>
             <a href="/2015/05/17/Operating-System-Notes/">Operating System Notes</a>
           </li>
         
           <li>
-            <a href="/2015/05/15/Learning-Emacs-Lisp/">Learning Emacs Lisp</a>
+            <a href="/2015/05/14/Learning-Emacs-Lisp/">Learning Emacs Lisp</a>
           </li>
         
           <li>
-            <a href="/2015/05/11/Making-Emacs-a-Better-C-C-IDE/">Making Emacs a Better C/C++ IDE</a>
+            <a href="/2015/05/10/Making-Emacs-a-Better-C-C-IDE/">Making Emacs a Better C/C++ IDE</a>
           </li>
         
           <li>
             <a href="/2015/05/06/251-Final-Review/">251 Final Review</a>
-          </li>
-        
-          <li>
-            <a href="/2015/04/07/最近想做的菜/">最近想做的菜</a>
           </li>
         
       </ul>
@@ -985,7 +1006,7 @@ Upperbound for misses: 300<br>Please refer to the image for 32 <em> 32. In this 
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2015 Kai Kang<br>
+      &copy; 2016 Kai Kang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

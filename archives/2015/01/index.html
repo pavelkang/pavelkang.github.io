@@ -81,10 +81,10 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
-    <article id="post--15251-Formalization-of-Proof-Finite-Automata" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post--15251-Uncountability-and-Uncomputability" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/01/23/-15251-Formalization-of-Proof-Finite-Automata/" class="article-date">
-  <time datetime="2015-01-22T23:53:05.000Z" itemprop="datePublished">Jan 23 2015</time>
+    <a href="/2015/01/31/-15251-Uncountability-and-Uncomputability/" class="article-date">
+  <time datetime="2015-01-31T22:55:35.000Z" itemprop="datePublished">Jan 31 2015</time>
 </a>
     
   </div>
@@ -95,7 +95,88 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/23/-15251-Formalization-of-Proof-Finite-Automata/">[15251] Formalization of Proof, Finite Automata</a>
+      <a class="article-title" href="/2015/01/31/-15251-Uncountability-and-Uncomputability/">[15251 Uncountability and Uncomputability]</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody" style="display:none">
+      
+        <ul>
+<li>Injective: $a \neq a’ \rightarrow f(a) \neq f(a’)$</li>
+<li>Surjective: $\forall b\in B, \exists a\in A, f(a) = b$</li>
+<li>Bijective</li>
+</ul>
+<p>$\mathbb{N} = \mathbb{Z}$<br><em>Countable</em> = finite or countably infinite<br><strong>Cantor’s Theorem</strong><br>For any non-empty set $A$, $|A|\lt |P(A)|$. This can be proven by <em>diagonalization</em>. $S = a\in A: a\notin f(a)$ $S$ is defined by diagonalization so that $S$ cannot equal any $f(a)$.<br><strong>Continuum Hypothesis (Hilbert’s 1st Problem)</strong><br>There is no set $S$ such that $|\mathbb{N}|\lt |S|\lt |P(\mathbb{N})|$</p>
+<p><em>String encoding</em>: Computational problems can be <em>serialized</em> into a string</p>
+<h3 id="Computational_Complexity">Computational Complexity</h3>
+<ul>
+<li>Every multitape TM has an equivalent single tape TM.</li>
+<li>Running time depends on the particular model you choose</li>
+<li>Running time is defined as $T_A(n) = max{# \text{steps A takes on I}}$ (max input instance)</li>
+<li><em>intrinsic complexity</em> is defined by $min$ (min algorithm).</li>
+<li>Entscheidungsproblem: Decide whether a given statement is valid with a given set of axioms</li>
+<li>To compute summations:<ul>
+<li>Rough bounding</li>
+<li>Exact computation</li>
+<li>Induction</li>
+<li>Telescoping series ($\frac{1}{i(i+1)}$)</li>
+<li>Comparison with an integral</li>
+</ul>
+</li>
+<li><strong>Master Method</strong><br>For $T(n) \le a\dot T(\frac{n}{b}) + O(n^d)$,<ul>
+<li>$a = b^d$, $O(n^dlog n)$</li>
+<li>$a &lt; b^d$, $O(n^d)$</li>
+<li>$a &gt; b^d$, $O(n^{log_ba})$</li>
+</ul>
+</li>
+</ul>
+<p>Countable:</p>
+<ul>
+<li>countable cartesian product of countable sets<ul>
+<li>Prime factorization</li>
+</ul>
+</li>
+<li>Countable union of countable sets</li>
+<li>Set of Finite Subsets of Countable Set<ul>
+<li>Induction</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://pavelkang.github.io/2015/01/31/-15251-Uncountability-and-Uncomputability/" data-id="aotud5mb20zvj18y" class="article-share-link">Share</a>
+      
+        <a href="https://pavelkang.github.io/2015/01/31/-15251-Uncountability-and-Uncomputability/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/251/">251</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/">math</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post--15251-Formalization-of-Proof-Finite-Automata" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/01/22/-15251-Formalization-of-Proof-Finite-Automata/" class="article-date">
+  <time datetime="2015-01-22T23:53:05.000Z" itemprop="datePublished">Jan 22 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/22/-15251-Formalization-of-Proof-Finite-Automata/">[15251] Formalization of Proof, Finite Automata</a>
     </h1>
   
 
@@ -161,9 +242,9 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2015/01/23/-15251-Formalization-of-Proof-Finite-Automata/" data-id="rd7irjl9y0damy3o" class="article-share-link">Share</a>
+      <a data-url="https://pavelkang.github.io/2015/01/22/-15251-Formalization-of-Proof-Finite-Automata/" data-id="rd7irjl9y0damy3o" class="article-share-link">Share</a>
       
-        <a href="https://pavelkang.github.io/2015/01/23/-15251-Formalization-of-Proof-Finite-Automata/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="https://pavelkang.github.io/2015/01/22/-15251-Formalization-of-Proof-Finite-Automata/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/251/">251</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/">math</a></li></ul>
@@ -396,8 +477,8 @@ ga('send', 'pageview');
   
     <article id="post--15251-Deductive-Systems-and-Propositional-Logic" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/01/16/-15251-Deductive-Systems-and-Propositional-Logic/" class="article-date">
-  <time datetime="2015-01-16T02:42:59.000Z" itemprop="datePublished">Jan 16 2015</time>
+    <a href="/2015/01/15/-15251-Deductive-Systems-and-Propositional-Logic/" class="article-date">
+  <time datetime="2015-01-16T02:42:59.000Z" itemprop="datePublished">Jan 15 2015</time>
 </a>
     
   </div>
@@ -408,7 +489,7 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/16/-15251-Deductive-Systems-and-Propositional-Logic/">[15251] Deductive Systems and Propositional Logic</a>
+      <a class="article-title" href="/2015/01/15/-15251-Deductive-Systems-and-Propositional-Logic/">[15251] Deductive Systems and Propositional Logic</a>
     </h1>
   
 
@@ -470,9 +551,9 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2015/01/16/-15251-Deductive-Systems-and-Propositional-Logic/" data-id="zzwj5bs25obm0219" class="article-share-link">Share</a>
+      <a data-url="https://pavelkang.github.io/2015/01/15/-15251-Deductive-Systems-and-Propositional-Logic/" data-id="zzwj5bs25obm0219" class="article-share-link">Share</a>
       
-        <a href="https://pavelkang.github.io/2015/01/16/-15251-Deductive-Systems-and-Propositional-Logic/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="https://pavelkang.github.io/2015/01/15/-15251-Deductive-Systems-and-Propositional-Logic/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/251/">251</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/">math</a></li></ul>
@@ -486,8 +567,8 @@ ga('send', 'pageview');
   
     <article id="post-Dark-Meat-vs-White-Meat-Which-meat-to-have-at-KFC" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/01/14/Dark-Meat-vs-White-Meat-Which-meat-to-have-at-KFC/" class="article-date">
-  <time datetime="2015-01-14T01:10:51.000Z" itemprop="datePublished">Jan 14 2015</time>
+    <a href="/2015/01/13/Dark-Meat-vs-White-Meat-Which-meat-to-have-at-KFC/" class="article-date">
+  <time datetime="2015-01-14T01:10:51.000Z" itemprop="datePublished">Jan 13 2015</time>
 </a>
     
   </div>
@@ -498,7 +579,7 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/14/Dark-Meat-vs-White-Meat-Which-meat-to-have-at-KFC/">Dark Meat vs. White Meat - Which meat to have at KFC</a>
+      <a class="article-title" href="/2015/01/13/Dark-Meat-vs-White-Meat-Which-meat-to-have-at-KFC/">Dark Meat vs. White Meat - Which meat to have at KFC</a>
     </h1>
   
 
@@ -511,9 +592,9 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2015/01/14/Dark-Meat-vs-White-Meat-Which-meat-to-have-at-KFC/" data-id="smwpiy29p04l69pc" class="article-share-link">Share</a>
+      <a data-url="https://pavelkang.github.io/2015/01/13/Dark-Meat-vs-White-Meat-Which-meat-to-have-at-KFC/" data-id="smwpiy29p04l69pc" class="article-share-link">Share</a>
       
-        <a href="https://pavelkang.github.io/2015/01/14/Dark-Meat-vs-White-Meat-Which-meat-to-have-at-KFC/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="https://pavelkang.github.io/2015/01/13/Dark-Meat-vs-White-Meat-Which-meat-to-have-at-KFC/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/food/">food</a></li></ul>
@@ -608,7 +689,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -620,23 +701,23 @@ ga('send', 'pageview');
       <ul>
         
           <li>
+            <a href="/2016/04/05/graph/">graph</a>
+          </li>
+        
+          <li>
             <a href="/2015/05/17/Operating-System-Notes/">Operating System Notes</a>
           </li>
         
           <li>
-            <a href="/2015/05/15/Learning-Emacs-Lisp/">Learning Emacs Lisp</a>
+            <a href="/2015/05/14/Learning-Emacs-Lisp/">Learning Emacs Lisp</a>
           </li>
         
           <li>
-            <a href="/2015/05/11/Making-Emacs-a-Better-C-C-IDE/">Making Emacs a Better C/C++ IDE</a>
+            <a href="/2015/05/10/Making-Emacs-a-Better-C-C-IDE/">Making Emacs a Better C/C++ IDE</a>
           </li>
         
           <li>
             <a href="/2015/05/06/251-Final-Review/">251 Final Review</a>
-          </li>
-        
-          <li>
-            <a href="/2015/04/07/最近想做的菜/">最近想做的菜</a>
           </li>
         
       </ul>
@@ -651,7 +732,7 @@ ga('send', 'pageview');
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2015 Kai Kang<br>
+      &copy; 2016 Kai Kang<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
