@@ -140,12 +140,22 @@ ga('send', 'pageview');
 </ul>
 </li>
 <li>Minors and Topological Minors<ul>
-<li>Definitions of Minors:<ul>
+<li>Definitions of Minors:<ol>
 <li>Remove vertices, then remove edges, then contract edges arbitrarily</li>
 <li>In the exact order: remove vertices, remove edges, contract edges</li>
 <li>$G$ contains $H$ as a minor if letting $v_1…v_h$ be the vertices of $H$, there are disjoint connected subgraphs $X_1…X_h$ such that $(v_i, v_j)\in E(H)$ means that $X_i,X_j$ in $G$.</li>
+</ol>
+</li>
+<li><strong>Equivalence Proof</strong>:<ul>
+<li>1 $\Rightarrow$ 2 is trivially true</li>
+<li>2 $\Rightarrow$ 3: Remove all vertices not in $H$, all edges not in $H$, and contract each $X_i$ to $v_i$.</li>
+<li>3 $\Rightarrow$ 1: For any edge contraction on $(x,y)$, we ‘uncontract’ by union the vertex sets $x, y$ are in. $v_i, v_j$ edge is an $X_i, X_j$ edge because edges are never deleted, so this edge is present in $G$ too.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>If $\Delta(H)\le 3$, and $H$ is a minor of $G$, then $H$ is a topological minor of $G$<ul>
 <li><strong>Proof</strong>:</li>
-<li>If $\Delta(H)\le 3, and H is a minor of G, then H is a topological minor of G$</li>
 </ul>
 </li>
 </ul>
