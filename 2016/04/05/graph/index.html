@@ -167,7 +167,7 @@ ga('send', 'pageview');
 </ul>
 </li>
 <li><strong>Lemma 4.4.3</strong> Every 3-connected graph $G$ without $K^5$ or $K_{3,3}$ minor is planar<ul>
-<li><strong>Proof</strong>:</li>
+<li><strong>Proof</strong>: Prove by induction on $|G|$. Base case is $K^4$, true. Consider $G$ contract edge $xy$. The remaining graph is planar by induction, and 3-connected by lemma 3.2.4. If we remove $ v<em>{xy} $, it is 2-connected. So the boundary is a cycle. Denote $P_i$ to be the path from $x_i$ to $x</em>{i+1}$. If we can show that all of $y$ neighbors are in a certain $P_i$, then we can put $y$ in and still have a planar graph. Case 1, y has a neighbor in $P_i$ and one outside, then $y’, y’’$ are separated by two of x neighbors, there is a k3,3. Case 2, y’s neighbors are a subset of x neighbors. Thus, if y has 2 neighbors, this is case 1. If y has more than 2, then there is a TK5. Thus, it must be planar.</li>
 </ul>
 </li>
 </ul>
@@ -176,6 +176,7 @@ ga('send', 'pageview');
 </ul>
 <h2 id="5-_Coloring">5. Coloring</h2>
 <ul>
+<li>Four color theorem, Kempe Chain:</li>
 <li>Greedy Algorithm:</li>
 <li>Coloring Number $col(G)$:</li>
 <li>Planar graphs are 6-colorable, 5-colorable</li>
