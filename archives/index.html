@@ -219,6 +219,12 @@ ga('send', 'pageview');
 </ul>
 </li>
 </ul>
+<h2 id="7_Extremal_Graph_Theory">7 Extremal Graph Theory</h2>
+<ul>
+<li>$R(H_1, H_2, … H_k)$ is the minimum $N$ such that every k coloring of the edges of $k^N$ yields some $i\in [k]$ for which $H_i$ is a subgraph of the ith color.</li>
+<li>SCHUR $S(k)$ is the largest $N$ such that $[N]$ can be partitioned into k sum free sets.</li>
+<li><strong>Van Der Waerden</strong> is the least $N$ such that partitioning $[n]$ into R sets must yield.</li>
+</ul>
 
       
     </div>
@@ -1025,10 +1031,10 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-undergrad-schedule" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post--15-251-Graph-Algorithms" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/02/25/undergrad-schedule/" class="article-date">
-  <time datetime="2015-02-25T15:52:10.000Z" itemprop="datePublished">Feb 25 2015</time>
+    <a href="/2015/02/24/-15-251-Graph-Algorithms/" class="article-date">
+  <time datetime="2015-02-24T06:38:34.000Z" itemprop="datePublished">Feb 24 2015</time>
 </a>
     
   </div>
@@ -1039,7 +1045,7 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/02/25/undergrad-schedule/">undergrad schedule</a>
+      <a class="article-title" href="/2015/02/24/-15-251-Graph-Algorithms/">[15-251] Graph Algorithms</a>
     </h1>
   
 
@@ -1047,41 +1053,38 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody" style="display:none">
       
-        <ul>
-<li>Category2 ?Econ?</li>
-<li>15354 computational discrete math / 21301 combinatorics</li>
-<li>Does 301 double count?</li>
-</ul>
-<h3 id="Fall_2015_(45_units)">Fall 2015 (45 units)</h3>
+        <h3 id="Basics">Basics</h3>
 <ul>
-<li>(15)15410 OS</li>
-<li>(9)36401 Modern Regression/11411 NLP/database?/15466?Computer Games/301 Combi?</li>
-<li>(3) 15295?</li>
-<li>(9)15300 Tech Comm</li>
-<li>(9)Beatles/Arts in Pittsburgh</li>
-<li>(3)Guitar<h3 id="Spring_2016">Spring 2016</h3>
-</li>
-<li>(12)15451 Algorithms</li>
-<li>(12)15462 CG</li>
-<li>(10)16465 Game Engine<h3 id="Fall_2016">Fall 2016</h3>
-</li>
-<li>10xxx ML Senior Project<br>-</li>
-<li>15411 Compilers<h3 id="Spring_2017">Spring 2017</h3>
-</li>
-<li>15312 Programming Languages</li>
-<li>11-751 Speech Recognition</li>
-<li>1 elective</li>
+<li>Regular: all nodes have same degrees</li>
+<li>Walk</li>
+<li>Path: Walk with no repeated vertices</li>
+<li>Cycle: a walk from u to u where the only repeated vertex is u</li>
+<li>Tree: connected; n-1 edges; acyclic</li>
+<li>Local Search guarantees to get $\ge \frac{m}{2}$<ul>
+<li>Each vertex has $\ge \frac{deg(v)}{2}$ edges cut because otherwise we can flip its color to get more cuts</li>
 </ul>
+</li>
+</ul>
+<p>Problem: Identify all nodes reachable from s.<br>BFS, DFS, AFS<br>AFS finds a <em>spanning tree</em> rooted at s (bag, mark)<br>Why does AFS halt?<br>If we put <em>edge</em> in the bag, get a spanning tree.<br>Full AFS finds all connected components<br>CFS: Cheapest First Search<br><em>MST</em>: subset of edges of minimum total cost such that all vertices connected<br>Prim: put the cheapest edge in the bag. If use Priority Queue, $O(Elog(E))$ run-time.<br><em>MST Cut Property</em> e is the cheapest edge from S to not S, then must be in the MST.<br><em>Kruskal</em>: Go through edges, add as long as it does not make cycles<br><em>Boruvka</em>: Add the cheapest edges out of each c.c.</p>
+<h2 id="Matching">Matching</h2>
+<p><em>Bipartite Graph</em>: there is a bipartition X and Y such that each edge connects x and y.<br><em>Matching</em>: a subset of edges that do not share an endpoint.<br><em>Maximum Matching</em>: A matching with largest number of edges<br><em>Perfect Matching</em>: A matching that covers all vertices<br><em>Stable matching</em>: There is no unstable pair(u, v not matched to each other, but they prefer each other to their current partners)<br>GS-algorithm: While a man is unmatched: propose to w(highest in the list)</p>
+<ul>
+<li>$O(n^2)$ (because number of proposals are $n^2$).</li>
+<li>Perfect Matching</li>
+<li>Stable<br>GS always finds the <em>Best Valid Partner</em><br>Prove: Man always finds the best. Woman always finds the worst.</li>
+</ul>
+<h3 id="Maximum_Matching">Maximum Matching</h3>
+<p><em>Augmenting path</em>(with respect to matching M): edges alternate between in M and not in M.<br>Prove: If there is an aug. path, M is not maximum<br>Find Maximum Matching: start with an edge, find augment path, …<br>To find aug. path: direct edges in M from left to right.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2015/02/25/undergrad-schedule/" data-id="kofws00ea98cq54w" class="article-share-link">Share</a>
+      <a data-url="https://pavelkang.github.io/2015/02/24/-15-251-Graph-Algorithms/" data-id="rrh1z2unvmqn5if9" class="article-share-link">Share</a>
       
-        <a href="https://pavelkang.github.io/2015/02/25/undergrad-schedule/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="https://pavelkang.github.io/2015/02/24/-15-251-Graph-Algorithms/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/schedule/">schedule</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/251/">251</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/">math</a></li></ul>
 
     </footer>
   </div>
@@ -1092,7 +1095,7 @@ ga('send', 'pageview');
   
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
     </nav>
   
 </section>
@@ -1105,7 +1108,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/251/">251</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/410/">410</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OS/">OS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cachelab/">cachelab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/emacs/">emacs</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">food</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/">machine learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/">notes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/schedule/">schedule</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/251/">251</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/410/">410</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interview/">Interview</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OS/">OS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/emacs/">emacs</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">food</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/">machine learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/">math</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/">notes</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -1114,7 +1117,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/213/" style="font-size: 10.00px;">213</a><a href="/tags/251/" style="font-size: 20.00px;">251</a><a href="/tags/410/" style="font-size: 12.50px;">410</a><a href="/tags/C/" style="font-size: 12.50px;">C++</a><a href="/tags/Interview/" style="font-size: 12.50px;">Interview</a><a href="/tags/OS/" style="font-size: 12.50px;">OS</a><a href="/tags/Python/" style="font-size: 12.50px;">Python</a><a href="/tags/algorithm/" style="font-size: 10.00px;">algorithm</a><a href="/tags/cachelab/" style="font-size: 12.50px;">cachelab</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab, 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab; 213</a><a href="/tags/combination/" style="font-size: 10.00px;">combination</a><a href="/tags/editor/" style="font-size: 10.00px;">editor</a><a href="/tags/emacs/" style="font-size: 15.00px;">emacs</a><a href="/tags/food/" style="font-size: 17.50px;">food</a><a href="/tags/hexo/" style="font-size: 12.50px;">hexo</a><a href="/tags/leetcode/" style="font-size: 10.00px;">leetcode</a><a href="/tags/lisp/" style="font-size: 10.00px;">lisp</a><a href="/tags/machine-learning/" style="font-size: 12.50px;">machine learning</a><a href="/tags/math/" style="font-size: 20.00px;">math</a><a href="/tags/notes/" style="font-size: 12.50px;">notes</a><a href="/tags/permutation/" style="font-size: 10.00px;">permutation</a><a href="/tags/schedule/" style="font-size: 12.50px;">schedule</a>
+      <a href="/tags/213/" style="font-size: 10.00px;">213</a><a href="/tags/251/" style="font-size: 20.00px;">251</a><a href="/tags/410/" style="font-size: 12.50px;">410</a><a href="/tags/C/" style="font-size: 12.50px;">C++</a><a href="/tags/Interview/" style="font-size: 12.50px;">Interview</a><a href="/tags/OS/" style="font-size: 12.50px;">OS</a><a href="/tags/Python/" style="font-size: 12.50px;">Python</a><a href="/tags/algorithm/" style="font-size: 10.00px;">algorithm</a><a href="/tags/cachelab/" style="font-size: 10.00px;">cachelab</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab, 213</a><a href="/tags/cachelab-213/" style="font-size: 10.00px;">cachelab; 213</a><a href="/tags/combination/" style="font-size: 10.00px;">combination</a><a href="/tags/editor/" style="font-size: 10.00px;">editor</a><a href="/tags/emacs/" style="font-size: 15.00px;">emacs</a><a href="/tags/food/" style="font-size: 17.50px;">food</a><a href="/tags/hexo/" style="font-size: 12.50px;">hexo</a><a href="/tags/leetcode/" style="font-size: 10.00px;">leetcode</a><a href="/tags/lisp/" style="font-size: 10.00px;">lisp</a><a href="/tags/machine-learning/" style="font-size: 12.50px;">machine learning</a><a href="/tags/math/" style="font-size: 20.00px;">math</a><a href="/tags/notes/" style="font-size: 12.50px;">notes</a><a href="/tags/permutation/" style="font-size: 10.00px;">permutation</a><a href="/tags/schedule/" style="font-size: 10.00px;">schedule</a>
     </div>
   </div>
 
@@ -1123,7 +1126,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 

@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2016 | Kai Kang</title>
+  <title>Create a blog with hexo | Kai Kang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="a place of sharing tech, food">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Kai Kang">
-<meta property="og:url" content="https://pavelkang.github.io/archives/2016/">
+  <meta name="description" content="I started to get bored with writing a blog on wordpress.com. It should be more exciting to host my own blog. So I googled and found this blog framework Hexo. It’s super easy to use for someone with a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Create a blog with hexo">
+<meta property="og:url" content="https://pavelkang.github.io/2014/10/05/Create-a-blog-with-hexo/">
 <meta property="og:site_name" content="Kai Kang">
-<meta property="og:description" content="a place of sharing tech, food">
+<meta property="og:description" content="I started to get bored with writing a blog on wordpress.com. It should be more exciting to host my own blog. So I googled and found this blog framework Hexo. It’s super easy to use for someone with a">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kai Kang">
-<meta name="twitter:description" content="a place of sharing tech, food">
+<meta name="twitter:title" content="Create a blog with hexo">
+<meta name="twitter:description" content="I started to get bored with writing a blog on wordpress.com. It should be more exciting to host my own blog. So I googled and found this blog framework Hexo. It’s super easy to use for someone with a">
 
   
     <link rel="alternative" href="/atom.xml" title="Kai Kang" type="application/atom+xml">
@@ -79,12 +79,10 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-graph" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Create-a-blog-with-hexo" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/04/05/graph/" class="article-date">
-  <time datetime="2016-04-05T17:07:25.000Z" itemprop="datePublished">Apr 5 2016</time>
+    <a href="/2014/10/05/Create-a-blog-with-hexo/" class="article-date">
+  <time datetime="2014-10-06T02:13:18.000Z" itemprop="datePublished">Oct 5 2014</time>
 </a>
     
   </div>
@@ -94,154 +92,57 @@ ga('send', 'pageview');
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/05/graph/">graph</a>
+    <h1 class="article-title" itemprop="name">
+      Create a blog with hexo
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody" style="display:none">
+    <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="4-_Planar_Graphs">4. Planar Graphs</h2>
-<ul>
-<li>Planarity<ul>
-<li><strong>Plane Graph</strong></li>
-<li><strong>Euler’s theorem</strong>: $n-m+f=2$<ul>
-<li>Use it to show certain graphs are not planar</li>
-</ul>
-</li>
-<li>A plane graph with $n\ge 3$ vertices has at most $3n-6$ edges, which is achieved by plane triangulation</li>
-<li><strong>Planar Graph</strong>: If it can be embedded in the plane: if it is isomorphic to a plane graph.</li>
-</ul>
-</li>
-<li>Minors and Topological Minors<ul>
-<li>Definitions of Minors:<ol>
-<li>Remove vertices, then remove edges, then contract edges arbitrarily</li>
-<li>In the exact order: remove vertices, remove edges, contract edges</li>
-<li>$G$ contains $H$ as a minor if letting $v_1…v_h$ be the vertices of $H$, there are disjoint connected subgraphs $X_1…X_h$ such that $(v_i, v_j)\in E(H)$ means that $X_i,X_j$ in $G$.</li>
-</ol>
-</li>
-<li><strong>Equivalence Proof</strong>:<ul>
-<li>1 $\Rightarrow$ 2 is trivially true</li>
-<li>2 $\Rightarrow$ 3: Remove all vertices not in $H$, all edges not in $H$, and contract each $X_i$ to $v_i$.</li>
-<li>3 $\Rightarrow$ 1: For any edge contraction on $(x,y)$, we ‘uncontract’ by union the vertex sets $x, y$ are in. $v_i, v_j$ edge is an $X_i, X_j$ edge because edges are never deleted, so this edge is present in $G$ too.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>If $\Delta(H)\le 3$, and $H$ is a minor of $G$, then $H$ is a topological minor of $G$<ul>
-<li><strong>Proof</strong>: Use definition 3 above. Get a tree $T_i$ on $X_i$.</li>
-</ul>
-</li>
-<li>Every topological minor is also a minor</li>
-</ul>
-</li>
-<li>Kuratowski’s and Wagner’s Theorem<ul>
-<li><strong>Lemma 4.4.2</strong>: A graph $G$ contains $K^5$ or $K_{3,3}$ as minors if and only if it contains them as topological minors<ul>
-<li><strong>Proof</strong>: Suffice to show that a $K^5$ minor leads to $K^5$ topological minor, or $ K<em>{3,3} $ minor. If all trees in $ IK^5 $ are $ K</em>{1,4} $ then we have a $K^5$ topological minor. Otherwise, there are two vertices of degree $3$, and the 6 vertices form a $K_{3,3}$ minor.</li>
-</ul>
-</li>
-<li><strong>Lemma 4.4.3</strong> Every 3-connected graph $G$ without $K^5$ or $K_{3,3}$ minor is planar<ul>
-<li><strong>Proof</strong>: Prove by induction on $|G|$. Base case is $K^4$, true. Consider $G$ contract edge $xy$. The remaining graph is planar by induction, and 3-connected by lemma 3.2.4. If we remove vxy, it is 2-connected. So the boundary is a cycle. Denote Pi to be the path from $x<em>i$ to $x</em>{i+1}$. If we can show that all of $y$ neighbors are in a certain segment path Pi, then we can put $y$ in and still have a planar graph. Case 1, y has a neighbor in $P_i$ and one outside, then $y’, y’’$ are separated by two of x neighbors, there is a k3,3. Case 2, y’s neighbors are a subset of x neighbors. Thus, if y has 2 neighbors, this is case 1. If y has more than 2, then there is a TK5. Thus, it must be planar.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Crossing Numbers:</li>
-</ul>
-<h2 id="5-_Coloring">5. Coloring</h2>
-<ul>
-<li>Four color theorem, Kempe Chain:</li>
-<li>Greedy Algorithm:<ul>
-<li>Can be arbitrarily good or bad. There exists a vertex ordering such that the greedy gives the best chromatic number. There exists bipartite graph can be colored with an arbitrarily large number of colors using the greedy algorithm (not connecting vi and ui).</li>
-</ul>
-</li>
-<li>Coloring Number $col(G)$:<ul>
-<li>The min k such that there exists an ordering, each vi has back-degree $&lt; k$.</li>
-<li>$col(G)\le max \delta(H) + 1$ if we use max to min ordering</li>
-<li>$col(G)\ge col(H) \ge \delta(H) + 1$ easily</li>
-<li>Thus, <strong>5.2.2</strong>, $\chi(G)\le col(G) = max \delta(H)+1$</li>
-</ul>
-</li>
-<li>Planar graphs are 6-colorable, 5-colorable: Proof by Kempe Chain</li>
-<li>Brook’s theorem:<ul>
-<li>If $G$ is neither complete nor an odd cycle, then $\chi(G)\le \Delta(G)$</li>
-<li>Proof is by induction</li>
-</ul>
-</li>
-<li>Lower bounds and Upper bounds of $\chi(G)$:<ul>
-<li>Lower:<ul>
-<li>$\omega(G)$. Obvious.</li>
-<li>$\frac{n}{\alpha}$. Obvious, each color has at most $\alpha$ vertices</li>
-</ul>
-</li>
-<li>Upper:<ul>
-<li>$\Delta(G)+1$: Greedy algorithm</li>
-<li>$n-\alpha +1$</li>
-<li>$\Delta(G)$ for not complete or odd cycle graphs. Brook’s Theorem.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Edge coloring $\chi’(G)$:<ul>
-<li>Konig Theorem: Every bipartite graph $G$ satisfies $\chi’(G)=\Delta(G)$.</li>
-</ul>
-</li>
-<li>Vizing’s Theorem:<ul>
-<li>$\Delta(G)\le \chi’(G)\le \Delta(G)+1$</li>
-</ul>
-</li>
-<li>List coloring $ch(G)$:<ul>
-<li>$ch(G)\ge \chi(G)$</li>
-<li>Examples where $ch(G)&gt;&gt;\chi(G)$. hw7 q5. We show that there are graphs with $\chi(G)=2$ and $ch(G)=k$. We first show that there is a graph with $ch(G) \ge k$. Then we show that $ch(G-v)$ is at least $ch(G)-1$. Thus we can remove one vertex at a time to get $ch(G)=k$.</li>
-</ul>
-</li>
-<li>Perfect Graphs:<ul>
-<li>Perfect elimination ordering:<ul>
-<li>For all $v_i$, its neighbors that come before it form a clique.</li>
-</ul>
-</li>
-<li>Proof that PEO graph is perfect<ul>
-<li>put max-clique vertex the end</li>
-</ul>
-</li>
-<li>Chordal Graph:<ul>
-<li>PEO graphs are chordal</li>
-</ul>
-</li>
-<li>Weak and Strong Perfect Graphs:<ul>
-<li>cliques, bipartite, and complements</li>
-<li>A bipartite graph’s complement is perfect</li>
-<li><strong>Proof</strong>: Let $G$ be bipartite, then $\chi(\bar G) = M + n - 2M = n - M$. This is because $G$ has only cliques of 1, 2. This is the minimum number of cliques in $G$. In a bipartite graph, $M = n - \alpha$.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="7_Extremal_Graph_Theory">7 Extremal Graph Theory</h2>
-<ul>
-<li>$R(H_1, H_2, … H_k)$ is the minimum $N$ such that every k coloring of the edges of $k^N$ yields some $i\in [k]$ for which $H_i$ is a subgraph of the ith color.</li>
-<li>SCHUR $S(k)$ is the largest $N$ such that $[N]$ can be partitioned into k sum free sets.</li>
-<li><strong>Van Der Waerden</strong> is the least $N$ such that partitioning $[n]$ into R sets must yield.</li>
-</ul>
+        <!-- Table of Contents -->
+        
+        <p>I started to get bored with writing a blog on wordpress.com. It should be more exciting to host my own blog. So I googled and found this blog framework <em>Hexo</em>. It’s super easy to use for someone with a basic understanding of nodejs applications and simple deployment on Github/Heroku etc. Anyway, it’s a fun thing to do! Hopefully I can keep writing more blogs.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://pavelkang.github.io/2016/04/05/graph/" data-id="5hs9quovdzueo3p5" class="article-share-link">Share</a>
+      <a data-url="https://pavelkang.github.io/2014/10/05/Create-a-blog-with-hexo/" data-id="6fyzg5gg95syf8xs" class="article-share-link">Share</a>
       
-        <a href="https://pavelkang.github.io/2016/04/05/graph/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="https://pavelkang.github.io/2014/10/05/Create-a-blog-with-hexo/#disqus_thread" class="article-comment-link">Comments</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
     </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/11/15/Tech-Interview-1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Tech Interview
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
   
 </article>
 
 
-  
-  
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
 </section>
         
           <aside id="sidebar">
@@ -332,11 +233,13 @@ ga('send', 'pageview');
 <script>
   var disqus_shortname = 'sclingtt';
   
+  var disqus_url = 'https://pavelkang.github.io/2014/10/05/Create-a-blog-with-hexo/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
